@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
-		46E160821DF98D5B00E90C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160811DF98D5B00E90C4F /* ViewController.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
 		46E160871DF98D5B00E90C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E160861DF98D5B00E90C4F /* Assets.xcassets */; };
 		46E1608A1DF98D5B00E90C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160881DF98D5B00E90C4F /* LaunchScreen.storyboard */; };
 		46E160951DF98D5B00E90C4F /* GourmetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160941DF98D5B00E90C4F /* GourmetTests.swift */; };
+		46E160A21DF996AC00E90C4F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160A11DF996AC00E90C4F /* LoginVC.swift */; };
+		46E160A41DF996DF00E90C4F /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160A31DF996DF00E90C4F /* BalanceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,6 @@
 /* Begin PBXFileReference section */
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46E160811DF98D5B00E90C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46E160841DF98D5B00E90C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46E160861DF98D5B00E90C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E160891DF98D5B00E90C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		46E160901DF98D5B00E90C4F /* GourmetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E160941DF98D5B00E90C4F /* GourmetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetTests.swift; sourceTree = "<group>"; };
 		46E160961DF98D5B00E90C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E160A11DF996AC00E90C4F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		46E160A31DF996DF00E90C4F /* BalanceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		46E1607E1DF98D5B00E90C4F /* Gourmet */ = {
 			isa = PBXGroup;
 			children = (
+				46E1609F1DF9966900E90C4F /* Login */,
+				46E160A01DF9967000E90C4F /* Balance */,
 				46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */,
-				46E160811DF98D5B00E90C4F /* ViewController.swift */,
 				46E160831DF98D5B00E90C4F /* Main.storyboard */,
 				46E160861DF98D5B00E90C4F /* Assets.xcassets */,
 				46E160881DF98D5B00E90C4F /* LaunchScreen.storyboard */,
@@ -94,6 +97,22 @@
 				46E160961DF98D5B00E90C4F /* Info.plist */,
 			);
 			path = GourmetTests;
+			sourceTree = "<group>";
+		};
+		46E1609F1DF9966900E90C4F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				46E160A11DF996AC00E90C4F /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		46E160A01DF9967000E90C4F /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				46E160A31DF996DF00E90C4F /* BalanceVC.swift */,
+			);
+			path = Balance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E160821DF98D5B00E90C4F /* ViewController.swift in Sources */,
+				46E160A41DF996DF00E90C4F /* BalanceVC.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
+				46E160A21DF996AC00E90C4F /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +424,7 @@
 				46E1609B1DF98D5B00E90C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46E1609C1DF98D5B00E90C4F /* Build configuration list for PBXNativeTarget "GourmetTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +433,7 @@
 				46E1609E1DF98D5B00E90C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
