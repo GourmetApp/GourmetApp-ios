@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  Gourmet
 //
 //  Created by David Martinez on 08/12/2016.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol LoginView {
+protocol SignUpView {
     
     func showAccount(account : AccountVM)
     func showError(message : String)

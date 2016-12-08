@@ -8,9 +8,20 @@
 
 import Foundation
 
-class Account : NSObject {
+class Account : NSObject, NSCoding {
     
     var cardId : String = ""
     var password : String = ""
     
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(cardId, forKey: "cardId")
+        aCoder.encode(password, forKey: "password")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        
+        cardId = aDecoder.decodeObject(forKey: "cardId") as? String ?? ""
+        password = aDecoder.decodeObject(forKey: "password") as? String ?? ""
+    }
 }

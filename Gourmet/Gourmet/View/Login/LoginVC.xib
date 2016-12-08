@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </array>
+        <array key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="Gourmet" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="gJm-pU-a3L" id="zMb-vO-ZH1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gJm-pU-a3L">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsh-PP-nDw">
+                    <rect key="frame" x="40" y="289.5" width="295" height="89"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-6D-1bf" userLabel="Label - cardId">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="24"/>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQC-lM-Ypk" userLabel="View - border">
+                            <rect key="frame" x="0.0" y="28" width="295" height="1"/>
+                            <color key="backgroundColor" red="0.47450980390000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="97h-HA-QoN"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dop-fR-MPs">
+                            <rect key="frame" x="0.0" y="45" width="295" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="acC-9I-lUP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" red="0.47450980390000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dop-fR-MPs" secondAttribute="bottom" id="143-j9-Xfo"/>
+                        <constraint firstItem="dop-fR-MPs" firstAttribute="leading" secondItem="fsh-PP-nDw" secondAttribute="leading" id="5sF-oI-q3u"/>
+                        <constraint firstItem="OOa-6D-1bf" firstAttribute="leading" secondItem="fsh-PP-nDw" secondAttribute="leading" id="O8j-Jw-FDZ"/>
+                        <constraint firstAttribute="trailing" secondItem="OOa-6D-1bf" secondAttribute="trailing" id="PAq-20-gqY"/>
+                        <constraint firstItem="dop-fR-MPs" firstAttribute="top" secondItem="JQC-lM-Ypk" secondAttribute="bottom" constant="16" id="RCF-hp-aNf"/>
+                        <constraint firstAttribute="trailing" secondItem="JQC-lM-Ypk" secondAttribute="trailing" id="TVI-oe-uup"/>
+                        <constraint firstItem="OOa-6D-1bf" firstAttribute="top" secondItem="fsh-PP-nDw" secondAttribute="top" id="Tbn-K2-obG"/>
+                        <constraint firstAttribute="trailing" secondItem="dop-fR-MPs" secondAttribute="trailing" id="YQb-B0-WGz"/>
+                        <constraint firstItem="JQC-lM-Ypk" firstAttribute="top" secondItem="OOa-6D-1bf" secondAttribute="bottom" constant="4" id="uva-bb-9m2"/>
+                        <constraint firstItem="JQC-lM-Ypk" firstAttribute="leading" secondItem="fsh-PP-nDw" secondAttribute="leading" id="vEp-cs-Aph"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fsh-PP-nDw" firstAttribute="leading" secondItem="gJm-pU-a3L" secondAttribute="leadingMargin" constant="32" id="Khq-UR-tMH"/>
+                <constraint firstItem="fsh-PP-nDw" firstAttribute="centerY" secondItem="gJm-pU-a3L" secondAttribute="centerY" id="ZbP-Pb-n5B"/>
+                <constraint firstAttribute="trailingMargin" secondItem="fsh-PP-nDw" secondAttribute="trailing" constant="32" id="sqq-7r-W7O"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

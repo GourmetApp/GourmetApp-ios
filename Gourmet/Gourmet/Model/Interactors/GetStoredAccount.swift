@@ -10,8 +10,18 @@ import Foundation
 
 class GetStoredAccount : NSObject {
     
-    func execute (callback : (_ account : Account?) -> Void) {
-        // TODO:
+    func execute (callback : @escaping (_ account : Account?) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            let defaults = UserDefaults.init(suiteName: "com.atenea.gourmet.appgroup")
+            var account : Account?
+            if let accountData = defaults!.data(forKey: "account") {
+                account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account
+            }
+            
+            DispatchQueue.main.async {
+                callback(account)
+            }
+        }
     }
     
 }

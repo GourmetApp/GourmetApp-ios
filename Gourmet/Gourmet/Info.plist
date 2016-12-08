@@ -2,8 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFUIText-Light</string>
+		<string>SFUIText-Medium</string>
+		<string>SFUIText-Regular</string>
+		<string>SFUIText-Italic</string>
+		<string>SFUIText-LightItalic</string>
+		<string>SFUIText-MediumItalic</string>
+		<string>SFUIText-Bold</string>
+		<string>SFUIText-Heavy</string>
+		<string>SFUIText-Semibold</string>
+		<string>SFUIText-BoldItalic</string>
+		<string>SFUIText-HeavyItalic</string>
+		<string>SFUIText-SemiboldItalic</string>
+		<string>SFUIText-Ultrathin</string>
+		<string>SFUIText-UltrathinItalic</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>es</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -31,8 +53,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

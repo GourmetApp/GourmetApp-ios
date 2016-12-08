@@ -25,15 +25,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kg0-eq-hEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276" y="304"/>
+            <point key="canvasLocation" x="1121" y="303"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Hx-Ef-ags">
             <objects>
                 <navigationController id="QhJ-R2-tcy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2p-hf-bWB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2p-hf-bWB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="suh-D7-M2r" kind="relationship" relationship="rootViewController" id="nDM-HA-gpr"/>
@@ -43,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-558" y="304"/>
         </scene>
-        <!--Login-->
+        <!--Main-->
         <scene sceneID="C5i-1A-JRd">
             <objects>
-                <viewController title="Login" id="suh-D7-M2r" customClass="LoginVC" customModule="Gourmet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" hidesBottomBarWhenPushed="YES" id="suh-D7-M2r" customClass="MainVC" customModule="Gourmet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n07-An-ePH"/>
                         <viewControllerLayoutGuide type="bottom" id="mez-z8-gib"/>
@@ -58,14 +62,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Tb-Qy-0XS"/>
                     <connections>
-                        <segue destination="Na5-D8-8ec" kind="showDetail" identifier="login_to_balance" id="5ms-kV-uPu">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="Na5-D8-8ec" kind="showDetail" id="KQf-hc-2um"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfa-D1-ddZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="304"/>
+            <point key="canvasLocation" x="282.39999999999998" y="302.6986506746627"/>
         </scene>
     </scenes>
 </document>

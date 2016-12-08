@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		464906691DF9E10800EF209B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906681DF9E10800EF209B /* SignUpVC.swift */; };
+		464906711DF9E14B00EF209B /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066C1DF9E14B00EF209B /* AccountVM.swift */; };
+		464906721DF9E14B00EF209B /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066D1DF9E14B00EF209B /* MainFactory.swift */; };
+		464906731DF9E14B00EF209B /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066E1DF9E14B00EF209B /* MainPresenter.swift */; };
+		464906741DF9E14B00EF209B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066F1DF9E14B00EF209B /* MainVC.swift */; };
+		464906751DF9E14B00EF209B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906701DF9E14B00EF209B /* MainView.swift */; };
+		464906771DF9E15F00EF209B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906761DF9E15F00EF209B /* LoginVC.swift */; };
+		464906791DF9E5A900EF209B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906781DF9E5A900EF209B /* LoginView.swift */; };
+		4649067B1DF9E66E00EF209B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649067A1DF9E66E00EF209B /* SignUpView.swift */; };
+		4649067D1DF9E80C00EF209B /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4649067C1DF9E80C00EF209B /* LoginVC.xib */; };
+		4649067F1DF9E81700EF209B /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4649067E1DF9E81700EF209B /* SignUpVC.xib */; };
+		464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906801DF9F23B00EF209B /* MappeableProtocol.swift */; };
+		464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */; };
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
 		46E160871DF98D5B00E90C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E160861DF98D5B00E90C4F /* Assets.xcassets */; };
 		46E1608A1DF98D5B00E90C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160881DF98D5B00E90C4F /* LaunchScreen.storyboard */; };
 		46E160951DF98D5B00E90C4F /* GourmetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160941DF98D5B00E90C4F /* GourmetTests.swift */; };
-		46E160AB1DF9A4CC00E90C4F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160A91DF9A4CC00E90C4F /* LoginVC.swift */; };
 		46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160AD1DF9A52700E90C4F /* BalanceVC.swift */; };
-		46E160B01DF9A58F00E90C4F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160AF1DF9A58F00E90C4F /* LoginView.swift */; };
-		46E160B21DF9A64800E90C4F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B11DF9A64800E90C4F /* LoginPresenter.swift */; };
-		46E160B41DF9A65900E90C4F /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B31DF9A65900E90C4F /* LoginFactory.swift */; };
-		46E160B61DF9A84700E90C4F /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B51DF9A84700E90C4F /* AccountVM.swift */; };
 		46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */; };
 		46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BA1DF9A93300E90C4F /* LoginCheck.swift */; };
 		46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BC1DF9AA1200E90C4F /* GetBalance.swift */; };
@@ -26,6 +34,31 @@
 		46E160C41DF9AB0200E90C4F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C31DF9AB0200E90C4F /* Account.swift */; };
 		46E160C61DF9AB0C00E90C4F /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C51DF9AB0C00E90C4F /* Balance.swift */; };
 		46E160C81DF9AB1600E90C4F /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C71DF9AB1600E90C4F /* Purchase.swift */; };
+		46E160CE1DF9B03F00E90C4F /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E160CD1DF9B03F00E90C4F /* App.strings */; };
+		46E160D01DF9B05200E90C4F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160CF1DF9B05200E90C4F /* Localizable.swift */; };
+		46E160EB1DF9B45B00E90C4F /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D31DF9B45B00E90C4F /* SF-UI-Display-Black.otf */; };
+		46E160EC1DF9B45B00E90C4F /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D41DF9B45B00E90C4F /* SF-UI-Display-Bold.otf */; };
+		46E160ED1DF9B45B00E90C4F /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D51DF9B45B00E90C4F /* SF-UI-Display-Heavy.otf */; };
+		46E160EE1DF9B45B00E90C4F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D61DF9B45B00E90C4F /* SF-UI-Display-Light.otf */; };
+		46E160EF1DF9B45B00E90C4F /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D71DF9B45B00E90C4F /* SF-UI-Display-Medium.otf */; };
+		46E160F01DF9B45B00E90C4F /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D81DF9B45B00E90C4F /* SF-UI-Display-Regular.otf */; };
+		46E160F11DF9B45B00E90C4F /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D91DF9B45B00E90C4F /* SF-UI-Display-Semibold.otf */; };
+		46E160F21DF9B45B00E90C4F /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DA1DF9B45B00E90C4F /* SF-UI-Display-Thin.otf */; };
+		46E160F31DF9B45B00E90C4F /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DB1DF9B45B00E90C4F /* SF-UI-Display-Ultralight.otf */; };
+		46E160F41DF9B45B00E90C4F /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DD1DF9B45B00E90C4F /* SF-UI-Text-Bold.otf */; };
+		46E160F51DF9B45B00E90C4F /* SF-UI-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DE1DF9B45B00E90C4F /* SF-UI-Text-BoldItalic.otf */; };
+		46E160F61DF9B45B00E90C4F /* SF-UI-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DF1DF9B45B00E90C4F /* SF-UI-Text-Heavy.otf */; };
+		46E160F71DF9B45B00E90C4F /* SF-UI-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E01DF9B45B00E90C4F /* SF-UI-Text-HeavyItalic.otf */; };
+		46E160F81DF9B45B00E90C4F /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E11DF9B45B00E90C4F /* SF-UI-Text-Light.otf */; };
+		46E160F91DF9B45B00E90C4F /* SF-UI-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E21DF9B45B00E90C4F /* SF-UI-Text-LightItalic.otf */; };
+		46E160FA1DF9B45B00E90C4F /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E31DF9B45B00E90C4F /* SF-UI-Text-Medium.otf */; };
+		46E160FB1DF9B45B00E90C4F /* SF-UI-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E41DF9B45B00E90C4F /* SF-UI-Text-MediumItalic.otf */; };
+		46E160FC1DF9B45B00E90C4F /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E51DF9B45B00E90C4F /* SF-UI-Text-Regular.otf */; };
+		46E160FD1DF9B45B00E90C4F /* SF-UI-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E61DF9B45B00E90C4F /* SF-UI-Text-RegularItalic.otf */; };
+		46E160FE1DF9B45B00E90C4F /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E71DF9B45B00E90C4F /* SF-UI-Text-Semibold.otf */; };
+		46E160FF1DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */; };
+		46E161001DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */; };
+		46E161011DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +72,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		464906681DF9E10800EF209B /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		4649066C1DF9E14B00EF209B /* AccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVM.swift; sourceTree = "<group>"; };
+		4649066D1DF9E14B00EF209B /* MainFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
+		4649066E1DF9E14B00EF209B /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		4649066F1DF9E14B00EF209B /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		464906701DF9E14B00EF209B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		464906761DF9E15F00EF209B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		464906781DF9E5A900EF209B /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4649067A1DF9E66E00EF209B /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4649067C1DF9E80C00EF209B /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		4649067E1DF9E81700EF209B /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		464906801DF9F23B00EF209B /* MappeableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappeableProtocol.swift; sourceTree = "<group>"; };
+		464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAccountToAccountVM.swift; sourceTree = "<group>"; };
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E160841DF98D5B00E90C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,12 +94,7 @@
 		46E160901DF98D5B00E90C4F /* GourmetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E160941DF98D5B00E90C4F /* GourmetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetTests.swift; sourceTree = "<group>"; };
 		46E160961DF98D5B00E90C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46E160A91DF9A4CC00E90C4F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		46E160AD1DF9A52700E90C4F /* BalanceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
-		46E160AF1DF9A58F00E90C4F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		46E160B11DF9A64800E90C4F /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		46E160B31DF9A65900E90C4F /* LoginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
-		46E160B51DF9A84700E90C4F /* AccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVM.swift; sourceTree = "<group>"; };
 		46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStoredAccount.swift; sourceTree = "<group>"; };
 		46E160BA1DF9A93300E90C4F /* LoginCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheck.swift; sourceTree = "<group>"; };
 		46E160BC1DF9AA1200E90C4F /* GetBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalance.swift; sourceTree = "<group>"; };
@@ -62,6 +103,31 @@
 		46E160C31DF9AB0200E90C4F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		46E160C51DF9AB0C00E90C4F /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		46E160C71DF9AB1600E90C4F /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		46E160CD1DF9B03F00E90C4F /* App.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = App.strings; sourceTree = "<group>"; };
+		46E160CF1DF9B05200E90C4F /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		46E160D31DF9B45B00E90C4F /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
+		46E160D41DF9B45B00E90C4F /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
+		46E160D51DF9B45B00E90C4F /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
+		46E160D61DF9B45B00E90C4F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
+		46E160D71DF9B45B00E90C4F /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		46E160D81DF9B45B00E90C4F /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		46E160D91DF9B45B00E90C4F /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
+		46E160DA1DF9B45B00E90C4F /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
+		46E160DB1DF9B45B00E90C4F /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		46E160DD1DF9B45B00E90C4F /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
+		46E160DE1DF9B45B00E90C4F /* SF-UI-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		46E160DF1DF9B45B00E90C4F /* SF-UI-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Heavy.otf"; sourceTree = "<group>"; };
+		46E160E01DF9B45B00E90C4F /* SF-UI-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		46E160E11DF9B45B00E90C4F /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
+		46E160E21DF9B45B00E90C4F /* SF-UI-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		46E160E31DF9B45B00E90C4F /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
+		46E160E41DF9B45B00E90C4F /* SF-UI-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		46E160E51DF9B45B00E90C4F /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		46E160E61DF9B45B00E90C4F /* SF-UI-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		46E160E71DF9B45B00E90C4F /* SF-UI-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Semibold.otf"; sourceTree = "<group>"; };
+		46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Ultrathin.otf"; sourceTree = "<group>"; };
+		46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-UltrathinItalic.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +148,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		464906671DF9E10800EF209B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				464906681DF9E10800EF209B /* SignUpVC.swift */,
+				4649067A1DF9E66E00EF209B /* SignUpView.swift */,
+				4649067E1DF9E81700EF209B /* SignUpVC.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4649066A1DF9E12800EF209B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				464906761DF9E15F00EF209B /* LoginVC.swift */,
+				464906781DF9E5A900EF209B /* LoginView.swift */,
+				4649067C1DF9E80C00EF209B /* LoginVC.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4649066B1DF9E14B00EF209B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4649066C1DF9E14B00EF209B /* AccountVM.swift */,
+				4649066E1DF9E14B00EF209B /* MainPresenter.swift */,
+				4649066F1DF9E14B00EF209B /* MainVC.swift */,
+				464906701DF9E14B00EF209B /* MainView.swift */,
+				4649066D1DF9E14B00EF209B /* MainFactory.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		464906821DF9F2F500EF209B /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
 		46E160731DF98D5B00E90C4F = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +233,10 @@
 		46E160A51DF9A42B00E90C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4649066B1DF9E14B00EF209B /* Main */,
+				4649066A1DF9E12800EF209B /* Login */,
+				464906671DF9E10800EF209B /* SignUp */,
 				46E160AC1DF9A52700E90C4F /* Balance */,
-				46E160A81DF9A4CC00E90C4F /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +247,7 @@
 				46E160C91DF9AB6600E90C4F /* Data */,
 				46E160C21DF9AAF000E90C4F /* Entities */,
 				46E160B71DF9A8E700E90C4F /* Interactors */,
+				464906801DF9F23B00EF209B /* MappeableProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,20 +255,11 @@
 		46E160A71DF9A4A000E90C4F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				464906821DF9F2F500EF209B /* Mappers */,
+				46E160D11DF9B45B00E90C4F /* Fonts */,
+				46E160CC1DF9B02900E90C4F /* Strings */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		46E160A81DF9A4CC00E90C4F /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				46E160B51DF9A84700E90C4F /* AccountVM.swift */,
-				46E160A91DF9A4CC00E90C4F /* LoginVC.swift */,
-				46E160AF1DF9A58F00E90C4F /* LoginView.swift */,
-				46E160B11DF9A64800E90C4F /* LoginPresenter.swift */,
-				46E160B31DF9A65900E90C4F /* LoginFactory.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		46E160AC1DF9A52700E90C4F /* Balance */ = {
@@ -197,6 +297,62 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		46E160CC1DF9B02900E90C4F /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				46E160CF1DF9B05200E90C4F /* Localizable.swift */,
+				46E160CD1DF9B03F00E90C4F /* App.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		46E160D11DF9B45B00E90C4F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46E160D21DF9B45B00E90C4F /* SF-UI-Display */,
+				46E160DC1DF9B45B00E90C4F /* SF-UI-Text */,
+			);
+			name = Fonts;
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		46E160D21DF9B45B00E90C4F /* SF-UI-Display */ = {
+			isa = PBXGroup;
+			children = (
+				46E160D31DF9B45B00E90C4F /* SF-UI-Display-Black.otf */,
+				46E160D41DF9B45B00E90C4F /* SF-UI-Display-Bold.otf */,
+				46E160D51DF9B45B00E90C4F /* SF-UI-Display-Heavy.otf */,
+				46E160D61DF9B45B00E90C4F /* SF-UI-Display-Light.otf */,
+				46E160D71DF9B45B00E90C4F /* SF-UI-Display-Medium.otf */,
+				46E160D81DF9B45B00E90C4F /* SF-UI-Display-Regular.otf */,
+				46E160D91DF9B45B00E90C4F /* SF-UI-Display-Semibold.otf */,
+				46E160DA1DF9B45B00E90C4F /* SF-UI-Display-Thin.otf */,
+				46E160DB1DF9B45B00E90C4F /* SF-UI-Display-Ultralight.otf */,
+			);
+			path = "SF-UI-Display";
+			sourceTree = "<group>";
+		};
+		46E160DC1DF9B45B00E90C4F /* SF-UI-Text */ = {
+			isa = PBXGroup;
+			children = (
+				46E160DD1DF9B45B00E90C4F /* SF-UI-Text-Bold.otf */,
+				46E160DE1DF9B45B00E90C4F /* SF-UI-Text-BoldItalic.otf */,
+				46E160DF1DF9B45B00E90C4F /* SF-UI-Text-Heavy.otf */,
+				46E160E01DF9B45B00E90C4F /* SF-UI-Text-HeavyItalic.otf */,
+				46E160E11DF9B45B00E90C4F /* SF-UI-Text-Light.otf */,
+				46E160E21DF9B45B00E90C4F /* SF-UI-Text-LightItalic.otf */,
+				46E160E31DF9B45B00E90C4F /* SF-UI-Text-Medium.otf */,
+				46E160E41DF9B45B00E90C4F /* SF-UI-Text-MediumItalic.otf */,
+				46E160E51DF9B45B00E90C4F /* SF-UI-Text-Regular.otf */,
+				46E160E61DF9B45B00E90C4F /* SF-UI-Text-RegularItalic.otf */,
+				46E160E71DF9B45B00E90C4F /* SF-UI-Text-Semibold.otf */,
+				46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */,
+				46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */,
+				46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */,
+			);
+			path = "SF-UI-Text";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +438,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E160FE1DF9B45B00E90C4F /* SF-UI-Text-Semibold.otf in Resources */,
+				46E160EB1DF9B45B00E90C4F /* SF-UI-Display-Black.otf in Resources */,
+				46E160FB1DF9B45B00E90C4F /* SF-UI-Text-MediumItalic.otf in Resources */,
+				46E161011DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf in Resources */,
+				46E160CE1DF9B03F00E90C4F /* App.strings in Resources */,
+				46E160F01DF9B45B00E90C4F /* SF-UI-Display-Regular.otf in Resources */,
+				46E160EE1DF9B45B00E90C4F /* SF-UI-Display-Light.otf in Resources */,
+				46E160F31DF9B45B00E90C4F /* SF-UI-Display-Ultralight.otf in Resources */,
+				46E160F21DF9B45B00E90C4F /* SF-UI-Display-Thin.otf in Resources */,
+				46E160EF1DF9B45B00E90C4F /* SF-UI-Display-Medium.otf in Resources */,
 				46E1608A1DF98D5B00E90C4F /* LaunchScreen.storyboard in Resources */,
+				46E160FA1DF9B45B00E90C4F /* SF-UI-Text-Medium.otf in Resources */,
+				46E160F41DF9B45B00E90C4F /* SF-UI-Text-Bold.otf in Resources */,
 				46E160871DF98D5B00E90C4F /* Assets.xcassets in Resources */,
+				4649067F1DF9E81700EF209B /* SignUpVC.xib in Resources */,
+				4649067D1DF9E80C00EF209B /* LoginVC.xib in Resources */,
+				46E160EC1DF9B45B00E90C4F /* SF-UI-Display-Bold.otf in Resources */,
+				46E160F61DF9B45B00E90C4F /* SF-UI-Text-Heavy.otf in Resources */,
+				46E160FD1DF9B45B00E90C4F /* SF-UI-Text-RegularItalic.otf in Resources */,
+				46E160FC1DF9B45B00E90C4F /* SF-UI-Text-Regular.otf in Resources */,
+				46E160FF1DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf in Resources */,
+				46E160ED1DF9B45B00E90C4F /* SF-UI-Display-Heavy.otf in Resources */,
 				46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */,
+				46E160F71DF9B45B00E90C4F /* SF-UI-Text-HeavyItalic.otf in Resources */,
+				46E160F51DF9B45B00E90C4F /* SF-UI-Text-BoldItalic.otf in Resources */,
+				46E160F91DF9B45B00E90C4F /* SF-UI-Text-LightItalic.otf in Resources */,
+				46E160F81DF9B45B00E90C4F /* SF-UI-Text-Light.otf in Resources */,
+				46E160F11DF9B45B00E90C4F /* SF-UI-Display-Semibold.otf in Resources */,
+				46E161001DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,18 +487,25 @@
 				46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */,
 				46E160C41DF9AB0200E90C4F /* Account.swift in Sources */,
 				46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */,
-				46E160AB1DF9A4CC00E90C4F /* LoginVC.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
+				464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */,
+				464906711DF9E14B00EF209B /* AccountVM.swift in Sources */,
+				464906741DF9E14B00EF209B /* MainVC.swift in Sources */,
 				46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */,
-				46E160B41DF9A65900E90C4F /* LoginFactory.swift in Sources */,
-				46E160B01DF9A58F00E90C4F /* LoginView.swift in Sources */,
+				464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */,
 				46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */,
 				46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */,
 				46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */,
+				464906721DF9E14B00EF209B /* MainFactory.swift in Sources */,
+				464906751DF9E14B00EF209B /* MainView.swift in Sources */,
+				464906731DF9E14B00EF209B /* MainPresenter.swift in Sources */,
 				46E160C81DF9AB1600E90C4F /* Purchase.swift in Sources */,
-				46E160B21DF9A64800E90C4F /* LoginPresenter.swift in Sources */,
+				464906771DF9E15F00EF209B /* LoginVC.swift in Sources */,
 				46E160C61DF9AB0C00E90C4F /* Balance.swift in Sources */,
-				46E160B61DF9A84700E90C4F /* AccountVM.swift in Sources */,
+				4649067B1DF9E66E00EF209B /* SignUpView.swift in Sources */,
+				464906791DF9E5A900EF209B /* LoginView.swift in Sources */,
+				46E160D01DF9B05200E90C4F /* Localizable.swift in Sources */,
+				464906691DF9E10800EF209B /* SignUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

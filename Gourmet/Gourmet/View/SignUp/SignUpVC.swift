@@ -1,5 +1,5 @@
 //
-//  LoginVC.swift
+//  SignUpVC.swift
 //  Gourmet
 //
 //  Created by David Martinez on 08/12/2016.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class LoginVC: UIViewController, LoginView {
+class SignUpVC: UIViewController, SignUpView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    // MARK: LoginView
+    // MARK: SignUpView
     func showAccount(account: AccountVM) {
         
     }
@@ -22,5 +22,5 @@ class LoginVC: UIViewController, LoginView {
     func showError(message: String) {
         
     }
-    
+
 }
