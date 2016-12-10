@@ -17,23 +17,26 @@ class SignUpPresenter : NSObject {
     }
     
     func signUp (cardId : String?, password : String?, view : SignUpView) {
-        guard cardId != nil else {
+        guard cardId != nil && cardId!.characters.count != 0 else {
             view.showError(message: Localizable.getString(key: "signup_error_cardid_empty"))
             return
         }
         
-        let cardIdParsed = String (describing:
-            cardId?.characters.lazy.filter({ (c : Character) -> Bool in
-                return String(c).rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
-            })
-        )
+//        let cardIdParsed = String (describing:
+//            cardId?.characters.filter({ (c : Character) -> Bool in
+//                return String(c).rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
+//            })
+//        )
         
-        guard cardIdParsed.characters.count != 16 else {
+        let components = cardId!.components(separatedBy: CharacterSet.decimalDigits.inverted)
+        let cardIdParsed = components.joined(separator: "")
+        
+        guard cardIdParsed.characters.count == 16 else {
             view.showError(message: Localizable.getString(key: "signup_error_cardid_malformed"))
             return
         }
         
-        guard password != nil else {
+        guard password != nil && password!.characters.count != 0 else {
             view.showError(message: Localizable.getString(key: "signup_error_password_empty"))
             return
         }

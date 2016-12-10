@@ -15,3 +15,6 @@
 "signup_error_cardid_not_exists" = "La tarjeta introducida no existe. Inténtelo de nuevo.";
 "signup_error_password_invalid" = "La contraseña no es correcta. Inténtelo de nuevo.";
 "signup_error_connection_unknown" = "Se ha producido un error en la conexión con el servidor. Inténtelo de nuevo más tarde.";
+
+"signUp_alert_title" = "Aviso";
+"signUp_alert_ok" = "Aceptar";

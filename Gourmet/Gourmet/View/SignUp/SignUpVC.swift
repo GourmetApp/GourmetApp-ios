@@ -119,12 +119,18 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
     }
     
     func showError(message: String) {
-        // TODO:
+        let titleMessage = Localizable.getString(key: "signUp_alert_title")
+        let okMessage = Localizable.getString(key: "signUp_alert_ok")
+        let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: okMessage, style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
 
     // MARK: Actions
     @IBAction func actionSignUp (_ sender : UIButton) {
-        // TODO:
+        performSignUp()
     }
     
     // MARK: UITextField Delegate
@@ -133,10 +139,12 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
             passwordTF.becomeFirstResponder()
         } else {
             passwordTF.resignFirstResponder()
-            // TODO: mandar datos a login
+            performSignUp()
         }
         return true
     }
     
-    
+    private func performSignUp () {
+        presenter.signUp(cardId: cardTF.text, password: passwordTF.text, view: self)
+    }
 }
