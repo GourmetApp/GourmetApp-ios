@@ -13,6 +13,15 @@ class Account : NSObject, NSCoding {
     var cardId : String = ""
     var password : String = ""
     
+    override init() {
+        
+    }
+    
+    init(cardId : String, password : String) {
+        self.cardId = cardId
+        self.password = password
+    }
+    
     func encode(with aCoder: NSCoder) {
         aCoder.encode(cardId, forKey: "cardId")
         aCoder.encode(password, forKey: "password")

@@ -1,0 +1,39 @@
+SERVICES:
+
+1. Account Verification.
+    Method:
+        POST
+    Url:
+        http://wsvut.chequegourmet.com/ConsultaUsuarios?wdsl
+    Headers:
+        Authorization - Basic dmFsaWRhVXN1YXJpb1RhcmpldGE6Y2gzcXUzR291cm1ldA==
+        Content-Type - application/xml
+    Body(raw):
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.tarjetaWeb.gourmet.com/">
+            <soapenv:Header />
+            <soapenv:Body>
+                <ws:consultaUsuarios>
+                    <pan>{{cardId}}</pan>
+                    <contrasena>{{password}}</contrasena>
+                </ws:consultaUsuarios>
+            </soapenv:Body>
+        </soapenv:Envelope>
+
+    Response:
+        <?xml version='1.0' encoding='UTF-8'?>
+        <S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+            <S:Body>
+                <ns2:consultaUsuariosResponse xmlns:ns2="http://ws.tarjetaWeb.gourmet.com/">
+                    <return>
+                        <codReq>{{code_request}}</codReq>
+                        <desReq>{{localized_message}}</desReq>
+                    </return>
+                </ns2:consultaUsuariosResponse>
+            </S:Body>
+        </S:Envelope>
+
+        where:
+            {{code_request}}:
+                -1 => card id not found
+                2 => invalid password
+                1 => valid card

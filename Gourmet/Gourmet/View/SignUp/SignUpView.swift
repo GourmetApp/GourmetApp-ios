@@ -10,7 +10,7 @@ import Foundation
 
 protocol SignUpView {
     
-    func showAccount(account : AccountVM)
+    func showLoading()
     func showError(message : String)
     
 }

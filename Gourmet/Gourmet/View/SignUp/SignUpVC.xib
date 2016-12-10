@@ -17,6 +17,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="Gourmet" customModuleProvider="target">
             <connections>
+                <outlet property="alignYSignUpContainer" destination="8r5-ia-GFc" id="C93-3V-KRm"/>
+                <outlet property="cardTF" destination="iv9-7g-xoB" id="IYh-7A-poz"/>
+                <outlet property="loginBoxView" destination="U5n-Fx-KBW" id="e32-6X-bVf"/>
+                <outlet property="passwordTF" destination="wmF-7Q-ihJ" id="r2i-7O-qcS"/>
+                <outlet property="signUpButton" destination="9ng-VF-bnv" id="QEt-Hn-zVL"/>
                 <outlet property="view" destination="0cz-BC-CUV" id="TFW-uX-Vgg"/>
             </connections>
         </placeholder>
@@ -28,7 +33,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5n-Fx-KBW" userLabel="View - SignUp">
                     <rect key="frame" x="24" y="232.5" width="327" height="202"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAB-fg-q02">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAB-fg-q02" userLabel="View - CardId">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="63"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyA-Um-93O" userLabel="Label - cardId">
@@ -68,7 +73,7 @@
                                 <constraint firstItem="RyA-Um-93O" firstAttribute="leading" secondItem="zAB-fg-q02" secondAttribute="leading" constant="8" id="uhn-II-4oC"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-H0-Wfn">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-H0-Wfn" userLabel="View - Password">
                             <rect key="frame" x="0.0" y="63" width="327" height="63"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1W-Iv-mGK" userLabel="Label - password">
@@ -110,14 +115,17 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-VF-bnv">
                             <rect key="frame" x="8" y="158" width="319" height="44"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.47450980390000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="wX5-Pk-bZr"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
                             <state key="normal" title="Add Card">
-                                <color key="titleColor" red="0.47450980390000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="actionSignUp:" destination="-1" eventType="touchUpInside" id="UCx-Pj-XbM"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -137,10 +145,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="U5n-Fx-KBW" firstAttribute="centerY" secondItem="0cz-BC-CUV" secondAttribute="centerY" id="8r5-ia-GFc"/>
+                <constraint firstItem="U5n-Fx-KBW" firstAttribute="centerY" secondItem="0cz-BC-CUV" secondAttribute="centerY" id="8r5-ia-GFc" userLabel="View - SignUp.centerY = centerY "/>
                 <constraint firstItem="U5n-Fx-KBW" firstAttribute="leading" secondItem="0cz-BC-CUV" secondAttribute="leadingMargin" constant="16" id="Igh-2l-Wzy"/>
                 <constraint firstAttribute="trailingMargin" secondItem="U5n-Fx-KBW" secondAttribute="trailing" constant="16" id="sO6-fV-JfL"/>
             </constraints>
+            <point key="canvasLocation" x="-402" y="-218"/>
         </view>
     </objects>
 </document>

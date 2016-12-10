@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462843091DFC732700F07686 /* SignUpFactory.swift */; };
 		464906691DF9E10800EF209B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906681DF9E10800EF209B /* SignUpVC.swift */; };
 		464906711DF9E14B00EF209B /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066C1DF9E14B00EF209B /* AccountVM.swift */; };
 		464906721DF9E14B00EF209B /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066D1DF9E14B00EF209B /* MainFactory.swift */; };
@@ -20,6 +21,7 @@
 		4649067F1DF9E81700EF209B /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4649067E1DF9E81700EF209B /* SignUpVC.xib */; };
 		464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906801DF9F23B00EF209B /* MappeableProtocol.swift */; };
 		464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */; };
+		46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */; };
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
 		46E160871DF98D5B00E90C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E160861DF98D5B00E90C4F /* Assets.xcassets */; };
@@ -72,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		462843091DFC732700F07686 /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		464906681DF9E10800EF209B /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		4649066C1DF9E14B00EF209B /* AccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVM.swift; sourceTree = "<group>"; };
 		4649066D1DF9E14B00EF209B /* MainFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		4649067E1DF9E81700EF209B /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		464906801DF9F23B00EF209B /* MappeableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappeableProtocol.swift; sourceTree = "<group>"; };
 		464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAccountToAccountVM.swift; sourceTree = "<group>"; };
+		46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E160841DF98D5B00E90C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,9 +155,11 @@
 		464906671DF9E10800EF209B /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				464906681DF9E10800EF209B /* SignUpVC.swift */,
 				4649067A1DF9E66E00EF209B /* SignUpView.swift */,
+				464906681DF9E10800EF209B /* SignUpVC.swift */,
 				4649067E1DF9E81700EF209B /* SignUpVC.xib */,
+				46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */,
+				462843091DFC732700F07686 /* SignUpFactory.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -485,8 +491,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */,
+				46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */,
 				46E160C41DF9AB0200E90C4F /* Account.swift in Sources */,
 				46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */,
+				4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
 				464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */,
 				464906711DF9E14B00EF209B /* AccountVM.swift in Sources */,

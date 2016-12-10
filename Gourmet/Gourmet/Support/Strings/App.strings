@@ -7,3 +7,11 @@
 */
 
 "login_window_title" = "Login";
+
+"signup_error_cardid_empty" = "El identificador de la tarjeta Gourmet no puede ser vacio.";
+"signup_error_cardid_malformed" = "El identificador de la tarjeta Gourmet no es valido (no dispone de 16 digitos o algunos no son númericos).";
+"signup_error_password_empty" = "La contraseña no puede ser vacia.";
+
+"signup_error_cardid_not_exists" = "La tarjeta introducida no existe. Inténtelo de nuevo.";
+"signup_error_password_invalid" = "La contraseña no es correcta. Inténtelo de nuevo.";
+"signup_error_connection_unknown" = "Se ha producido un error en la conexión con el servidor. Inténtelo de nuevo más tarde.";
