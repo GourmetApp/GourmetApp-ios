@@ -19,7 +19,9 @@ class SignUpFactory : NSObject {
     }
     
     func getPresenter () -> SignUpPresenter {
-        let loginChecker = LoginCheck()
+        let service = GourmetServiceDM()
+        let parser = LoginCheckParser()
+        let loginChecker = LoginCheck(dm: service, parser: parser)
         return SignUpPresenter(loginCheckInteractor: loginChecker)
     }
     

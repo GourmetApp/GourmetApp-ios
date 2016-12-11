@@ -8,9 +8,10 @@
 
 import Foundation
 
-class SignUpPresenter : NSObject {
+class SignUpPresenter : NSObject, LoginCheckListener {
     
     private var loginChecker : LoginCheck!
+    private weak var view : SignUpView?
     
     init(loginCheckInteractor : LoginCheck) {
         loginChecker = loginCheckInteractor
@@ -21,12 +22,6 @@ class SignUpPresenter : NSObject {
             view.showError(message: Localizable.getString(key: "signup_error_cardid_empty"))
             return
         }
-        
-//        let cardIdParsed = String (describing:
-//            cardId?.characters.filter({ (c : Character) -> Bool in
-//                return String(c).rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
-//            })
-//        )
         
         let components = cardId!.components(separatedBy: CharacterSet.decimalDigits.inverted)
         let cardIdParsed = components.joined(separator: "")
@@ -41,18 +36,34 @@ class SignUpPresenter : NSObject {
             return
         }
         
+        self.view = view
         view.showLoading()
         
         let account = Account(cardId: cardId!, password: password!)
-        loginChecker.execute(account: account) { (account : Account, error : LoginCheck.ErrorType) in
-            if error == LoginCheck.ErrorType.noError {
-                // TODO: Navegar a visor
-            } else if error == LoginCheck.ErrorType.cardIdNotExists {
-                view.showError(message: Localizable.getString(key: "signup_error_cardid_not_exists"))
+        loginChecker.setAccount(account: account)
+        loginChecker.setListener(listener: self)
+        loginChecker.execute()
+    }
+    
+    // MARK: LoginCheckListener
+    internal func onSuccess(caller: LoginCheck, account: Account) {
+        loginChecker.setListener(listener: nil)
+        
+        DispatchQueue.main.async {
+            // TODO: Navegar al visor
+        }
+    }
+    
+    internal func onError(caller: LoginCheck, error: LoginCheck.ErrorType) {
+        loginChecker.setListener(listener: nil)
+        
+        DispatchQueue.main.async { [weak self] in
+            if error == LoginCheck.ErrorType.cardIdNotExists {
+                self?.view?.showError(message: Localizable.getString(key: "signup_error_cardid_not_exists"))
             } else if error == LoginCheck.ErrorType.passwordInvalid {
-                view.showError(message: Localizable.getString(key: "signup_error_password_invalid"))
+                self?.view?.showError(message: Localizable.getString(key: "signup_error_password_invalid"))
             } else {
-                view.showError(message: Localizable.getString(key: "signup_error_connection_unknown"))
+                self?.view?.showError(message: Localizable.getString(key: "signup_error_connection_unknown"))
             }
         }
     }

@@ -9,21 +9,36 @@
 import Foundation
 
 protocol LoginCheckListener : NSObjectProtocol {
-    func onSuccess (account : Account)
-    func onError(error : LoginCheck.ErrorType)
+    
+    func onSuccess (caller: LoginCheck, account : Account)
+    func onError (caller: LoginCheck, error : LoginCheck.ErrorType)
+    
 }
 
-class LoginCheck : NSObject {
+class LoginCheck : NSObject, LoginCheckParseListener {
     
     enum ErrorType : Error {
-        case noError
         case cardIdNotExists
         case passwordInvalid
+        case connectionProblem
+        case parseError
         case unknown
     }
     
+    private var dm : GourmetServiceDM!
+    private var parser : LoginCheckParser!
+    
     private weak var listener : LoginCheckListener?
     private var account : Account?
+    
+    init(dm : GourmetServiceDM,
+         parser : LoginCheckParser) {
+        
+        super.init()
+        self.dm = dm
+        self.parser = parser
+        self.parser.setListener(listener: self)
+    }
     
     func setListener (listener : LoginCheckListener?) {
         self.listener = listener
@@ -44,11 +59,29 @@ class LoginCheck : NSObject {
             return
         }
         
-        // TODO: Server Communication
+        dm.validate(account: account!) { (url: URL?, error: Error?) in
+            if (url == nil) {
+                self.listener?.onError(caller: self, error: .connectionProblem)
+            } else {
+                self.parser.parse(contentsOfFile: url!)
+            }
+        }
     }
     
-    func execute (account : Account, callback : (_ account: Account, _ error : LoginCheck.ErrorType) -> Void) {
-        // TODO: Server Communication
+    // MARK: LoginCheckParserListener
+    internal func onSuccess(parser: LoginCheckParser, response: ResponseLogin) {
+        if (response.code == ResponseLogin.VALID_ID) {
+            listener?.onSuccess(caller: self, account: account!)
+        } else if (response.code == ResponseLogin.INVALID_ID) {
+            listener?.onError(caller: self, error: .cardIdNotExists)
+        } else if (response.code == ResponseLogin.INVALID_PASSWORD) {
+            listener?.onError(caller: self, error: .passwordInvalid)
+        } else {
+            listener?.onError(caller: self, error: .unknown)
+        }
     }
     
+    internal func onError(parser: LoginCheckParser) {
+        listener?.onError(caller: self, error: .parseError)
+    }
 }

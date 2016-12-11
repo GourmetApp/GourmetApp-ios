@@ -26,16 +26,12 @@
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
 		46E160871DF98D5B00E90C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E160861DF98D5B00E90C4F /* Assets.xcassets */; };
 		46E1608A1DF98D5B00E90C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160881DF98D5B00E90C4F /* LaunchScreen.storyboard */; };
-		46E160951DF98D5B00E90C4F /* GourmetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160941DF98D5B00E90C4F /* GourmetTests.swift */; };
 		46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160AD1DF9A52700E90C4F /* BalanceVC.swift */; };
 		46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */; };
 		46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BA1DF9A93300E90C4F /* LoginCheck.swift */; };
 		46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BC1DF9AA1200E90C4F /* GetBalance.swift */; };
 		46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BE1DF9AA7F00E90C4F /* BalanceVM.swift */; };
 		46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C01DF9AA8900E90C4F /* PurchaseVM.swift */; };
-		46E160C41DF9AB0200E90C4F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C31DF9AB0200E90C4F /* Account.swift */; };
-		46E160C61DF9AB0C00E90C4F /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C51DF9AB0C00E90C4F /* Balance.swift */; };
-		46E160C81DF9AB1600E90C4F /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C71DF9AB1600E90C4F /* Purchase.swift */; };
 		46E160CE1DF9B03F00E90C4F /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E160CD1DF9B03F00E90C4F /* App.strings */; };
 		46E160D01DF9B05200E90C4F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160CF1DF9B05200E90C4F /* Localizable.swift */; };
 		46E160EB1DF9B45B00E90C4F /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160D31DF9B45B00E90C4F /* SF-UI-Display-Black.otf */; };
@@ -61,6 +57,14 @@
 		46E160FF1DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */; };
 		46E161001DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */; };
 		46E161011DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */; };
+		46EFDBAC1DFD75E20058204D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBA91DFD75E20058204D /* Account.swift */; };
+		46EFDBAD1DFD75E20058204D /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAA1DFD75E20058204D /* Balance.swift */; };
+		46EFDBAE1DFD75E20058204D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAB1DFD75E20058204D /* Purchase.swift */; };
+		46EFDBB01DFD76FC0058204D /* EntityNSCodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */; };
+		46EFDBB31DFD85A00058204D /* GourmetServiceDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */; };
+		46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */; };
+		46EFDBB71DFDCD170058204D /* LoginCheckParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */; };
+		46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +100,6 @@
 		46E160891DF98D5B00E90C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E1608B1DF98D5B00E90C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E160901DF98D5B00E90C4F /* GourmetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46E160941DF98D5B00E90C4F /* GourmetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetTests.swift; sourceTree = "<group>"; };
 		46E160961DF98D5B00E90C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E160AD1DF9A52700E90C4F /* BalanceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
 		46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStoredAccount.swift; sourceTree = "<group>"; };
@@ -104,9 +107,6 @@
 		46E160BC1DF9AA1200E90C4F /* GetBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalance.swift; sourceTree = "<group>"; };
 		46E160BE1DF9AA7F00E90C4F /* BalanceVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceVM.swift; sourceTree = "<group>"; };
 		46E160C01DF9AA8900E90C4F /* PurchaseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseVM.swift; sourceTree = "<group>"; };
-		46E160C31DF9AB0200E90C4F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		46E160C51DF9AB0C00E90C4F /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
-		46E160C71DF9AB1600E90C4F /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		46E160CD1DF9B03F00E90C4F /* App.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = App.strings; sourceTree = "<group>"; };
 		46E160CF1DF9B05200E90C4F /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		46E160D31DF9B45B00E90C4F /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
@@ -132,6 +132,14 @@
 		46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Ultrathin.otf"; sourceTree = "<group>"; };
 		46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-UltrathinItalic.otf"; sourceTree = "<group>"; };
+		46EFDBA91DFD75E20058204D /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		46EFDBAA1DFD75E20058204D /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		46EFDBAB1DFD75E20058204D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNSCodingTest.swift; sourceTree = "<group>"; };
+		46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetServiceDM.swift; sourceTree = "<group>"; };
+		46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParser.swift; sourceTree = "<group>"; };
+		46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParserTest.swift; sourceTree = "<group>"; };
+		46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,8 +238,9 @@
 		46E160931DF98D5B00E90C4F /* GourmetTests */ = {
 			isa = PBXGroup;
 			children = (
-				46E160941DF98D5B00E90C4F /* GourmetTests.swift */,
+				46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */,
 				46E160961DF98D5B00E90C4F /* Info.plist */,
+				46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */,
 			);
 			path = GourmetTests;
 			sourceTree = "<group>";
@@ -251,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				46E160C91DF9AB6600E90C4F /* Data */,
-				46E160C21DF9AAF000E90C4F /* Entities */,
 				46E160B71DF9A8E700E90C4F /* Interactors */,
 				464906801DF9F23B00EF209B /* MappeableProtocol.swift */,
 			);
@@ -282,25 +290,18 @@
 			isa = PBXGroup;
 			children = (
 				46E160BA1DF9A93300E90C4F /* LoginCheck.swift */,
+				46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */,
 				46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */,
 				46E160BC1DF9AA1200E90C4F /* GetBalance.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
 		};
-		46E160C21DF9AAF000E90C4F /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				46E160C31DF9AB0200E90C4F /* Account.swift */,
-				46E160C51DF9AB0C00E90C4F /* Balance.swift */,
-				46E160C71DF9AB1600E90C4F /* Purchase.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		46E160C91DF9AB6600E90C4F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				46EFDBB11DFD85600058204D /* DataManager */,
+				46EFDBA81DFD75E20058204D /* Entities */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -359,6 +360,26 @@
 				46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */,
 			);
 			path = "SF-UI-Text";
+			sourceTree = "<group>";
+		};
+		46EFDBA81DFD75E20058204D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				46EFDBA91DFD75E20058204D /* Account.swift */,
+				46EFDBAA1DFD75E20058204D /* Balance.swift */,
+				46EFDBAB1DFD75E20058204D /* Purchase.swift */,
+				46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		46EFDBB11DFD85600058204D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */,
+			);
+			name = DataManager;
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,26 +512,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */,
+				46EFDBAC1DFD75E20058204D /* Account.swift in Sources */,
 				46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */,
-				46E160C41DF9AB0200E90C4F /* Account.swift in Sources */,
 				46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */,
 				4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
 				464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */,
+				46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */,
+				46EFDBAD1DFD75E20058204D /* Balance.swift in Sources */,
+				46EFDBB31DFD85A00058204D /* GourmetServiceDM.swift in Sources */,
 				464906711DF9E14B00EF209B /* AccountVM.swift in Sources */,
 				464906741DF9E14B00EF209B /* MainVC.swift in Sources */,
 				46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */,
 				464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */,
+				46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */,
 				46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */,
 				46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */,
 				46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */,
 				464906721DF9E14B00EF209B /* MainFactory.swift in Sources */,
 				464906751DF9E14B00EF209B /* MainView.swift in Sources */,
 				464906731DF9E14B00EF209B /* MainPresenter.swift in Sources */,
-				46E160C81DF9AB1600E90C4F /* Purchase.swift in Sources */,
 				464906771DF9E15F00EF209B /* LoginVC.swift in Sources */,
-				46E160C61DF9AB0C00E90C4F /* Balance.swift in Sources */,
 				4649067B1DF9E66E00EF209B /* SignUpView.swift in Sources */,
+				46EFDBAE1DFD75E20058204D /* Purchase.swift in Sources */,
 				464906791DF9E5A900EF209B /* LoginView.swift in Sources */,
 				46E160D01DF9B05200E90C4F /* Localizable.swift in Sources */,
 				464906691DF9E10800EF209B /* SignUpVC.swift in Sources */,
@@ -521,7 +545,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E160951DF98D5B00E90C4F /* GourmetTests.swift in Sources */,
+				46EFDBB01DFD76FC0058204D /* EntityNSCodingTest.swift in Sources */,
+				46EFDBB71DFDCD170058204D /* LoginCheckParserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

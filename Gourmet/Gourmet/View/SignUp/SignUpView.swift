@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SignUpView {
+protocol SignUpView : NSObjectProtocol {
     
     func showLoading()
     func showError(message : String)
