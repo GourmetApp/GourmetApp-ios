@@ -8,9 +8,19 @@
 
 import Foundation
 
+@objc protocol GetStoredAccountListener {
+    func onFinish (interactor : GetStoredAccount, account : Account?)
+}
+
 class GetStoredAccount : NSObject {
     
-    func execute (callback : @escaping (_ account : Account?) -> Void) {
+    private var listener : GetStoredAccountListener?
+    
+    func setListener (listener : GetStoredAccountListener?) {
+        self.listener = listener
+    }
+    
+    func execute () {
         DispatchQueue.global(qos: .background).async {
             let defaults = UserDefaults.init(suiteName: "com.atenea.gourmet.appgroup")
             var account : Account?
@@ -18,8 +28,9 @@ class GetStoredAccount : NSObject {
                 account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account
             }
             
-            DispatchQueue.main.async {
-                callback(account)
+            DispatchQueue.main.async { [weak self] in
+                guard self != nil else { return }
+                self!.listener?.onFinish(interactor: self!, account: account)
             }
         }
     }

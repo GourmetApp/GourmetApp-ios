@@ -31,7 +31,7 @@
         <scene sceneID="6Hx-Ef-ags">
             <objects>
                 <navigationController id="QhJ-R2-tcy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2p-hf-bWB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2p-hf-bWB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +62,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Tb-Qy-0XS"/>
                     <connections>
-                        <segue destination="Na5-D8-8ec" kind="showDetail" id="KQf-hc-2um"/>
+                        <segue destination="Na5-D8-8ec" kind="showDetail" identifier="main_to_balance" id="KQf-hc-2um"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfa-D1-ddZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

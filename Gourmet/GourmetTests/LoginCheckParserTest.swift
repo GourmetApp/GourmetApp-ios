@@ -31,7 +31,7 @@ class LoginCheckParserTest: XCTestCase, LoginCheckParseListener {
         responseArrived = expectation(description: "Waiting for XMLParser")
         let parser = LoginCheckParser()
         parser.setListener(listener: self)
-        parser.parse(inputStream: inputStream)
+        parser.execute(inputStream: inputStream)
         
         waitForExpectations(timeout: 3.0) { (error: Error?) in
             XCTAssertEqual(self.response?.code, -1)

@@ -65,6 +65,7 @@
 		46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */; };
 		46EFDBB71DFDCD170058204D /* LoginCheckParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */; };
 		46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */; };
+		46EFDBBB1DFDF0F50058204D /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParser.swift; sourceTree = "<group>"; };
 		46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParserTest.swift; sourceTree = "<group>"; };
 		46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
+		46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,9 +291,10 @@
 		46E160B71DF9A8E700E90C4F /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */,
 				46E160BA1DF9A93300E90C4F /* LoginCheck.swift */,
 				46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */,
-				46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */,
+				46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */,
 				46E160BC1DF9AA1200E90C4F /* GetBalance.swift */,
 			);
 			path = Interactors;
@@ -526,6 +529,7 @@
 				46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */,
 				464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */,
 				46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */,
+				46EFDBBB1DFDF0F50058204D /* StoreAccount.swift in Sources */,
 				46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */,
 				46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */,
 				46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */,

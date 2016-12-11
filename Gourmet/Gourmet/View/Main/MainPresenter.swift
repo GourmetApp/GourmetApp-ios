@@ -14,28 +14,34 @@ protocol MainPresenterInterface {
     
 }
 
-class MainPresenter : NSObject, MainPresenterInterface {
+class MainPresenter : NSObject, MainPresenterInterface, GetStoredAccountListener {
     
     private var storedAccount : GetStoredAccount!
     private var mapper : MapAccountToAccountVM!
     
-    init(
-        storedAccountInteractor : GetStoredAccount,
-        mapper : MapAccountToAccountVM) {
+    private weak var view : MainView?
+    
+    init(storedAccountInteractor : GetStoredAccount,
+         mapper : MapAccountToAccountVM) {
         
+        super.init()
         storedAccount = storedAccountInteractor
+        storedAccount.setListener(listener: self)
         self.mapper = mapper
     }
     
     func updateView(view: MainView) {
-        storedAccount.execute { [unowned self] (account : Account?) in
-            if (account == nil) {
-                view.showNoAccount()
-            } else {
-                let accountVM = self.mapper.map(source: account!)!
-                view.showAccountInfo(account: accountVM)
-            }
-        }
+        self.view = view
+        storedAccount.execute()
     }
     
+    // MARK: GetStoredAccountListener
+    func onFinish(interactor: GetStoredAccount, account: Account?) {
+        if (account == nil) {
+            view?.showNoAccount()
+        } else {
+            let accountVM = self.mapper.map(source: account!)!
+            view?.showAccountInfo(account: accountVM)
+        }
+    }
 }

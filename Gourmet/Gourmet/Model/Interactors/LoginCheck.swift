@@ -15,7 +15,7 @@ protocol LoginCheckListener : NSObjectProtocol {
     
 }
 
-class LoginCheck : NSObject, LoginCheckParseListener {
+class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
     
     enum ErrorType : Error {
         case cardIdNotExists
@@ -27,17 +27,21 @@ class LoginCheck : NSObject, LoginCheckParseListener {
     
     private var dm : GourmetServiceDM!
     private var parser : LoginCheckParser!
+    private var storeAccount : StoreAccount!
     
     private weak var listener : LoginCheckListener?
     private var account : Account?
     
     init(dm : GourmetServiceDM,
-         parser : LoginCheckParser) {
+         parser : LoginCheckParser,
+         storage : StoreAccount) {
         
         super.init()
         self.dm = dm
         self.parser = parser
         self.parser.setListener(listener: self)
+        self.storeAccount = storage
+        self.storeAccount.setListener(listener: self)
     }
     
     func setListener (listener : LoginCheckListener?) {
@@ -63,7 +67,7 @@ class LoginCheck : NSObject, LoginCheckParseListener {
             if (url == nil) {
                 self.listener?.onError(caller: self, error: .connectionProblem)
             } else {
-                self.parser.parse(contentsOfFile: url!)
+                self.parser.execute(contentsOfFile: url!)
             }
         }
     }
@@ -71,7 +75,8 @@ class LoginCheck : NSObject, LoginCheckParseListener {
     // MARK: LoginCheckParserListener
     internal func onSuccess(parser: LoginCheckParser, response: ResponseLogin) {
         if (response.code == ResponseLogin.VALID_ID) {
-            listener?.onSuccess(caller: self, account: account!)
+            storeAccount.setAccount(account: account!)
+            storeAccount.execute()
         } else if (response.code == ResponseLogin.INVALID_ID) {
             listener?.onError(caller: self, error: .cardIdNotExists)
         } else if (response.code == ResponseLogin.INVALID_PASSWORD) {
@@ -83,5 +88,10 @@ class LoginCheck : NSObject, LoginCheckParseListener {
     
     internal func onError(parser: LoginCheckParser) {
         listener?.onError(caller: self, error: .parseError)
+    }
+    
+    // MARK: StoreAccountListener
+    func onFinish(interactor: StoreAccount) {
+        listener?.onSuccess(caller: self, account: account!)
     }
 }

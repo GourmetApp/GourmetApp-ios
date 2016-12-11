@@ -30,7 +30,7 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         self.listener = listener
     }
     
-    func parse (inputStream : InputStream) {
+    func execute (inputStream : InputStream) {
         let parser = XMLParser(stream: inputStream)
         
         reader = Reader()
@@ -38,13 +38,13 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         parser.parse()
     }
     
-    func parse (contentsOfFile url : URL) {
+    func execute (contentsOfFile url : URL) {
         guard let stream = InputStream(url: url) else {
             listener?.onError(parser: self)
             return
         }
         
-        parse(inputStream: stream)
+        execute(inputStream: stream)
     }
     
     // MARK: XMLParserDelegate
@@ -90,6 +90,7 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         listener?.onSuccess(parser: self, response: response)
     }
     
+    // MARK: Holder class
     private class Reader : NSObject {
         var codeId : Int?
         var message : String?
