@@ -39,7 +39,7 @@ class SignUpPresenter : NSObject, LoginCheckListener {
         self.view = view
         view.showLoading()
         
-        let account = Account(cardId: cardId!, password: password!)
+        let account = Account(cardId: cardIdParsed, password: password!)
         loginChecker.setAccount(account: account)
         loginChecker.setListener(listener: self)
         loginChecker.execute()

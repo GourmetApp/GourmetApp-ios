@@ -33,7 +33,7 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
         super.viewDidLoad()
         decorViews()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         registerForKeyboardEvents()

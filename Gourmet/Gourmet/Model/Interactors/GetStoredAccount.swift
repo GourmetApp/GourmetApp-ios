@@ -14,7 +14,7 @@ import Foundation
 
 class GetStoredAccount : NSObject {
     
-    private var listener : GetStoredAccountListener?
+    private weak var listener : GetStoredAccountListener?
     
     func setListener (listener : GetStoredAccountListener?) {
         self.listener = listener
@@ -34,5 +34,4 @@ class GetStoredAccount : NSObject {
             }
         }
     }
-    
 }

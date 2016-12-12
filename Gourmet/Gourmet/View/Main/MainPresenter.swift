@@ -14,29 +14,52 @@ protocol MainPresenterInterface {
     
 }
 
-class MainPresenter : NSObject, MainPresenterInterface, GetStoredAccountListener {
+class MainPresenter : NSObject, MainPresenterInterface, GetStoredAccountListener,
+StoreAccountObserverListener {
     
-    private var storedAccount : GetStoredAccount!
+    private var getAccountInteractor : GetStoredAccount!
+    private var accountObserverInteractor : StoreAccountObserver!
     private var mapper : MapAccountToAccountVM!
     
     private weak var view : MainView?
     
-    init(storedAccountInteractor : GetStoredAccount,
+    init(getAccount : GetStoredAccount,
+         accountObserver : StoreAccountObserver,
          mapper : MapAccountToAccountVM) {
         
         super.init()
-        storedAccount = storedAccountInteractor
-        storedAccount.setListener(listener: self)
+        
+        getAccountInteractor = getAccount
+        getAccountInteractor.setListener(listener: self)
+        
+        accountObserverInteractor = accountObserver
+        accountObserverInteractor.setListener(listener: self)
+        accountObserverInteractor.execute()
+        
         self.mapper = mapper
+    }
+    
+    deinit {
+        accountObserverInteractor.setListener(listener: nil)
     }
     
     func updateView(view: MainView) {
         self.view = view
-        storedAccount.execute()
+        getAccountInteractor.execute()
     }
     
     // MARK: GetStoredAccountListener
     func onFinish(interactor: GetStoredAccount, account: Account?) {
+        if (account == nil) {
+            view?.showNoAccount()
+        } else {
+            let accountVM = self.mapper.map(source: account!)!
+            view?.showAccountInfo(account: accountVM)
+        }
+    }
+    
+    // MARK: StoreAccountObserverListener
+    func onChange(observer: StoreAccountObserver, account: Account?) {
         if (account == nil) {
             view?.showNoAccount()
         } else {

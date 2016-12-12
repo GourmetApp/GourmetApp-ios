@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol LoginView {
+protocol LoginView : NSObjectProtocol {
     
     func showAccount(account : AccountVM)
     func showError(message : String)

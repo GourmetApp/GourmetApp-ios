@@ -32,8 +32,10 @@ class MainFactory : NSObject {
     
     func getMainPresenter () -> MainPresenter {
         let storedInteractor = GetStoredAccount()
+        let accountObserver = StoreAccountObserver()
         let mapper = MapAccountToAccountVM()
-        let presenter = MainPresenter(storedAccountInteractor: storedInteractor,
+        let presenter = MainPresenter(getAccount: storedInteractor,
+                                      accountObserver: accountObserver,
                                       mapper: mapper)
         return presenter
     }
