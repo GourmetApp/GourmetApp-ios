@@ -22,7 +22,16 @@ class LoginFactory: NSObject {
         let getStorage = GetStoredAccount()
         let postStorage = StoreAccount()
         let mapper = MapAccountToAccountVM()
-        return LoginPresenter(interactorGet: getStorage, interactorPost: postStorage, mapper: mapper)
+        
+        let service = GourmetServiceDM()
+        let parser = LoginCheckParser()
+        let storage = StoreAccount()
+        let loginChecker = LoginCheck(dm: service, parser: parser, storage: storage)
+        
+        return LoginPresenter(interactorGet: getStorage,
+                              interactorPost: postStorage,
+                              interactorLogin: loginChecker,
+                              mapper: mapper)
     }
     
 }

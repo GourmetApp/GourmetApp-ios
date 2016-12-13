@@ -34,7 +34,10 @@ class StoreAccount : NSObject {
             }
             
             defaults?.set(data, forKey: "account")
-            self.listener?.onFinish(interactor: self)
+            
+            DispatchQueue.main.async {
+                self.listener?.onFinish(interactor: self)
+            }
         }
     }
     

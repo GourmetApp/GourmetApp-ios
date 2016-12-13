@@ -40,11 +40,13 @@ class StoreAccountObserver : NSObject {
         
         guard let accountKey = keyPath else { return }
         let userDefaults = object as? UserDefaults
+        var account : Account?
         if let accountData = userDefaults?.data(forKey: accountKey) {
-            let account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account
-            listener?.onChange(observer: self, account: account)
-        } else {
-            listener?.onChange(observer: self, account: nil)
+            account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account
+        }
+        
+        DispatchQueue.main.async {
+            self.listener?.onChange(observer: self, account: account)
         }
     }
     

@@ -18,3 +18,10 @@
 
 "signUp_alert_title" = "Aviso";
 "signUp_alert_ok" = "Aceptar";
+
+"login_alert_title" = "Aviso";
+"login_alert_ok" = "Aceptar";
+
+"login_error_cardid_not_exists" = "La tarjeta introducida no existe. ¿La ha deshabilitado?";
+"login_error_password_invalid" = "La contraseña no es correcta. ¿Ha cambiado su contraseña desde la última vez?.";
+"login_error_connection_unknown" = "Se ha producido un error en la conexión con el servidor. Inténtelo de nuevo más tarde.";

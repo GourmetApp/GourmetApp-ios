@@ -87,7 +87,10 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         let response = ResponseLogin()
         response.code = (reader?.codeId)!
         response.message = (reader?.message)!
-        listener?.onSuccess(parser: self, response: response)
+        
+        DispatchQueue.main.async {
+            self.listener?.onSuccess(parser: self, response: response)
+        }
     }
     
     // MARK: Holder class

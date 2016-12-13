@@ -51,12 +51,18 @@ class LoginVC: UIViewController, LoginView {
     }
     
     func showError(message: String) {
-        // TODO:
+        let titleMessage = Localizable.getString(key: "login_alert_title")
+        let okMessage = Localizable.getString(key: "login_alert_ok")
+        let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: okMessage, style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: Actions
     @IBAction func actionLogin (_ sender : UIButton) {
-        // TODO:
+        presenter.login(account: account)
     }
     
     @IBAction func actionUnlinkCard (_ sender : UIButton) {

@@ -65,7 +65,9 @@ class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
         
         dm.validate(account: account!) { (url: URL?, error: Error?) in
             if (url == nil) {
-                self.listener?.onError(caller: self, error: .connectionProblem)
+                DispatchQueue.main.async {
+                    self.listener?.onError(caller: self, error: .connectionProblem)
+                }
             } else {
                 self.parser.execute(contentsOfFile: url!)
             }
@@ -78,20 +80,30 @@ class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
             storeAccount.setAccount(account: account!)
             storeAccount.execute()
         } else if (response.code == ResponseLogin.INVALID_ID) {
-            listener?.onError(caller: self, error: .cardIdNotExists)
+            DispatchQueue.main.async {
+                self.listener?.onError(caller: self, error: .cardIdNotExists)
+            }
         } else if (response.code == ResponseLogin.INVALID_PASSWORD) {
-            listener?.onError(caller: self, error: .passwordInvalid)
+            DispatchQueue.main.async {
+                self.listener?.onError(caller: self, error: .passwordInvalid)
+            }
         } else {
-            listener?.onError(caller: self, error: .unknown)
+            DispatchQueue.main.async {
+                self.listener?.onError(caller: self, error: .unknown)
+            }
         }
     }
     
     internal func onError(parser: LoginCheckParser) {
-        listener?.onError(caller: self, error: .parseError)
+        DispatchQueue.main.async {
+            self.listener?.onError(caller: self, error: .parseError)
+        }
     }
     
     // MARK: StoreAccountListener
     func onFinish(interactor: StoreAccount) {
-        listener?.onSuccess(caller: self, account: account!)
+        DispatchQueue.main.async {
+            self.listener?.onSuccess(caller: self, account: self.account!)
+        }
     }
 }

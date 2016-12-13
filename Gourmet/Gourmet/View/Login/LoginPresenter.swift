@@ -8,22 +8,26 @@
 
 import Foundation
 
-class LoginPresenter : NSObject, GetStoredAccountListener {
+class LoginPresenter : NSObject, GetStoredAccountListener,
+LoginCheckListener {
     
     private weak var view : LoginView?
     
     private var storedGetAccount : GetStoredAccount!
     private var storeAccount : StoreAccount!
+    private var loginChecker : LoginCheck!
     private var accountMapper : MapAccountToAccountVM!
     
     // MARK: Lifecycle
     init(interactorGet : GetStoredAccount,
          interactorPost : StoreAccount,
+         interactorLogin : LoginCheck,
          mapper : MapAccountToAccountVM) {
         
         super.init()
         storedGetAccount = interactorGet
         storedGetAccount.setListener(listener: self)
+        loginChecker = interactorLogin
         storeAccount = interactorPost
         accountMapper = mapper
     }
@@ -40,7 +44,11 @@ class LoginPresenter : NSObject, GetStoredAccountListener {
     }
     
     func login (account : AccountVM) {
-        // TODO:
+        loginChecker.setListener(listener: self)
+        let account = Account(cardId: account.cardId, password: account.password)
+        loginChecker.setAccount(account: account)
+        loginChecker.setListener(listener: self)
+        loginChecker.execute()
     }
     
     func unlink (account : AccountVM) {
@@ -53,8 +61,25 @@ class LoginPresenter : NSObject, GetStoredAccountListener {
         guard account != nil else { return }
         guard let accountVM = accountMapper.map(source: account!) else { return }
         
-        DispatchQueue.main.async {
-            self.view?.showAccount(account: accountVM)
+        view?.showAccount(account: accountVM)
+    }
+    
+    // MARK: LoginCheckListener
+    func onSuccess(caller: LoginCheck, account: Account) {
+        // TODO: Navigate
+    }
+    
+    func onError(caller: LoginCheck, error: LoginCheck.ErrorType) {
+        loginChecker.setListener(listener: nil)
+        
+        DispatchQueue.main.async { [weak self] in
+            if error == LoginCheck.ErrorType.cardIdNotExists {
+                self?.view?.showError(message: Localizable.getString(key: "login_error_cardid_not_exists"))
+            } else if error == LoginCheck.ErrorType.passwordInvalid {
+                self?.view?.showError(message: Localizable.getString(key: "login_error_password_invalid"))
+            } else {
+                self?.view?.showError(message: Localizable.getString(key: "login_error_connection_unknown"))
+            }
         }
     }
 }
