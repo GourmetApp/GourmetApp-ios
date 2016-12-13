@@ -12,5 +12,6 @@ protocol MainView : NSObjectProtocol {
     
     func showAccountInfo(account : AccountVM)
     func showNoAccount()
+    func navigateBalance(account : Account)
     
 }

@@ -63,6 +63,10 @@ class MainVC : UIViewController, MainView {
         add(viewController: signUpVC!)
     }
     
+    func navigateBalance(account : Account) {
+        performSegue(withIdentifier: "main_to_balance", sender: account)
+    }
+    
     private func add (viewController : UIViewController) {
         addChildViewController(viewController)
         viewController.view.frame = view.frame
@@ -77,4 +81,10 @@ class MainVC : UIViewController, MainView {
         viewController.removeFromParentViewController()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard sender is Account else { return }
+        if let layout = segue.destination as? BalanceVC {
+            layout.setAccount(account: sender as! Account)
+        }
+    }
 }

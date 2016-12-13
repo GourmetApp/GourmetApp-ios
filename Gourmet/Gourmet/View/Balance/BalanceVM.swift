@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class BalanceVM : NSObject {
+ 
+    var quantity : Double = 0.0
+    var lastPurchases : [PurchaseVM] = []
+    
+}

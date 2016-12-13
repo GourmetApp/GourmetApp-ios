@@ -8,6 +8,95 @@
 
 import UIKit
 
-class BalanceVC : UIViewController {
+class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableViewDataSource {
     
+    private var account : Account!
+    private var balance : BalanceVM?
+    
+    @IBOutlet weak var eurosLabel : UILabel!
+    @IBOutlet weak var centsLabel : UILabel!
+    @IBOutlet weak var dateLabel : UILabel!
+    @IBOutlet weak var tableView : UITableView!
+    
+    func setAccount (account : Account) {
+        self.account = account
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let balance = BalanceVM()
+        balance.quantity = 127.34
+        balance.lastPurchases = []
+        
+        for _ in 0 ..< 3 {
+            let purchase = PurchaseVM()
+            purchase.quantity = 10.0
+            purchase.commerce = "Comercio"
+            purchase.location = "Madrid"
+            purchase.type = .spend
+            purchase.date = Date()
+            balance.lastPurchases.append(purchase)
+        }
+        
+        showBalance(balance: balance)
+    }
+    
+    // MARK: BalanceView
+    func showBalance(balance: BalanceVM) {
+        self.balance = balance
+        
+        let stringBalance = String(balance.quantity)
+        let balanceComponents = stringBalance.components(separatedBy: ".")
+        let euros = balanceComponents.first ?? "0"
+        let cents = balanceComponents.last ?? "00"
+        eurosLabel.text = euros
+        centsLabel.text = ",\(cents)"
+        
+        tableView.reloadData()
+    }
+    
+    func showError(message: String) {
+        // TODO:
+    }
+    
+    // MARK: TableView
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return balance?.lastPurchases.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? BalanceViewCell
+        
+        if let purchase = balance?.lastPurchases[indexPath.row] {
+            cell?.show(purchase: purchase)
+        }
+        
+        return cell!
+    }
+    
+}
+
+class BalanceViewCell : UITableViewCell {
+    
+    @IBOutlet weak var commerceLabel : UILabel!
+    @IBOutlet weak var priceDateLabel : UILabel!
+    
+    func show(purchase : PurchaseVM) {
+        commerceLabel.text = "\(purchase.commerce)(\(purchase.location))"
+        priceDateLabel.text = "\(purchase.quantity) (\(purchase.date))"
+    }
+    
+    override func prepareForReuse() {
+        commerceLabel.text = nil
+        priceDateLabel.text = nil
+    }
 }

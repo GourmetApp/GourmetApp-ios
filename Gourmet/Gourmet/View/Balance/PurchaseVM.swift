@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class PurchaseVM : NSObject {
+    
+    enum PurchaseType : Int {
+        case charge = 0
+        case spend = 1
+    }
+    
+    var date : Date!
+    var type : PurchaseType = .spend
+    var quantity : Double = 0.0
+    var commerce : String = ""
+    var location : String = ""
+    
+    override init() {
+        
+    }
+    
+}

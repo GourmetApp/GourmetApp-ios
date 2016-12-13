@@ -65,6 +65,7 @@ StoreAccountObserverListener {
         } else {
             let accountVM = self.mapper.map(source: account!)!
             view?.showAccountInfo(account: accountVM)
+            view?.navigateBalance(account: account!)
         }
     }
 }

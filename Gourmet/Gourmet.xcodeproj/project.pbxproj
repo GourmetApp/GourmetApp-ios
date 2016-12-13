@@ -21,6 +21,8 @@
 		4649067F1DF9E81700EF209B /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4649067E1DF9E81700EF209B /* SignUpVC.xib */; };
 		464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906801DF9F23B00EF209B /* MappeableProtocol.swift */; };
 		464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */; };
+		465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8191E007B5000B375DF /* BalancePresenter.swift */; };
+		465CF81C1E007B6700B375DF /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81B1E007B6700B375DF /* BalanceView.swift */; };
 		46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */; };
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
@@ -96,6 +98,8 @@
 		4649067E1DF9E81700EF209B /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		464906801DF9F23B00EF209B /* MappeableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappeableProtocol.swift; sourceTree = "<group>"; };
 		464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAccountToAccountVM.swift; sourceTree = "<group>"; };
+		465CF8191E007B5000B375DF /* BalancePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
+		465CF81B1E007B6700B375DF /* BalanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,7 +295,9 @@
 			children = (
 				46E160BE1DF9AA7F00E90C4F /* BalanceVM.swift */,
 				46E160C01DF9AA8900E90C4F /* PurchaseVM.swift */,
+				465CF81B1E007B6700B375DF /* BalanceView.swift */,
 				46E160AD1DF9A52700E90C4F /* BalanceVC.swift */,
+				465CF8191E007B5000B375DF /* BalancePresenter.swift */,
 			);
 			path = Balance;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 				464906741DF9E14B00EF209B /* MainVC.swift in Sources */,
 				46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */,
 				464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */,
+				465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */,
 				46EFDBBF1DFE00B80058204D /* LoginFactory.swift in Sources */,
 				46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */,
 				46EFDBBB1DFDF0F50058204D /* StoreAccount.swift in Sources */,
@@ -546,6 +553,7 @@
 				46EFDBBD1DFE001B0058204D /* LoginPresenter.swift in Sources */,
 				46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */,
 				464906721DF9E14B00EF209B /* MainFactory.swift in Sources */,
+				465CF81C1E007B6700B375DF /* BalanceView.swift in Sources */,
 				464906751DF9E14B00EF209B /* MainView.swift in Sources */,
 				464906731DF9E14B00EF209B /* MainPresenter.swift in Sources */,
 				464906771DF9E15F00EF209B /* LoginVC.swift in Sources */,
