@@ -32,7 +32,7 @@ class EntityNSCodingTest: XCTestCase {
         let purchase = Purchase()
         purchase.date = Date()
         purchase.commerce = "1"
-        purchase.quantity = 150.0
+        purchase.quantity = "150.0"
         purchase.location = "here"
         purchase.type = .charge
         
@@ -51,20 +51,20 @@ class EntityNSCodingTest: XCTestCase {
         let purchase1 = Purchase()
         purchase1.date = Date()
         purchase1.commerce = "1"
-        purchase1.quantity = 150.0
+        purchase1.quantity = "150.0"
         purchase1.location = "here"
         purchase1.type = .charge
         
         let purchase2 = Purchase()
         purchase2.date = Date()
         purchase2.commerce = "2"
-        purchase2.quantity = 250.0
+        purchase2.quantity = "250.0"
         purchase2.location = "here 2"
         purchase2.type = .spend
         
         let purchases = [purchase1, purchase2]
         let balance = Balance()
-        balance.quantity = 400.0
+        balance.quantity = "400.0"
         balance.lastPurchases = purchases
         
         let balanceData = NSKeyedArchiver.archivedData(withRootObject: balance)

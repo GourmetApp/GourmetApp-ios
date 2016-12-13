@@ -10,7 +10,7 @@ import Foundation
 
 class Balance : NSObject, NSCoding {
     
-    var quantity : Double = 0.0
+    var quantity : String = "0.00"
     var lastPurchases : [Purchase] = []
     
     override init() {
@@ -25,7 +25,7 @@ class Balance : NSObject, NSCoding {
     required init?(coder aDecoder: NSCoder) {
         super.init()
         
-        quantity = aDecoder.decodeDouble(forKey: "quantity")
+        quantity = aDecoder.decodeObject(forKey: "quantity") as? String ?? "0.00"
         lastPurchases = aDecoder.decodeObject(forKey: "lastPurchases") as? [Purchase] ?? []
     }
 

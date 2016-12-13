@@ -17,7 +17,7 @@ class Purchase : NSObject, NSCoding {
     
     var date : Date!
     var type : PurchaseType = .spend
-    var quantity : Double = 0.0
+    var quantity : String = "0.00"
     var commerce : String = ""
     var location : String = ""
     
@@ -36,7 +36,7 @@ class Purchase : NSObject, NSCoding {
     required init?(coder aDecoder: NSCoder) {
         date = Date(timeIntervalSinceReferenceDate: aDecoder.decodeDouble(forKey: "date"))
         type = PurchaseType(rawValue: aDecoder.decodeInteger(forKey: "type")) ?? .spend
-        quantity = aDecoder.decodeDouble(forKey: "quantity")
+        quantity = aDecoder.decodeObject(forKey: "quantity") as? String ?? "0.00"
         commerce = aDecoder.decodeObject(forKey: "commerce") as? String ?? ""
         location = aDecoder.decodeObject(forKey: "location") as? String ?? ""
     }

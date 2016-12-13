@@ -1,0 +1,297 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=2.0;' name='viewport' />
+        <title>Consulta tarjetas</title>
+        <link href="css/tarjeta.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            .saldo {
+            color: #Fa8200;
+            }
+            .style3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            }
+            .style5 {font-family: Arial, Helvetica, sans-serif; font-size: 14px;font-weight:normal;}
+        </style>
+        <script language="javascript">
+            function cierreSesion(){
+            top.location.replace("cierreSesion_iphone.jsp");
+            }
+        </script>
+        <script language="javascript">
+            function detectOrientation(){
+            if(typeof window.onorientationchange != 'undefined'){
+            if ( orientation == 0 ) {
+            window.scrollTo(0,1);
+            if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+            document.getElementById('Pie').style.marginTop="90%";
+            }
+            }
+            else if ( orientation == 90 ) {
+            window.scrollTo(0,1);
+            if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+            document.getElementById('Pie').style.marginTop="75%";
+            }
+            }
+            else if ( orientation == -90 ) {
+            window.scrollTo(0,1);
+            if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+            document.getElementById('Pie').style.marginTop="75%";
+            }
+            }
+            else if ( orientation == 180 ) {
+            window.scrollTo(0,1);
+            }
+            }
+            }
+            window.onorientationchange = detectOrientation;
+        </script>
+        <script language="javascript">
+            function deteccion(){
+            window.scrollTo(0,1);
+            if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
+            document.getElementById('Pie').style.marginTop="90%";
+            }else{
+            document.getElementById('Pie').style.marginTop="75%";
+            }
+            
+            //			document.getElementById('Pie').style.display="none";
+            }
+            //	window.onload = setTimeout("deteccion();",1000);
+        </script>
+        <script language="javascript">
+            
+            function trim(v)
+            {
+            return v.replace(/^\s+/i, '').replace(/\s+$/i, '');
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <div id="cuerpo" align="center">
+            <div id="Cabecera">
+                <div class="style5" id="iniciosesion">Consulta de Saldo Tarjeta</div>
+            </div>
+            <div id="TotalSaldo">
+                <span class="saldo">
+                    <span class="style3">Saldo</span>:
+                </span>
+                <strong>
+                    196,75
+                </strong>
+            </div>
+            <div id="mostrarMovimientos">
+                <table id="tablaMovimientos"  border="1"  frame="below" rules="rows" class="textoTabla" align="center">
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">12/12/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">KILOMETROS DE PIZZA     M</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">26,00</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            KILOMETROS DE PIZZA     M		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            1591		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            22:42		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5812		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">07/12/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">Actualización de saldo</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">135,00</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            Actualización de saldo		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            1300		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            13:00		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            6011		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">02/12/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">T G I FRIDAY S GRAN     M</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">18,00</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            T G I FRIDAY S GRAN     M		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            0518		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            18:06		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5956		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">21/11/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">AYNAELDA                M</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">32,00</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            AYNAELDA                M		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            0111		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            22:51		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5812		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">19/11/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">BURGUER KING AVD. AVIACIO</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">5,65</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            BURGUER KING AVD. AVIACIO		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            0542		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            23:03		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5814		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">16/11/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">DA NICOLA               M</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">14,50</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            DA NICOLA               M		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            1304		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            15:40		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5811		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">15/11/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">Actualización de saldo</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">144,00</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            Actualización de saldo		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            1201		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            12:01		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            6011		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">09/11/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">CAFE VANGOGH            M</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">11,30</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            CAFE VANGOGH            M		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            7251		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            14:24		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5813		</td>
+                    </tr>
+                    <tr align="left" name= "direcciones" id="direccionesCG">
+                        <td id="fecha" align="left" valign="top" class="cuerpoTabla" width="25%">
+                            <font size="2%">08/11/2016</font>
+                        </td>
+                        <td id="operacion" align="left" valign="top" class="cuerpoTabla" width="60%">
+                            <font size="2%">T G I FRIDAY S GRAN     M</font>
+                        </td>
+                        <td id="importe" align="right" class="cuerpoTabla" valign="top" width="15%">
+                            <font size="2%">15,00</font>
+                        </td>
+                        <td id = "tipoPan" width="0%" style="display:none">
+                            T G I FRIDAY S GRAN     M		 </td>
+                        <td id = "numeroOperacion" style="display:none" width="0%">
+                            2602		</td>
+                        <td id = "horaOperacion" style="display:none" width="0%">
+                            17:58		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            ok		</td>
+                        <td id = "resultadoOperacion" style="display:none" width="0%">
+                            5956		</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="PieSalir" >
+                <div id="salir" style="display:none">
+                    <!--				<input name="botonsalir" type="button" class="boton01"  onClick="cierreSesion()" value="Salir">	 -->
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

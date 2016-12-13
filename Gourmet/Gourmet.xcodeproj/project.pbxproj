@@ -23,6 +23,12 @@
 		464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */; };
 		465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8191E007B5000B375DF /* BalancePresenter.swift */; };
 		465CF81C1E007B6700B375DF /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81B1E007B6700B375DF /* BalanceView.swift */; };
+		465CF81E1E009DE000B375DF /* GetBalanceOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */; };
+		465CF8201E009DEB00B375DF /* GetBalanceOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */; };
+		465CF8221E009DF600B375DF /* StoreBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8211E009DF600B375DF /* StoreBalance.swift */; };
+		465CF8241E009E0600B375DF /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8231E009E0600B375DF /* BalanceParser.swift */; };
+		465CF8261E009E1B00B375DF /* BalanceParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8251E009E1B00B375DF /* BalanceParserTest.swift */; };
+		465CF8281E009E3A00B375DF /* BalanceResponseOk.xml in Resources */ = {isa = PBXBuildFile; fileRef = 465CF8271E009E3A00B375DF /* BalanceResponseOk.xml */; };
 		46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */; };
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
@@ -100,6 +106,12 @@
 		464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAccountToAccountVM.swift; sourceTree = "<group>"; };
 		465CF8191E007B5000B375DF /* BalancePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
 		465CF81B1E007B6700B375DF /* BalanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalanceOffline.swift; sourceTree = "<group>"; };
+		465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalanceOnline.swift; sourceTree = "<group>"; };
+		465CF8211E009DF600B375DF /* StoreBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBalance.swift; sourceTree = "<group>"; };
+		465CF8231E009E0600B375DF /* BalanceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceParser.swift; sourceTree = "<group>"; };
+		465CF8251E009E1B00B375DF /* BalanceParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceParserTest.swift; sourceTree = "<group>"; };
+		465CF8271E009E3A00B375DF /* BalanceResponseOk.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BalanceResponseOk.xml; sourceTree = "<group>"; };
 		46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,9 +264,11 @@
 		46E160931DF98D5B00E90C4F /* GourmetTests */ = {
 			isa = PBXGroup;
 			children = (
-				46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */,
 				46E160961DF98D5B00E90C4F /* Info.plist */,
+				46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */,
 				46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */,
+				465CF8251E009E1B00B375DF /* BalanceParserTest.swift */,
+				465CF8271E009E3A00B375DF /* BalanceResponseOk.xml */,
 			);
 			path = GourmetTests;
 			sourceTree = "<group>";
@@ -309,8 +323,12 @@
 				46E160BA1DF9A93300E90C4F /* LoginCheck.swift */,
 				46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */,
 				46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */,
-				46E160BC1DF9AA1200E90C4F /* GetBalance.swift */,
 				46EFDBC01DFE068C0058204D /* StoreAccountObserver.swift */,
+				46E160BC1DF9AA1200E90C4F /* GetBalance.swift */,
+				465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */,
+				465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */,
+				465CF8211E009DF600B375DF /* StoreBalance.swift */,
+				465CF8231E009E0600B375DF /* BalanceParser.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -519,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465CF8281E009E3A00B375DF /* BalanceResponseOk.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,13 +554,17 @@
 				46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */,
 				4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
+				465CF8241E009E0600B375DF /* BalanceParser.swift in Sources */,
 				464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */,
 				46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */,
+				465CF8221E009DF600B375DF /* StoreBalance.swift in Sources */,
 				46EFDBAD1DFD75E20058204D /* Balance.swift in Sources */,
 				46EFDBB31DFD85A00058204D /* GourmetServiceDM.swift in Sources */,
 				464906711DF9E14B00EF209B /* AccountVM.swift in Sources */,
 				46EFDBC11DFE068C0058204D /* StoreAccountObserver.swift in Sources */,
 				464906741DF9E14B00EF209B /* MainVC.swift in Sources */,
+				465CF8201E009DEB00B375DF /* GetBalanceOnline.swift in Sources */,
+				465CF81E1E009DE000B375DF /* GetBalanceOffline.swift in Sources */,
 				46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */,
 				464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */,
 				465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */,
@@ -569,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465CF8261E009E1B00B375DF /* BalanceParserTest.swift in Sources */,
 				46EFDBB01DFD76FC0058204D /* EntityNSCodingTest.swift in Sources */,
 				46EFDBB71DFDCD170058204D /* LoginCheckParserTest.swift in Sources */,
 			);
