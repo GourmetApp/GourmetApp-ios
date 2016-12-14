@@ -9,7 +9,7 @@
 import XCTest
 @testable import Gourmet
 
-class BalanceParserTest: XCTestCase, BalanceParseListener {
+class BalanceParserTest: XCTestCase, BalanceParserListener {
 
     private var responseArrived : XCTestExpectation?
     private var response : Balance?

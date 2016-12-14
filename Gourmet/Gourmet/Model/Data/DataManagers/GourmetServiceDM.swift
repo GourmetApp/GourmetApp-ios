@@ -50,5 +50,25 @@ class GourmetServiceDM : NSObject {
         downloadTask.resume()
     }
     
-    
+    func getBalance (account : Account, callback: @escaping (_ url: URL?, _ error : Error?) -> Void) {
+        
+        let token = "xAeSYsTQQTCVyPOGWLpR"
+        let sUrl = "http://tarjetagourmet.chequegourmet.com/processLogin_iphoneApp.jsp?usuario=\(account.cardId)&contrasena=\(account.password)&token=\(token)"
+        let url = URL(string: sUrl)!
+        
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        
+        let session = URLSession.shared
+        let downloadTask = session.downloadTask(with: request) { (resultUrl: URL?, response: URLResponse?, resultError: Error?) in
+            if (resultError != nil) {
+                callback(nil, resultError)
+            } else {
+                callback(resultUrl, nil)
+            }
+        }
+        
+        print("[Resquest] \(url.absoluteString)")
+        downloadTask.resume()
+    }
 }

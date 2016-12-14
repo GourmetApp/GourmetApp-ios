@@ -17,7 +17,7 @@ class PurchaseVM : NSObject {
     
     var date : Date!
     var type : PurchaseType = .spend
-    var quantity : Double = 0.0
+    var quantity : String = "0.00"
     var commerce : String = ""
     var location : String = ""
     

@@ -8,10 +8,70 @@
 
 import Foundation
 
-class GetBalance : NSObject {
+protocol GetBalanceListener : NSObjectProtocol {
     
-    func execute () {
-        // TODO:
+    func onSuccess (balance : Balance)
+    func onError ()
+    
+}
+
+class GetBalance : NSObject, GetBalanceOfflineListener, GetBalanceOnlineListener {
+    
+    private var getBalanceOffline : GetBalanceOffline!
+    private var getBalanceOnline : GetBalanceOnline!
+    private var storeBalance : StoreBalance!
+    private weak var listener : GetBalanceListener?
+    
+    private var account : Account!
+    
+    init(getBalanceOffline : GetBalanceOffline,
+         getBalanceOnline : GetBalanceOnline,
+         storeBalance : StoreBalance) {
+        
+        super.init()
+        
+        self.getBalanceOffline = getBalanceOffline
+        self.getBalanceOnline = getBalanceOnline
+        self.storeBalance = storeBalance
+        
+        getBalanceOffline.setListener(listener: self)
+        getBalanceOnline.setListener(listener: self)
+        
     }
     
+    func setListener (listener : GetBalanceListener) {
+        self.listener = listener
+    }
+    
+    func execute (account : Account) {
+        self.account = account
+        getBalanceOffline.execute()
+    }
+    
+    // MARK: GetBalanceOfflineListener
+    func onFinish(getBalanceOffline: GetBalanceOffline, balance: Balance?) {
+        guard listener != nil else { return }
+        
+        if (balance != nil) {
+            listener!.onSuccess(balance: balance!)
+        }
+        
+        getBalanceOnline.execute(account: account)
+    }
+    
+    // MARK: GetBalanceOnlineListener
+    func onFinish(getBalanceOnline: GetBalanceOnline, balance: Balance?) {
+        guard listener != nil else { return }
+        
+        if (balance != nil) {
+            DispatchQueue.main.async {
+                self.listener!.onSuccess(balance: balance!)
+            }
+            storeBalance.execute(balance: balance!)
+        } else {
+            DispatchQueue.main.async {
+                self.listener!.onError()
+            }
+        }
+    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableViewDataSource {
     
+    private var presenter : BalancePresenter!
     private var account : Account!
     private var balance : BalanceVM?
     
@@ -22,36 +23,48 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
         self.account = account
     }
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        presenter = BalanceFactory.shared.getPresenter()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        presenter = BalanceFactory.shared.getPresenter()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.bind(view: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let balance = BalanceVM()
-        balance.quantity = 127.34
-        balance.lastPurchases = []
+        presenter.updateView(account: account)
         
-        for _ in 0 ..< 3 {
-            let purchase = PurchaseVM()
-            purchase.quantity = 10.0
-            purchase.commerce = "Comercio"
-            purchase.location = "Madrid"
-            purchase.type = .spend
-            purchase.date = Date()
-            balance.lastPurchases.append(purchase)
-        }
-        
-        showBalance(balance: balance)
+//        let balance = BalanceVM()
+//        balance.quantity = "127.34"
+//        balance.lastPurchases = []
+//        
+//        for _ in 0 ..< 3 {
+//            let purchase = PurchaseVM()
+//            purchase.quantity = "10.0"
+//            purchase.commerce = "Comercio"
+//            purchase.location = "Madrid"
+//            purchase.type = .spend
+//            purchase.date = Date()
+//            balance.lastPurchases.append(purchase)
+//        }
+//        
+//        showBalance(balance: balance)
     }
     
     // MARK: BalanceView
     func showBalance(balance: BalanceVM) {
         self.balance = balance
         
-        let stringBalance = String(balance.quantity)
-        let balanceComponents = stringBalance.components(separatedBy: ".")
+        let balanceComponents = balance.quantity.components(separatedBy: ".")
         let euros = balanceComponents.first ?? "0"
         let cents = balanceComponents.last ?? "00"
         eurosLabel.text = euros

@@ -10,7 +10,7 @@ import Foundation
 
 class BalanceVM : NSObject {
  
-    var quantity : Double = 0.0
+    var quantity : String = "0.00"
     var lastPurchases : [PurchaseVM] = []
     
 }

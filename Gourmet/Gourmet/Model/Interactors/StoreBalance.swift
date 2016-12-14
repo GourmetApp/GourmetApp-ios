@@ -10,4 +10,8 @@ import UIKit
 
 class StoreBalance: NSObject {
 
+    func execute(balance : Balance) {
+        // TODO:
+    }
+    
 }

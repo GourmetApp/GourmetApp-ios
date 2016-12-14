@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BalanceParseListener : NSObjectProtocol {
+protocol BalanceParserListener : NSObjectProtocol {
     
     func onSuccess (parser: BalanceParser, response: Balance)
     func onError (parser: BalanceParser)
@@ -31,7 +31,7 @@ class BalanceParser: NSObject, XMLParserDelegate {
     
     private var readingType = BalanceParser.readingNone
     
-    private weak var listener : BalanceParseListener?
+    private weak var listener : BalanceParserListener?
     
     private var balance : Balance!
     private var elementValue : String?
@@ -41,7 +41,7 @@ class BalanceParser: NSObject, XMLParserDelegate {
     private var dateField2 : String = ""
     
     // MARK: Services
-    func setListener (listener : BalanceParseListener?) {
+    func setListener (listener : BalanceParserListener?) {
         self.listener = listener
     }
     
@@ -54,12 +54,32 @@ class BalanceParser: NSObject, XMLParserDelegate {
     }
     
     func execute (contentsOfFile url : URL) {
-        guard let stream = InputStream(url: url) else {
-            listener?.onError(parser: self)
-            return
-        }
+//        guard let stream = InputStream(url: url) else {
+//            listener?.onError(parser: self)
+//            return
+//        }
+//        
+//        execute(inputStream: stream)
         
-        execute(inputStream: stream)
+        do {
+            let string = try String(contentsOf: url, encoding: String.Encoding.isoLatin1)
+            guard let data = string.data(using: String.Encoding.utf8) else {
+                listener?.onError(parser: self)
+                return
+            }
+            
+            let parser = XMLParser(data: data)
+            parse(parser: parser)
+        } catch {
+            print ("\(error)")
+            listener?.onError(parser: self)
+        }
+    }
+    
+    private func parse (parser : XMLParser) {
+        balance = Balance()
+        parser.delegate = self
+        parser.parse()
     }
     
     // MARK: XMLParser

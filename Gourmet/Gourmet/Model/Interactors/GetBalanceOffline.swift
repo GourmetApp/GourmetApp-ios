@@ -8,6 +8,23 @@
 
 import UIKit
 
+protocol GetBalanceOfflineListener : NSObjectProtocol {
+    
+    func onFinish (getBalanceOffline: GetBalanceOffline, balance : Balance?)
+    
+}
+
 class GetBalanceOffline: NSObject {
 
+    private weak var listener : GetBalanceOfflineListener?
+    
+    func setListener (listener : GetBalanceOfflineListener?) {
+        self.listener = listener
+    }
+    
+    func execute() {
+        listener?.onFinish(getBalanceOffline: self, balance: nil)
+        // TODO:
+    }
+    
 }
