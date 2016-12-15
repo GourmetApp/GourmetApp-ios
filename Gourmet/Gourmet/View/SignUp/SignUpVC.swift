@@ -40,6 +40,12 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
         registerForKeyboardEvents()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cardTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         unregisterForKeyboardEvents()

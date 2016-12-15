@@ -35,6 +35,11 @@ class MainVC : UIViewController, MainView {
         presenter.updateView(view: self)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        currentVC?.resignFirstResponder()
+    }
+    
     private func localize () {
         self.title = Localizable.getString(key: "login_window_title")
     }

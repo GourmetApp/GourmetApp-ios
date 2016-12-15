@@ -12,12 +12,17 @@ class SignUpPresenter : NSObject, LoginCheckListener {
     
     private var loginChecker : LoginCheck!
     private weak var view : SignUpView?
+    private var isLoading = false
     
     init(loginCheckInteractor : LoginCheck) {
         loginChecker = loginCheckInteractor
     }
     
     func signUp (cardId : String?, password : String?, view : SignUpView) {
+        if (isLoading) {
+            return
+        }
+        
         guard cardId != nil && cardId!.characters.count != 0 else {
             view.showError(message: Localizable.getString(key: "signup_error_cardid_empty"))
             return
@@ -36,6 +41,8 @@ class SignUpPresenter : NSObject, LoginCheckListener {
             return
         }
         
+        isLoading = true
+        
         self.view = view
         view.showLoading()
         
@@ -47,11 +54,13 @@ class SignUpPresenter : NSObject, LoginCheckListener {
     
     // MARK: LoginCheckListener
     internal func onSuccess(caller: LoginCheck, account: Account) {
+        isLoading = false
         loginChecker.setListener(listener: nil)
         view?.hideLoading()
     }
     
     internal func onError(caller: LoginCheck, error: LoginCheck.ErrorType) {
+        isLoading = false
         loginChecker.setListener(listener: nil)
         view?.hideLoading()
         
