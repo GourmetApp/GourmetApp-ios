@@ -10,6 +10,7 @@ import Foundation
 
 protocol BalanceView : NSObjectProtocol {
     
+    func showLoading ()
     func showBalance (balance : BalanceVM)
     func showError (message : String)
     

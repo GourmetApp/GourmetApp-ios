@@ -18,6 +18,7 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
     @IBOutlet weak var centsLabel : UILabel!
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var tableView : UITableView!
+    @IBOutlet weak var loadingView : UIActivityIndicatorView!
     
     func setAccount (account : Account) {
         self.account = account
@@ -35,6 +36,10 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 68.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(onPullToRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
         cleanView()
         presenter.bind(view: self)
     }
@@ -45,30 +50,19 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
         dateLabel.text = nil
     }
     
+    @objc private func onPullToRefresh(refreshControl: UIRefreshControl) {
+        presenter.updateView(account: account)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         presenter.updateView(account: account)
-        
-//        let balance = BalanceVM()
-//        balance.quantity = "127.34"
-//        balance.lastPurchases = []
-//        
-//        for _ in 0 ..< 3 {
-//            let purchase = PurchaseVM()
-//            purchase.quantity = "10.0"
-//            purchase.commerce = "Comercio"
-//            purchase.location = "Madrid"
-//            purchase.type = .spend
-//            purchase.date = Date()
-//            balance.lastPurchases.append(purchase)
-//        }
-//        
-//        showBalance(balance: balance)
     }
     
     // MARK: BalanceView
     func showBalance(balance: BalanceVM) {
+        hideLoading()
         self.balance = balance
         
         let balanceComponents = balance.quantity.components(separatedBy: ".")
@@ -92,7 +86,26 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
     }
     
     func showError(message: String) {
-        // TODO:
+        hideLoading()
+        
+        let titleMessage = Localizable.getString(key: "balance_alert_title")
+        let okMessage = Localizable.getString(key: "balance_alert_ok")
+        let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: okMessage, style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showLoading() {
+        if tableView.refreshControl?.isRefreshing == false {
+            loadingView.isHidden = false
+        }
+    }
+    
+    private func hideLoading () {
+        tableView.refreshControl?.endRefreshing()
+        loadingView.isHidden = true
     }
     
     // MARK: TableView
@@ -114,24 +127,33 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
 }
 
 class BalanceViewCell : UITableViewCell {
     
     @IBOutlet weak var commerceLabel : UILabel!
-    @IBOutlet weak var priceDateLabel : UILabel!
+    @IBOutlet weak var dateLabel : UILabel!
+    @IBOutlet weak var quantityLabel : UILabel!
+    @IBOutlet weak var iconImageView : UIImageView!
+    
+    private static let increaseImage = UIImage(named: "increase")
+    private static let decreaseImage = UIImage(named: "decrease")
     
     func show(purchase : PurchaseVM) {
-        commerceLabel.text = "\(purchase.commerce)(\(purchase.location))"
-        priceDateLabel.text = "\(purchase.quantity) (\(purchase.date))"
+        commerceLabel.text = purchase.commerce
+        quantityLabel.text = purchase.quantity
+        
+        let dateFormat = "dd/MM/yyyy HH:mm"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        dateLabel.text = dateFormatter.string(from: purchase.date)
+        iconImageView.image = purchase.type == .spend ? BalanceViewCell.decreaseImage : BalanceViewCell.increaseImage
     }
     
     override func prepareForReuse() {
         commerceLabel.text = nil
-        priceDateLabel.text = nil
+        dateLabel.text = nil
+        quantityLabel.text = nil
+        iconImageView.image = nil
     }
 }

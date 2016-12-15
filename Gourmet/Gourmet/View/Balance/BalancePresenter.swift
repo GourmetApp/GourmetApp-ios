@@ -28,6 +28,7 @@ class BalancePresenter : NSObject, GetBalanceListener {
     }
     
     func updateView (account : Account) {
+        view?.showLoading()
         getBalance.execute(account: account)
     }
     
@@ -38,6 +39,7 @@ class BalancePresenter : NSObject, GetBalanceListener {
     }
     
     func onError() {
-        // TODO:
+        let message = Localizable.getString(key: "balance_error_message")
+        view?.showError(message: message)
     }
 }

@@ -26,4 +26,7 @@
 "login_error_password_invalid" = "La contraseña no es correcta. ¿Ha cambiado su contraseña desde la última vez?.";
 "login_error_connection_unknown" = "Se ha producido un error en la conexión con el servidor. Inténtelo de nuevo más tarde.";
 
+"balance_alert_title" = "Aviso";
+"balance_alert_ok" = "Aceptar";
+"balance_error_message" = "Se ha producido un error en la conexión con el servidor. Inténtelo de nuevo más tarde.";
 "balance_date_request_format" = "Consultado el %@ a las %@";
