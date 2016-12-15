@@ -11,6 +11,7 @@ import Foundation
 protocol SignUpView : NSObjectProtocol {
     
     func showLoading()
+    func hideLoading()
     func showError(message : String)
     
 }

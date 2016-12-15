@@ -48,23 +48,19 @@ class SignUpPresenter : NSObject, LoginCheckListener {
     // MARK: LoginCheckListener
     internal func onSuccess(caller: LoginCheck, account: Account) {
         loginChecker.setListener(listener: nil)
-        
-        DispatchQueue.main.async {
-            // TODO: Navegar al visor
-        }
+        view?.hideLoading()
     }
     
     internal func onError(caller: LoginCheck, error: LoginCheck.ErrorType) {
         loginChecker.setListener(listener: nil)
+        view?.hideLoading()
         
-        DispatchQueue.main.async { [weak self] in
-            if error == LoginCheck.ErrorType.cardIdNotExists {
-                self?.view?.showError(message: Localizable.getString(key: "signup_error_cardid_not_exists"))
-            } else if error == LoginCheck.ErrorType.passwordInvalid {
-                self?.view?.showError(message: Localizable.getString(key: "signup_error_password_invalid"))
-            } else {
-                self?.view?.showError(message: Localizable.getString(key: "signup_error_connection_unknown"))
-            }
+        if error == LoginCheck.ErrorType.cardIdNotExists {
+            view?.showError(message: Localizable.getString(key: "signup_error_cardid_not_exists"))
+        } else if error == LoginCheck.ErrorType.passwordInvalid {
+            view?.showError(message: Localizable.getString(key: "signup_error_password_invalid"))
+        } else {
+            view?.showError(message: Localizable.getString(key: "signup_error_connection_unknown"))
         }
     }
     

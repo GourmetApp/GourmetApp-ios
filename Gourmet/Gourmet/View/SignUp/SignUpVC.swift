@@ -14,6 +14,7 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
     @IBOutlet weak var cardTF : UITextField!
     @IBOutlet weak var passwordTF : UITextField!
     @IBOutlet weak var signUpButton : UIButton!
+    @IBOutlet weak var loadingView : UIActivityIndicatorView!
     @IBOutlet weak var alignYSignUpContainer : NSLayoutConstraint!
     
     private var presenter : SignUpPresenter!
@@ -115,7 +116,11 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
     
     // MARK: SignUpView
     func showLoading() {
-        // TODO:
+        loadingView.isHidden = false
+    }
+    
+    func hideLoading() {
+        loadingView.isHidden = true
     }
     
     func showError(message: String) {
