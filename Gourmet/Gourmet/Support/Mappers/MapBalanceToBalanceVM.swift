@@ -17,6 +17,7 @@ class MapBalanceToBalanceVM: NSObject, MappeableProtocol {
         
         let balanceVM = BalanceVM()
         balanceVM.quantity = source.quantity
+        balanceVM.requestDate = source.requestDate
         balanceVM.lastPurchases = []
         for purchase in source.lastPurchases {
             let purchaseVM = PurchaseVM()

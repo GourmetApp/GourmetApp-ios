@@ -11,6 +11,7 @@ import Foundation
 class BalanceVM : NSObject {
  
     var quantity : String = "0.00"
+    var requestDate : Date!
     var lastPurchases : [PurchaseVM] = []
     
 }

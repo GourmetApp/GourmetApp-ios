@@ -49,6 +49,7 @@ class GetBalanceOnline: NSObject, BalanceParserListener {
     
     // MARK: BalanceParserListener
     func onSuccess(parser: BalanceParser, response: Balance) {
+        response.requestDate = Date()
         listener?.onFinish(getBalanceOnline: self, balance: response)
     }
     

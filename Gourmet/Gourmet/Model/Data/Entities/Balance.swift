@@ -11,6 +11,7 @@ import Foundation
 class Balance : NSObject, NSCoding {
     
     var quantity : String = "0.00"
+    var requestDate : Date!
     var lastPurchases : [Purchase] = []
     
     override init() {
@@ -19,6 +20,7 @@ class Balance : NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(quantity, forKey: "quantity")
+        aCoder.encode(requestDate.timeIntervalSinceReferenceDate, forKey: "requestDate")
         aCoder.encode(lastPurchases, forKey: "lastPurchases")
     }
     
@@ -26,6 +28,7 @@ class Balance : NSObject, NSCoding {
         super.init()
         
         quantity = aDecoder.decodeObject(forKey: "quantity") as? String ?? "0.00"
+        requestDate = Date(timeIntervalSinceReferenceDate: aDecoder.decodeDouble(forKey: "requestDate"))
         lastPurchases = aDecoder.decodeObject(forKey: "lastPurchases") as? [Purchase] ?? []
     }
 

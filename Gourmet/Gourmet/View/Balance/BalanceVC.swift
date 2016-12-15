@@ -35,7 +35,14 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cleanView()
         presenter.bind(view: self)
+    }
+    
+    private func cleanView () {
+        eurosLabel.text = nil
+        centsLabel.text = nil
+        dateLabel.text = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,6 +77,17 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
         eurosLabel.text = euros
         centsLabel.text = ",\(cents)"
         
+        let dateMessageFormat = Localizable.getString(key: "balance_date_request_format")
+        let dateFormat = "dd/MM/yyyy"
+        let hourFormat = "HH:mm"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        let dateFormatted = dateFormatter.string(from: balance.requestDate)
+        dateFormatter.dateFormat = hourFormat
+        let hourFormatted = dateFormatter.string(from: balance.requestDate)
+        let dateString = String(format: dateMessageFormat, dateFormatted, hourFormatted)
+        dateLabel.text = dateString
+        
         tableView.reloadData()
     }
     
@@ -94,6 +112,10 @@ class BalanceVC : UIViewController, BalanceView, UITableViewDelegate, UITableVie
         }
         
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
 }
