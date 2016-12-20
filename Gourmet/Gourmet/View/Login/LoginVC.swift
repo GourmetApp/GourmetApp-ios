@@ -45,9 +45,12 @@ class LoginVC: UIViewController, LoginView {
     // MARK: LoginView
     func showAccount(account: AccountVM) {
         self.account = account
-        cardIdL.text = account.cardId
         
-        // TODO: Replace first chars of cardId with ****
+        let startIndex = account.cardId.startIndex
+        let endIndex = account.cardId.index(account.cardId.endIndex, offsetBy: -4)
+        let replaceString = "**** **** **** "
+        let range = startIndex ..< endIndex
+        cardIdL.text = account.cardId.replacingCharacters(in: range, with: replaceString)
     }
     
     func showError(message: String) {
