@@ -90,44 +90,54 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imq-as-jBp" userLabel="View - Purchase Info">
-                                                    <rect key="frame" x="16" y="4" width="235.5" height="75.5"/>
+                                                    <rect key="frame" x="16" y="4" width="224" height="76"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-km-MzT" userLabel="Label - commerce name">
-                                                            <rect key="frame" x="0.0" y="29.5" width="235.5" height="20"/>
+                                                            <rect key="frame" x="0.0" y="29" width="216" height="21"/>
                                                             <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0H-hv-t5x" userLabel="Label - purchase date">
-                                                            <rect key="frame" x="0.0" y="55.5" width="235.5" height="20"/>
+                                                            <rect key="frame" x="0.0" y="56" width="216" height="20"/>
                                                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGK-OX-UMK">
+                                                            <rect key="frame" x="223" y="8" width="1" height="60"/>
+                                                            <color key="backgroundColor" red="0.47450980390000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="1" id="WU0-SP-LJb"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="EGK-OX-UMK" firstAttribute="top" secondItem="Imq-as-jBp" secondAttribute="top" constant="8" id="0qz-j0-9jc"/>
                                                         <constraint firstItem="g0H-hv-t5x" firstAttribute="top" secondItem="CKw-km-MzT" secondAttribute="bottom" constant="6" id="4Xa-sB-Ef6"/>
-                                                        <constraint firstAttribute="trailing" secondItem="g0H-hv-t5x" secondAttribute="trailing" id="9gW-Sd-Pj5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="g0H-hv-t5x" secondAttribute="trailing" constant="8" id="9gW-Sd-Pj5"/>
                                                         <constraint firstItem="CKw-km-MzT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Imq-as-jBp" secondAttribute="top" constant="8" id="9im-4e-z3R"/>
-                                                        <constraint firstAttribute="trailing" secondItem="CKw-km-MzT" secondAttribute="trailing" id="DA1-We-Wgj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CKw-km-MzT" secondAttribute="trailing" constant="8" id="DA1-We-Wgj"/>
                                                         <constraint firstAttribute="bottom" secondItem="g0H-hv-t5x" secondAttribute="bottom" id="Fbk-D2-hfn"/>
                                                         <constraint firstItem="CKw-km-MzT" firstAttribute="leading" secondItem="Imq-as-jBp" secondAttribute="leading" id="Iy3-i3-cms"/>
                                                         <constraint firstItem="g0H-hv-t5x" firstAttribute="leading" secondItem="Imq-as-jBp" secondAttribute="leading" id="mgo-v2-WKm"/>
+                                                        <constraint firstAttribute="bottom" secondItem="EGK-OX-UMK" secondAttribute="bottom" constant="8" id="vhd-gW-PLo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EGK-OX-UMK" secondAttribute="trailing" id="wF2-6B-k2n"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Nc-CR-8GT" userLabel="View - Purchase Quantity">
-                                                    <rect key="frame" x="259.5" y="4" width="44.5" height="75.5"/>
+                                                    <rect key="frame" x="248" y="4" width="56" height="76"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyM-cN-OYq" userLabel="Image View - Purchase icon">
-                                                            <rect key="frame" x="10.5" y="36.5" width="24" height="13"/>
+                                                            <rect key="frame" x="16" y="37" width="24" height="13"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="ZyM-cN-OYq" secondAttribute="height" multiplier="20:11" id="IKr-UE-1lU"/>
                                                                 <constraint firstAttribute="width" constant="24" id="hWp-Uw-HMl"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99,99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy1-DI-oHn" userLabel="Label - Purchase quantity">
-                                                            <rect key="frame" x="0.0" y="55.5" width="44.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999,99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy1-DI-oHn" userLabel="Label - Purchase quantity">
+                                                            <rect key="frame" x="0.0" y="56" width="56" height="20"/>
                                                             <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -136,15 +146,15 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="gy1-DI-oHn" secondAttribute="trailing" id="54J-Bi-mxu"/>
+                                                        <constraint firstAttribute="width" constant="56" id="5OW-Pw-lBz"/>
                                                         <constraint firstItem="gy1-DI-oHn" firstAttribute="leading" secondItem="4Nc-CR-8GT" secondAttribute="leading" id="5vN-Yp-VRl"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="GmI-YO-gd7"/>
                                                         <constraint firstItem="gy1-DI-oHn" firstAttribute="top" secondItem="ZyM-cN-OYq" secondAttribute="bottom" constant="6" id="lFZ-T7-uFy"/>
                                                         <constraint firstAttribute="bottom" secondItem="gy1-DI-oHn" secondAttribute="bottom" id="m5o-OO-g5h"/>
                                                         <constraint firstItem="ZyM-cN-OYq" firstAttribute="centerX" secondItem="4Nc-CR-8GT" secondAttribute="centerX" id="ram-CU-m75"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8h-GK-EoP" userLabel="View - Separator">
-                                                    <rect key="frame" x="16" y="82.5" width="304" height="1"/>
+                                                    <rect key="frame" x="16" y="83" width="304" height="1"/>
                                                     <color key="backgroundColor" red="0.47450980390000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="6OS-tk-VVn"/>
@@ -212,7 +222,7 @@
         <scene sceneID="6Hx-Ef-ags">
             <objects>
                 <navigationController id="QhJ-R2-tcy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2p-hf-bWB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2p-hf-bWB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
