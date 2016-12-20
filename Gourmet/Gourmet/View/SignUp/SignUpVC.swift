@@ -33,6 +33,27 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         decorViews()
+        
+        cardTF.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
+    }
+    
+    @objc private func textFieldDidChange (textField : UITextField) {
+        guard let text = textField.text?.characters else { return }
+        var textFiltered = text.filter({$0 != "-"})
+        
+        if (textFiltered.count > 12) {
+            textFiltered.insert("-", at: 12)
+        }
+        
+        if (textFiltered.count > 8) {
+            textFiltered.insert("-", at: 8)
+        }
+        
+        if (textFiltered.count > 4) {
+            textFiltered.insert("-", at: 4)
+        }
+        
+        textField.text = String(textFiltered)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -155,7 +176,22 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
         return true
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == cardTF {
+            guard let textWritten = textField.text else { return true }
+            let maxCardLength = 16
+            let maxAdditionarCharsLength = 3
+            let maxLength = maxCardLength + maxAdditionarCharsLength
+            if textWritten.characters.count + string.characters.count > maxLength {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
     private func performSignUp () {
-        presenter.signUp(cardId: cardTF.text, password: passwordTF.text, view: self)
+        let cardId = cardTF.text?.components(separatedBy: "-").filter({$0 != "-"}).joined()
+        presenter.signUp(cardId: cardId, password: passwordTF.text, view: self)
     }
 }
