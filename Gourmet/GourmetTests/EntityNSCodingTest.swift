@@ -66,6 +66,7 @@ class EntityNSCodingTest: XCTestCase {
         let balance = Balance()
         balance.quantity = "400.0"
         balance.lastPurchases = purchases
+        balance.requestDate = Date()
         
         let balanceData = NSKeyedArchiver.archivedData(withRootObject: balance)
         let balanceParse = NSKeyedUnarchiver.unarchiveObject(with: balanceData) as? Balance
