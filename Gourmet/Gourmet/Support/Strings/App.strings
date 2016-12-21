@@ -30,3 +30,10 @@
 "balance_alert_ok" = "Aceptar";
 "balance_error_message" = "Se ha producido un error en la conexión con el servidor. Inténtelo de nuevo más tarde.";
 "balance_date_request_format" = "Consultado el %@ a las %@";
+
+/*
+ TODAY EXTENSION
+ */
+"widget_title" = "Saldo Gourmet";
+"widget_load_error" = "No se ha podido cargar el saldo de su tarjeta";
+"widget_no_account" = "Actualmente no tiene configurada ninguna tarjeta, por favor configure una en la aplicación para continuar";

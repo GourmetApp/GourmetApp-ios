@@ -23,12 +23,12 @@ class StoreAccountObserver : NSObject {
     }
     
     func execute () {
-        let defaults = UserDefaults.init(suiteName: "com.atenea.gourmet.appgroup")
+        let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
         defaults?.addObserver(self, forKeyPath: "account", options: NSKeyValueObservingOptions.new, context: nil)
     }
     
     deinit {
-        let defaults = UserDefaults.init(suiteName: "com.atenea.gourmet.appgroup")
+        let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
         defaults?.removeObserver(self, forKeyPath: "account")
     }
     

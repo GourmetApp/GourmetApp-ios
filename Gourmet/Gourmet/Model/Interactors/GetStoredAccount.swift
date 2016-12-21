@@ -22,7 +22,7 @@ class GetStoredAccount : NSObject {
     
     func execute () {
         DispatchQueue.global(qos: .background).async {
-            let defaults = UserDefaults.init(suiteName: "com.atenea.gourmet.appgroup")
+            let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
             var account : Account?
             if let accountData = defaults!.data(forKey: "account") {
                 account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account

@@ -27,7 +27,7 @@ class StoreAccount : NSObject {
     
     func execute () {
         DispatchQueue.global(qos: .background).async {
-            let defaults = UserDefaults.init(suiteName: "com.atenea.gourmet.appgroup")
+            let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
             var data : Data?
             if let ac = self.account {
                 data = NSKeyedArchiver.archivedData(withRootObject: ac)

@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460ED5361E0AAFA700C7A9BB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460ED5351E0AAFA700C7A9BB /* NotificationCenter.framework */; };
+		460ED5391E0AAFA700C7A9BB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460ED5381E0AAFA700C7A9BB /* TodayViewController.swift */; };
+		460ED53C1E0AAFA700C7A9BB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460ED53A1E0AAFA700C7A9BB /* MainInterface.storyboard */; };
+		460ED5401E0AAFA700C7A9BB /* GourmetToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		460ED5451E0AB09600C7A9BB /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160CF1DF9B05200E90C4F /* Localizable.swift */; };
+		460ED5461E0AB09600C7A9BB /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E160CD1DF9B03F00E90C4F /* App.strings */; };
+		460ED5471E0AB33000C7A9BB /* GourmetServiceDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */; };
+		460ED5481E0AB33800C7A9BB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBA91DFD75E20058204D /* Account.swift */; };
+		460ED5491E0AB33800C7A9BB /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAA1DFD75E20058204D /* Balance.swift */; };
+		460ED54A1E0AB33800C7A9BB /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAB1DFD75E20058204D /* Purchase.swift */; };
+		460ED5551E0AB36900C7A9BB /* GetStoredAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */; };
+		460ED5561E0AB36900C7A9BB /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BA1DF9A93300E90C4F /* LoginCheck.swift */; };
+		460ED5571E0AB36900C7A9BB /* LoginCheckParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */; };
+		460ED5581E0AB36900C7A9BB /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */; };
+		460ED5591E0AB36900C7A9BB /* StoreAccountObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBC01DFE068C0058204D /* StoreAccountObserver.swift */; };
+		460ED55A1E0AB36900C7A9BB /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BC1DF9AA1200E90C4F /* GetBalance.swift */; };
+		460ED55B1E0AB36900C7A9BB /* GetBalanceOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */; };
+		460ED55C1E0AB36900C7A9BB /* GetBalanceOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */; };
+		460ED55D1E0AB36900C7A9BB /* StoreBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8211E009DF600B375DF /* StoreBalance.swift */; };
+		460ED55E1E0AB36900C7A9BB /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8231E009E0600B375DF /* BalanceParser.swift */; };
+		460ED55F1E0AB36C00C7A9BB /* MappeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906801DF9F23B00EF209B /* MappeableProtocol.swift */; };
+		460ED5601E0AB37000C7A9BB /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */; };
 		4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462843091DFC732700F07686 /* SignUpFactory.swift */; };
 		464906691DF9E10800EF209B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906681DF9E10800EF209B /* SignUpVC.swift */; };
 		464906711DF9E14B00EF209B /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066C1DF9E14B00EF209B /* AccountVM.swift */; };
@@ -82,6 +104,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		460ED53E1E0AAFA700C7A9BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46E160741DF98D5B00E90C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 460ED5321E0AAFA700C7A9BB;
+			remoteInfo = GourmetToday;
+		};
 		46E160911DF98D5B00E90C4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46E160741DF98D5B00E90C4F /* Project object */;
@@ -91,7 +120,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		460ED5441E0AAFA700C7A9BB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				460ED5401E0AAFA700C7A9BB /* GourmetToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GourmetToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		460ED5351E0AAFA700C7A9BB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		460ED5381E0AAFA700C7A9BB /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		460ED53B1E0AAFA700C7A9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		460ED53D1E0AAFA700C7A9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462843091DFC732700F07686 /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		464906681DF9E10800EF209B /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		4649066C1DF9E14B00EF209B /* AccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVM.swift; sourceTree = "<group>"; };
@@ -171,6 +219,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		460ED5301E0AAFA700C7A9BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460ED5361E0AAFA700C7A9BB /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46E160791DF98D5B00E90C4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +244,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		460ED5341E0AAFA700C7A9BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				460ED5351E0AAFA700C7A9BB /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		460ED5371E0AAFA700C7A9BB /* GourmetToday */ = {
+			isa = PBXGroup;
+			children = (
+				460ED5381E0AAFA700C7A9BB /* TodayViewController.swift */,
+				460ED53A1E0AAFA700C7A9BB /* MainInterface.storyboard */,
+				460ED53D1E0AAFA700C7A9BB /* Info.plist */,
+			);
+			path = GourmetToday;
+			sourceTree = "<group>";
+		};
 		464906671DF9E10800EF209B /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +312,8 @@
 			children = (
 				46E1607E1DF98D5B00E90C4F /* Gourmet */,
 				46E160931DF98D5B00E90C4F /* GourmetTests */,
+				460ED5371E0AAFA700C7A9BB /* GourmetToday */,
+				460ED5341E0AAFA700C7A9BB /* Frameworks */,
 				46E1607D1DF98D5B00E90C4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -247,6 +323,7 @@
 			children = (
 				46E1607C1DF98D5B00E90C4F /* Gourmet.app */,
 				46E160901DF98D5B00E90C4F /* GourmetTests.xctest */,
+				460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -427,6 +504,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		460ED5321E0AAFA700C7A9BB /* GourmetToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 460ED5431E0AAFA700C7A9BB /* Build configuration list for PBXNativeTarget "GourmetToday" */;
+			buildPhases = (
+				460ED52F1E0AAFA700C7A9BB /* Sources */,
+				460ED5301E0AAFA700C7A9BB /* Frameworks */,
+				460ED5311E0AAFA700C7A9BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GourmetToday;
+			productName = GourmetToday;
+			productReference = 460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		46E1607B1DF98D5B00E90C4F /* Gourmet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46E160991DF98D5B00E90C4F /* Build configuration list for PBXNativeTarget "Gourmet" */;
@@ -434,10 +528,12 @@
 				46E160781DF98D5B00E90C4F /* Sources */,
 				46E160791DF98D5B00E90C4F /* Frameworks */,
 				46E1607A1DF98D5B00E90C4F /* Resources */,
+				460ED5441E0AAFA700C7A9BB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				460ED53F1E0AAFA700C7A9BB /* PBXTargetDependency */,
 			);
 			name = Gourmet;
 			productName = Gourmet;
@@ -472,6 +568,10 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Atenea;
 				TargetAttributes = {
+					460ED5321E0AAFA700C7A9BB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					46E1607B1DF98D5B00E90C4F = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -498,11 +598,21 @@
 			targets = (
 				46E1607B1DF98D5B00E90C4F /* Gourmet */,
 				46E1608F1DF98D5B00E90C4F /* GourmetTests */,
+				460ED5321E0AAFA700C7A9BB /* GourmetToday */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		460ED5311E0AAFA700C7A9BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460ED5461E0AB09600C7A9BB /* App.strings in Resources */,
+				460ED53C1E0AAFA700C7A9BB /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46E1607A1DF98D5B00E90C4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,6 +660,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		460ED52F1E0AAFA700C7A9BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460ED5551E0AB36900C7A9BB /* GetStoredAccount.swift in Sources */,
+				460ED55E1E0AB36900C7A9BB /* BalanceParser.swift in Sources */,
+				460ED55F1E0AB36C00C7A9BB /* MappeableProtocol.swift in Sources */,
+				460ED55A1E0AB36900C7A9BB /* GetBalance.swift in Sources */,
+				460ED5471E0AB33000C7A9BB /* GourmetServiceDM.swift in Sources */,
+				460ED5561E0AB36900C7A9BB /* LoginCheck.swift in Sources */,
+				460ED55B1E0AB36900C7A9BB /* GetBalanceOffline.swift in Sources */,
+				460ED55D1E0AB36900C7A9BB /* StoreBalance.swift in Sources */,
+				460ED5491E0AB33800C7A9BB /* Balance.swift in Sources */,
+				460ED55C1E0AB36900C7A9BB /* GetBalanceOnline.swift in Sources */,
+				460ED5571E0AB36900C7A9BB /* LoginCheckParser.swift in Sources */,
+				460ED5581E0AB36900C7A9BB /* StoreAccount.swift in Sources */,
+				460ED54A1E0AB33800C7A9BB /* Purchase.swift in Sources */,
+				460ED5591E0AB36900C7A9BB /* StoreAccountObserver.swift in Sources */,
+				460ED5481E0AB33800C7A9BB /* Account.swift in Sources */,
+				460ED5451E0AB09600C7A9BB /* Localizable.swift in Sources */,
+				460ED5601E0AB37000C7A9BB /* ResponseLogin.swift in Sources */,
+				460ED5391E0AAFA700C7A9BB /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46E160781DF98D5B00E90C4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,6 +744,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		460ED53F1E0AAFA700C7A9BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 460ED5321E0AAFA700C7A9BB /* GourmetToday */;
+			targetProxy = 460ED53E1E0AAFA700C7A9BB /* PBXContainerItemProxy */;
+		};
 		46E160921DF98D5B00E90C4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 46E1607B1DF98D5B00E90C4F /* Gourmet */;
@@ -617,6 +757,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		460ED53A1E0AAFA700C7A9BB /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				460ED53B1E0AAFA700C7A9BB /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		46E160831DF98D5B00E90C4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -636,6 +784,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		460ED5411E0AAFA700C7A9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GourmetToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet.GourmetToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		460ED5421E0AAFA700C7A9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GourmetToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet.GourmetToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		46E160971DF98D5B00E90C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -730,6 +902,7 @@
 		46E1609A1DF98D5B00E90C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gourmet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -742,6 +915,7 @@
 		46E1609B1DF98D5B00E90C4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gourmet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -782,6 +956,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		460ED5431E0AAFA700C7A9BB /* Build configuration list for PBXNativeTarget "GourmetToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				460ED5411E0AAFA700C7A9BB /* Debug */,
+				460ED5421E0AAFA700C7A9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		46E160771DF98D5B00E90C4F /* Build configuration list for PBXProject "Gourmet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
