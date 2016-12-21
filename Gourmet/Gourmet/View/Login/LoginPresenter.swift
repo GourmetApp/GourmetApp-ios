@@ -66,7 +66,7 @@ LoginCheckListener {
     
     // MARK: LoginCheckListener
     func onSuccess(caller: LoginCheck, account: Account) {
-        // TODO: Navigate
+        
     }
     
     func onError(caller: LoginCheck, error: LoginCheck.ErrorType) {

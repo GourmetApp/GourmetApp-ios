@@ -43,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=",44" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFu-Jn-hVY" userLabel="Label - cents">
-                                        <rect key="frame" x="199" y="59.5" width="50" height="38.5"/>
+                                        <rect key="frame" x="199" y="59" width="50" height="39"/>
                                         <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -222,7 +222,7 @@
         <scene sceneID="6Hx-Ef-ags">
             <objects>
                 <navigationController id="QhJ-R2-tcy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m2p-hf-bWB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2p-hf-bWB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

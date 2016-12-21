@@ -45,7 +45,7 @@ class StoreAccountObserver : NSObject {
             account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account
         }
         
-        DispatchQueue.main.async {
+        if (Thread.isMainThread) {
             self.listener?.onChange(observer: self, account: account)
         }
     }
