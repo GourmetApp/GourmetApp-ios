@@ -8,10 +8,7 @@
 
 import Foundation
 
-class MapAccountToAccountVM : NSObject, MappeableProtocol {
-    
-    typealias SOURCE = Account
-    typealias RESULT = AccountVM
+class MapAccountToAccountVM : NSObject {
     
     func map(source: Account) -> AccountVM? {
         let account = AccountVM()

@@ -8,10 +8,7 @@
 
 import UIKit
 
-class MapBalanceToBalanceVM: NSObject, MappeableProtocol {
-
-    typealias SOURCE = Balance
-    typealias RESULT = BalanceVM
+class MapBalanceToBalanceVM: NSObject {
     
     func map(source: Balance) -> BalanceVM? {
         

@@ -27,7 +27,6 @@
 		460ED55C1E0AB36900C7A9BB /* GetBalanceOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */; };
 		460ED55D1E0AB36900C7A9BB /* StoreBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8211E009DF600B375DF /* StoreBalance.swift */; };
 		460ED55E1E0AB36900C7A9BB /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8231E009E0600B375DF /* BalanceParser.swift */; };
-		460ED55F1E0AB36C00C7A9BB /* MappeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906801DF9F23B00EF209B /* MappeableProtocol.swift */; };
 		460ED5601E0AB37000C7A9BB /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */; };
 		4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462843091DFC732700F07686 /* SignUpFactory.swift */; };
 		464906691DF9E10800EF209B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906681DF9E10800EF209B /* SignUpVC.swift */; };
@@ -41,7 +40,6 @@
 		4649067B1DF9E66E00EF209B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649067A1DF9E66E00EF209B /* SignUpView.swift */; };
 		4649067D1DF9E80C00EF209B /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4649067C1DF9E80C00EF209B /* LoginVC.xib */; };
 		4649067F1DF9E81700EF209B /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4649067E1DF9E81700EF209B /* SignUpVC.xib */; };
-		464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906801DF9F23B00EF209B /* MappeableProtocol.swift */; };
 		464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */; };
 		465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8191E007B5000B375DF /* BalancePresenter.swift */; };
 		465CF81C1E007B6700B375DF /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81B1E007B6700B375DF /* BalanceView.swift */; };
@@ -152,7 +150,6 @@
 		4649067A1DF9E66E00EF209B /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4649067C1DF9E80C00EF209B /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		4649067E1DF9E81700EF209B /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
-		464906801DF9F23B00EF209B /* MappeableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappeableProtocol.swift; sourceTree = "<group>"; };
 		464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAccountToAccountVM.swift; sourceTree = "<group>"; };
 		465CF8191E007B5000B375DF /* BalancePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
 		465CF81B1E007B6700B375DF /* BalanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
@@ -371,7 +368,6 @@
 			children = (
 				46E160C91DF9AB6600E90C4F /* Data */,
 				46E160B71DF9A8E700E90C4F /* Interactors */,
-				464906801DF9F23B00EF209B /* MappeableProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -666,7 +662,6 @@
 			files = (
 				460ED5551E0AB36900C7A9BB /* GetStoredAccount.swift in Sources */,
 				460ED55E1E0AB36900C7A9BB /* BalanceParser.swift in Sources */,
-				460ED55F1E0AB36C00C7A9BB /* MappeableProtocol.swift in Sources */,
 				460ED55A1E0AB36900C7A9BB /* GetBalance.swift in Sources */,
 				460ED5471E0AB33000C7A9BB /* GourmetServiceDM.swift in Sources */,
 				460ED5561E0AB36900C7A9BB /* LoginCheck.swift in Sources */,
@@ -696,7 +691,6 @@
 				4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
 				465CF8241E009E0600B375DF /* BalanceParser.swift in Sources */,
-				464906811DF9F23B00EF209B /* MappeableProtocol.swift in Sources */,
 				46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */,
 				465CF8221E009DF600B375DF /* StoreBalance.swift in Sources */,
 				46EFDBAD1DFD75E20058204D /* Balance.swift in Sources */,
@@ -963,6 +957,7 @@
 				460ED5421E0AAFA700C7A9BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46E160771DF98D5B00E90C4F /* Build configuration list for PBXProject "Gourmet" */ = {
 			isa = XCConfigurationList;
