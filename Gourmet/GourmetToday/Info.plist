@@ -33,6 +33,23 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFUIText-Light</string>
+		<string>SFUIText-Medium</string>
+		<string>SFUIText-Regular</string>
+		<string>SFUIText-Italic</string>
+		<string>SFUIText-LightItalic</string>
+		<string>SFUIText-MediumItalic</string>
+		<string>SFUIText-Bold</string>
+		<string>SFUIText-Heavy</string>
+		<string>SFUIText-Semibold</string>
+		<string>SFUIText-BoldItalic</string>
+		<string>SFUIText-HeavyItalic</string>
+		<string>SFUIText-SemiboldItalic</string>
+		<string>SFUIText-Ultrathin</string>
+		<string>SFUIText-UltrathinItalic</string>
+	</array>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionMainStoryboard</key>

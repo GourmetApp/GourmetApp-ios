@@ -54,6 +54,20 @@
 		468610BF1E0BD4CE00575265 /* EntityNSCodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610BB1E0BD4CE00575265 /* EntityNSCodingTest.swift */; };
 		468610C01E0BD4CE00575265 /* LoginCheckParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610BC1E0BD4CE00575265 /* LoginCheckParserTest.swift */; };
 		468610C11E0BD51900575265 /* GourmetModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468610791E0BD3DF00575265 /* GourmetModel.framework */; };
+		468B21401E0C29E1004E5C22 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DD1DF9B45B00E90C4F /* SF-UI-Text-Bold.otf */; };
+		468B21411E0C29E1004E5C22 /* SF-UI-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DE1DF9B45B00E90C4F /* SF-UI-Text-BoldItalic.otf */; };
+		468B21421E0C29E1004E5C22 /* SF-UI-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160DF1DF9B45B00E90C4F /* SF-UI-Text-Heavy.otf */; };
+		468B21431E0C29E1004E5C22 /* SF-UI-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E01DF9B45B00E90C4F /* SF-UI-Text-HeavyItalic.otf */; };
+		468B21441E0C29E1004E5C22 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E11DF9B45B00E90C4F /* SF-UI-Text-Light.otf */; };
+		468B21451E0C29E1004E5C22 /* SF-UI-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E21DF9B45B00E90C4F /* SF-UI-Text-LightItalic.otf */; };
+		468B21461E0C29E1004E5C22 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E31DF9B45B00E90C4F /* SF-UI-Text-Medium.otf */; };
+		468B21471E0C29E1004E5C22 /* SF-UI-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E41DF9B45B00E90C4F /* SF-UI-Text-MediumItalic.otf */; };
+		468B21481E0C29E1004E5C22 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E51DF9B45B00E90C4F /* SF-UI-Text-Regular.otf */; };
+		468B21491E0C29E1004E5C22 /* SF-UI-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E61DF9B45B00E90C4F /* SF-UI-Text-RegularItalic.otf */; };
+		468B214A1E0C29E1004E5C22 /* SF-UI-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E71DF9B45B00E90C4F /* SF-UI-Text-Semibold.otf */; };
+		468B214B1E0C29E1004E5C22 /* SF-UI-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */; };
+		468B214C1E0C29E1004E5C22 /* SF-UI-Text-Ultrathin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */; };
+		468B214D1E0C29E1004E5C22 /* SF-UI-Text-UltrathinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */; };
 		46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */; };
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
@@ -736,7 +750,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468B21441E0C29E1004E5C22 /* SF-UI-Text-Light.otf in Resources */,
+				468B21401E0C29E1004E5C22 /* SF-UI-Text-Bold.otf in Resources */,
+				468B21451E0C29E1004E5C22 /* SF-UI-Text-LightItalic.otf in Resources */,
+				468B21481E0C29E1004E5C22 /* SF-UI-Text-Regular.otf in Resources */,
+				468B214A1E0C29E1004E5C22 /* SF-UI-Text-Semibold.otf in Resources */,
 				460ED5461E0AB09600C7A9BB /* App.strings in Resources */,
+				468B21411E0C29E1004E5C22 /* SF-UI-Text-BoldItalic.otf in Resources */,
+				468B21491E0C29E1004E5C22 /* SF-UI-Text-RegularItalic.otf in Resources */,
+				468B21431E0C29E1004E5C22 /* SF-UI-Text-HeavyItalic.otf in Resources */,
+				468B214D1E0C29E1004E5C22 /* SF-UI-Text-UltrathinItalic.otf in Resources */,
+				468B21461E0C29E1004E5C22 /* SF-UI-Text-Medium.otf in Resources */,
+				468B21421E0C29E1004E5C22 /* SF-UI-Text-Heavy.otf in Resources */,
+				468B21471E0C29E1004E5C22 /* SF-UI-Text-MediumItalic.otf in Resources */,
+				468B214B1E0C29E1004E5C22 /* SF-UI-Text-SemiboldItalic.otf in Resources */,
+				468B214C1E0C29E1004E5C22 /* SF-UI-Text-Ultrathin.otf in Resources */,
 				460ED53C1E0AAFA700C7A9BB /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
