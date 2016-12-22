@@ -13,5 +13,6 @@ protocol SignUpView : NSObjectProtocol {
     func showLoading()
     func hideLoading()
     func showError(message : String)
+    func showAccount(account : AccountVM)
     
 }

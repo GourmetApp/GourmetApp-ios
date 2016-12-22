@@ -37,6 +37,10 @@ class LoginVC: UIViewController, LoginView {
         presenter.bind(view: self)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
     private func decorViews () {
         loginButton.layer.cornerRadius = 6.0
         loginButton.clipsToBounds = true

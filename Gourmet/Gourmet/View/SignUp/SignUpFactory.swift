@@ -20,11 +20,12 @@ class SignUpFactory : NSObject {
     }
     
     func getPresenter () -> SignUpPresenter {
+        let accountMapper = MapAccountToAccountVM()
         let service = GourmetServiceDM()
         let parser = LoginCheckParser()
         let storage = StoreAccount()
         let loginChecker = LoginCheck(dm: service, parser: parser, storage: storage)
-        return SignUpPresenter(loginCheckInteractor: loginChecker)
+        return SignUpPresenter(loginCheckInteractor: loginChecker, mapper: accountMapper)
     }
     
 }

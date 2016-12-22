@@ -11,7 +11,7 @@ import GourmetModel
 
 class MapAccountToAccountVM : NSObject {
     
-    func map(source: Account) -> AccountVM? {
+    func map(source: Account) -> AccountVM {
         let account = AccountVM()
         account.cardId = source.cardId
         account.password = source.password

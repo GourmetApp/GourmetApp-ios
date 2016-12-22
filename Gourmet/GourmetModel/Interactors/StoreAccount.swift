@@ -14,6 +14,8 @@ public protocol StoreAccountListener : NSObjectProtocol {
 
 public class StoreAccount : NSObject {
     
+    internal static let AccountKey = "AccountKey"
+    
     private var account : Account?
     private weak var listener : StoreAccountListener?
     
@@ -37,8 +39,22 @@ public class StoreAccount : NSObject {
             
             DispatchQueue.main.async {
                 self.listener?.onFinish(interactor: self)
+                self.notifyAccountChange(account: self.account)
             }
         }
     }
     
+    private func notifyAccountChange (account : Account?) {
+        let center = NotificationCenter.default
+        var userInfo : [AnyHashable : Any] = [:]
+        if (account != nil) {
+            userInfo[StoreAccount.AccountKey] = account!
+        }
+        
+        center.post(name: .storedAccountUpdated, object: nil, userInfo: userInfo)
+    }
+}
+
+extension Notification.Name {
+    static let storedAccountUpdated = Notification.Name("StoreAccountUpdatedNotificationId")
 }

@@ -17,38 +17,38 @@ public protocol StoreAccountObserverListener : NSObjectProtocol {
 public class StoreAccountObserver : NSObject {
     
     private weak var listener : StoreAccountObserverListener?
+    private var observer : NSObjectProtocol?
     
     public func setListener (listener: StoreAccountObserverListener?) {
         self.listener = listener
     }
     
     public func execute () {
-        let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
-        defaults?.addObserver(self, forKeyPath: "account", options: NSKeyValueObservingOptions.new, context: nil)
+        let center = NotificationCenter.default
+        if (observer != nil) {
+            center.removeObserver(observer!)
+        }
+        
+        observer = center.addObserver(
+            forName: .storedAccountUpdated,
+            object: nil,
+            queue: OperationQueue.main,
+            using: { (notification : Notification) in
+                let account = notification.userInfo?[StoreAccount.AccountKey] as? Account
+                self.onAccountChange(account: account)
+            }
+        )
     }
     
     deinit {
-        let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
-        defaults?.removeObserver(self, forKeyPath: "account")
+        let center = NotificationCenter.default
+        if (observer != nil) {
+            center.removeObserver(observer!)
+        }
     }
     
-    override
-    public func observeValue (
-        forKeyPath keyPath: String?,
-        of object: Any?,
-        change: [NSKeyValueChangeKey : Any]?,
-        context: UnsafeMutableRawPointer?) {
-        
-        guard let accountKey = keyPath else { return }
-        let userDefaults = object as? UserDefaults
-        var account : Account?
-        if let accountData = userDefaults?.data(forKey: accountKey) {
-            account = NSKeyedUnarchiver.unarchiveObject(with: accountData) as? Account
-        }
-        
-        if (Thread.isMainThread) {
-            self.listener?.onChange(observer: self, account: account)
-        }
+    private func onAccountChange (account : Account?) {
+        self.listener?.onChange(observer: self, account: account)
     }
     
 }

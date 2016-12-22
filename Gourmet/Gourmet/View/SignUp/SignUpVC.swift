@@ -33,11 +33,16 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         decorViews()
-        
         cardTF.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
     }
     
-    @objc private func textFieldDidChange (textField : UITextField) {
+    private func decorViews () {
+        signUpButton.layer.cornerRadius = 6.0
+        signUpButton.clipsToBounds = true
+    }
+    
+    @objc
+    private func textFieldDidChange (textField : UITextField) {
         guard let text = textField.text?.characters else { return }
         var textFiltered = text.filter({$0 != "-"})
         
@@ -72,11 +77,6 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
         unregisterForKeyboardEvents()
     }
     
-    private func decorViews () {
-        signUpButton.layer.cornerRadius = 6.0
-        signUpButton.clipsToBounds = true
-    }
-    
     private func registerForKeyboardEvents () {
         let center = NotificationCenter.default
         center.addObserver(self, selector:
@@ -95,7 +95,8 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
         center.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    @objc private func keyboardWillShow (aNotification : NSNotification) {
+    @objc
+    private func keyboardWillShow (aNotification : NSNotification) {
         
         guard let userInfo = aNotification.userInfo else { return }
         guard let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
@@ -120,7 +121,8 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
                        completion: nil)
     }
     
-    @objc private func keyboardWillHide (aNotification : NSNotification) {
+    @objc
+    private func keyboardWillHide (aNotification : NSNotification) {
         guard let userInfo = aNotification.userInfo else { return }
         
         let duration : TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
@@ -160,6 +162,11 @@ class SignUpVC: UIViewController, SignUpView, UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
     }
 
+    func showAccount(account: AccountVM) {
+        cardTF.text = ""
+        passwordTF.text = ""
+    }
+    
     // MARK: Actions
     @IBAction func actionSignUp (_ sender : UIButton) {
         performSignUp()

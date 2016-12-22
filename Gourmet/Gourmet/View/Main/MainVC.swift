@@ -46,6 +46,10 @@ class MainVC : UIViewController, MainView {
     }
     
     func showAccountInfo(account: AccountVM) {
+        if (isMountedViewController(vc: loginVC)) {
+            return
+        }
+        
         if (currentVC != nil) {
             remove(viewController: currentVC!)
         }
@@ -54,10 +58,15 @@ class MainVC : UIViewController, MainView {
             loginVC = MainFactory.default.getLoginVC()
         }
         
+        currentVC = loginVC
         add(viewController: loginVC!)
     }
     
     func showNoAccount() {
+        if (isMountedViewController(vc: signUpVC)) {
+            return
+        }
+        
         if (currentVC != nil) {
             remove(viewController: currentVC!)
         }
@@ -66,7 +75,12 @@ class MainVC : UIViewController, MainView {
             signUpVC = MainFactory.default.getSignUpView()
         }
         
+        currentVC = signUpVC
         add(viewController: signUpVC!)
+    }
+    
+    private func isMountedViewController (vc : UIViewController?) -> Bool {
+        return vc?.parent != nil
     }
     
     func navigateBalance(account : Account) {
@@ -87,6 +101,7 @@ class MainVC : UIViewController, MainView {
         viewController.removeFromParentViewController()
     }
     
+    // MARK: Storyboard navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard sender is Account else { return }
         if let layout = segue.destination as? BalanceVC {

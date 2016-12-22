@@ -60,7 +60,7 @@ LoginCheckListener {
     // MARK: GetStoredAccountListener
     func onFinish(interactor: GetStoredAccount, account: Account?) {
         guard account != nil else { return }
-        guard let accountVM = accountMapper.map(source: account!) else { return }
+        let accountVM = accountMapper.map(source: account!)
         
         view?.showAccount(account: accountVM)
     }

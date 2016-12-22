@@ -54,7 +54,7 @@ StoreAccountObserverListener {
         if (account == nil) {
             view?.showNoAccount()
         } else {
-            let accountVM = self.mapper.map(source: account!)!
+            let accountVM = self.mapper.map(source: account!)
             view?.showAccountInfo(account: accountVM)
         }
     }
@@ -64,7 +64,7 @@ StoreAccountObserverListener {
         if (account == nil) {
             view?.showNoAccount()
         } else {
-            let accountVM = self.mapper.map(source: account!)!
+            let accountVM = self.mapper.map(source: account!)
             view?.showAccountInfo(account: accountVM)
             view?.navigateBalance(account: account!)
         }

@@ -12,10 +12,12 @@ import GourmetModel
 class SignUpPresenter : NSObject, LoginCheckListener {
     
     private var loginChecker : LoginCheck!
+    private var accountMapper : MapAccountToAccountVM!
     private weak var view : SignUpView?
     private var isLoading = false
     
-    init(loginCheckInteractor : LoginCheck) {
+    init(loginCheckInteractor : LoginCheck, mapper : MapAccountToAccountVM) {
+        accountMapper = mapper
         loginChecker = loginCheckInteractor
     }
     
@@ -58,6 +60,9 @@ class SignUpPresenter : NSObject, LoginCheckListener {
         isLoading = false
         loginChecker.setListener(listener: nil)
         view?.hideLoading()
+        
+        let accountVM = accountMapper.map(source: account)
+        view?.showAccount(account: accountVM)
     }
     
     internal func onError(caller: LoginCheck, error: LoginCheck.ErrorType) {
