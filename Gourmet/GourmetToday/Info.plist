@@ -33,6 +33,13 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionMainStoryboard</key>
+		<string>MainInterface</string>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widget-extension</string>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SFUIText-Light</string>
@@ -50,12 +57,5 @@
 		<string>SFUIText-Ultrathin</string>
 		<string>SFUIText-UltrathinItalic</string>
 	</array>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionMainStoryboard</key>
-		<string>MainInterface</string>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.widget-extension</string>
-	</dict>
 </dict>
 </plist>
