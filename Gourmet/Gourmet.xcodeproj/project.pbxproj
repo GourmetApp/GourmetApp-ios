@@ -201,6 +201,8 @@
 		468610BA1E0BD4CE00575265 /* BalanceResponseOk.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BalanceResponseOk.xml; sourceTree = "<group>"; };
 		468610BB1E0BD4CE00575265 /* EntityNSCodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNSCodingTest.swift; sourceTree = "<group>"; };
 		468610BC1E0BD4CE00575265 /* LoginCheckParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParserTest.swift; sourceTree = "<group>"; };
+		468B213E1E0C1C3F004E5C22 /* Gourmet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gourmet.entitlements; sourceTree = "<group>"; };
+		468B213F1E0C1C75004E5C22 /* GourmetToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GourmetToday.entitlements; sourceTree = "<group>"; };
 		46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 		460ED5371E0AAFA700C7A9BB /* GourmetToday */ = {
 			isa = PBXGroup;
 			children = (
+				468B213F1E0C1C75004E5C22 /* GourmetToday.entitlements */,
 				460ED5381E0AAFA700C7A9BB /* TodayViewController.swift */,
 				460ED53A1E0AAFA700C7A9BB /* MainInterface.storyboard */,
 				460ED53D1E0AAFA700C7A9BB /* Info.plist */,
@@ -447,6 +450,7 @@
 				46E160A51DF9A42B00E90C4F /* View */,
 				46E160A71DF9A4A000E90C4F /* Support */,
 				46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */,
+				468B213E1E0C1C3F004E5C22 /* Gourmet.entitlements */,
 				46E160831DF98D5B00E90C4F /* Main.storyboard */,
 				46E160861DF98D5B00E90C4F /* Assets.xcassets */,
 				46E160881DF98D5B00E90C4F /* LaunchScreen.storyboard */,
@@ -672,7 +676,13 @@
 				TargetAttributes = {
 					460ED5321E0AAFA700C7A9BB = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LTWTR6D3HJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					468610781E0BD3DF00575265 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -686,6 +696,11 @@
 					46E1607B1DF98D5B00E90C4F = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					46E1608F1DF98D5B00E90C4F = {
 						CreatedOnToolsVersion = 8.1;
@@ -927,6 +942,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = GourmetToday/GourmetToday.entitlements;
+				DEVELOPMENT_TEAM = LTWTR6D3HJ;
 				INFOPLIST_FILE = GourmetToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet.GourmetToday;
@@ -940,6 +957,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = GourmetToday/GourmetToday.entitlements;
+				DEVELOPMENT_TEAM = LTWTR6D3HJ;
 				INFOPLIST_FILE = GourmetToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet.GourmetToday;
@@ -1123,6 +1142,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gourmet/Gourmet.entitlements;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gourmet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet;
@@ -1136,6 +1157,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gourmet/Gourmet.entitlements;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gourmet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet;
