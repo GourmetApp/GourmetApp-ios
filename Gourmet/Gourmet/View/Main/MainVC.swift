@@ -60,6 +60,8 @@ class MainVC : UIViewController, MainView {
         
         currentVC = loginVC
         add(viewController: loginVC!)
+        
+        animateAppear(childVC: loginVC!)
     }
     
     func showNoAccount() {
@@ -77,6 +79,22 @@ class MainVC : UIViewController, MainView {
         
         currentVC = signUpVC
         add(viewController: signUpVC!)
+        
+        animateAppear(childVC: signUpVC!)
+    }
+    
+    private func animateAppear (childVC : UIViewController) {
+        childVC.view.alpha = 0.0
+        childVC.view.frame.origin.y = 30.0
+        
+        let timing = UICubicTimingParameters(animationCurve: .easeInOut)
+        let animator = UIViewPropertyAnimator(duration: 0.3, timingParameters: timing)
+        animator.addAnimations {
+            childVC.view.frame.origin.y = 0.0
+            childVC.view.alpha = 1.0
+        }
+        
+        animator.startAnimation()
     }
     
     private func isMountedViewController (vc : UIViewController?) -> Bool {
