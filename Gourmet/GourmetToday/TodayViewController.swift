@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import GourmetModel
 
 class TodayViewController: UIViewController, NCWidgetProviding,
 GetBalanceOnlineListener, GetStoredAccountListener {

@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Gourmet
+@testable import GourmetModel
 
 class LoginCheckParserTest: XCTestCase, LoginCheckParseListener {
     

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GourmetModel
 
 class BalancePresenter : NSObject, GetBalanceListener {
     

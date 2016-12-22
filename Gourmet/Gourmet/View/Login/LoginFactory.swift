@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GourmetModel
 
 class LoginFactory: NSObject {
 

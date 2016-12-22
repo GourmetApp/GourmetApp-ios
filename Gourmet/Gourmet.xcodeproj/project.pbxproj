@@ -13,21 +13,6 @@
 		460ED5401E0AAFA700C7A9BB /* GourmetToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		460ED5451E0AB09600C7A9BB /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160CF1DF9B05200E90C4F /* Localizable.swift */; };
 		460ED5461E0AB09600C7A9BB /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E160CD1DF9B03F00E90C4F /* App.strings */; };
-		460ED5471E0AB33000C7A9BB /* GourmetServiceDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */; };
-		460ED5481E0AB33800C7A9BB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBA91DFD75E20058204D /* Account.swift */; };
-		460ED5491E0AB33800C7A9BB /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAA1DFD75E20058204D /* Balance.swift */; };
-		460ED54A1E0AB33800C7A9BB /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAB1DFD75E20058204D /* Purchase.swift */; };
-		460ED5551E0AB36900C7A9BB /* GetStoredAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */; };
-		460ED5561E0AB36900C7A9BB /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BA1DF9A93300E90C4F /* LoginCheck.swift */; };
-		460ED5571E0AB36900C7A9BB /* LoginCheckParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */; };
-		460ED5581E0AB36900C7A9BB /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */; };
-		460ED5591E0AB36900C7A9BB /* StoreAccountObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBC01DFE068C0058204D /* StoreAccountObserver.swift */; };
-		460ED55A1E0AB36900C7A9BB /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BC1DF9AA1200E90C4F /* GetBalance.swift */; };
-		460ED55B1E0AB36900C7A9BB /* GetBalanceOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */; };
-		460ED55C1E0AB36900C7A9BB /* GetBalanceOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */; };
-		460ED55D1E0AB36900C7A9BB /* StoreBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8211E009DF600B375DF /* StoreBalance.swift */; };
-		460ED55E1E0AB36900C7A9BB /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8231E009E0600B375DF /* BalanceParser.swift */; };
-		460ED5601E0AB37000C7A9BB /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */; };
 		4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462843091DFC732700F07686 /* SignUpFactory.swift */; };
 		464906691DF9E10800EF209B /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906681DF9E10800EF209B /* SignUpVC.swift */; };
 		464906711DF9E14B00EF209B /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649066C1DF9E14B00EF209B /* AccountVM.swift */; };
@@ -43,23 +28,38 @@
 		464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */; };
 		465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8191E007B5000B375DF /* BalancePresenter.swift */; };
 		465CF81C1E007B6700B375DF /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81B1E007B6700B375DF /* BalanceView.swift */; };
-		465CF81E1E009DE000B375DF /* GetBalanceOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */; };
-		465CF8201E009DEB00B375DF /* GetBalanceOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */; };
-		465CF8221E009DF600B375DF /* StoreBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8211E009DF600B375DF /* StoreBalance.swift */; };
-		465CF8241E009E0600B375DF /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8231E009E0600B375DF /* BalanceParser.swift */; };
-		465CF8261E009E1B00B375DF /* BalanceParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CF8251E009E1B00B375DF /* BalanceParserTest.swift */; };
-		465CF8281E009E3A00B375DF /* BalanceResponseOk.xml in Resources */ = {isa = PBXBuildFile; fileRef = 465CF8271E009E3A00B375DF /* BalanceResponseOk.xml */; };
 		4662F83F1E01C00A0008796A /* BalanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662F83E1E01C00A0008796A /* BalanceFactory.swift */; };
 		4662F8411E01C12C0008796A /* MapBalanceToBalanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662F8401E01C12C0008796A /* MapBalanceToBalanceVM.swift */; };
+		468610821E0BD3E000575265 /* GourmetModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468610791E0BD3DF00575265 /* GourmetModel.framework */; };
+		4686108B1E0BD3E000575265 /* GourmetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4686107B1E0BD3DF00575265 /* GourmetModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4686108E1E0BD3E000575265 /* GourmetModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468610791E0BD3DF00575265 /* GourmetModel.framework */; };
+		4686108F1E0BD3E000575265 /* GourmetModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 468610791E0BD3DF00575265 /* GourmetModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		468610AA1E0BD49A00575265 /* GourmetServiceDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610991E0BD49A00575265 /* GourmetServiceDM.swift */; };
+		468610AB1E0BD49A00575265 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686109B1E0BD49A00575265 /* Account.swift */; };
+		468610AC1E0BD49A00575265 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686109C1E0BD49A00575265 /* Balance.swift */; };
+		468610AD1E0BD49A00575265 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686109D1E0BD49A00575265 /* Purchase.swift */; };
+		468610AE1E0BD49A00575265 /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686109E1E0BD49A00575265 /* ResponseLogin.swift */; };
+		468610AF1E0BD49A00575265 /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A01E0BD49A00575265 /* BalanceParser.swift */; };
+		468610B01E0BD49A00575265 /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A11E0BD49A00575265 /* GetBalance.swift */; };
+		468610B11E0BD49A00575265 /* GetBalanceOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A21E0BD49A00575265 /* GetBalanceOffline.swift */; };
+		468610B21E0BD49A00575265 /* GetBalanceOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A31E0BD49A00575265 /* GetBalanceOnline.swift */; };
+		468610B31E0BD49A00575265 /* GetStoredAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A41E0BD49A00575265 /* GetStoredAccount.swift */; };
+		468610B41E0BD49A00575265 /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A51E0BD49A00575265 /* LoginCheck.swift */; };
+		468610B51E0BD49A00575265 /* LoginCheckParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A61E0BD49A00575265 /* LoginCheckParser.swift */; };
+		468610B61E0BD49A00575265 /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A71E0BD49A00575265 /* StoreAccount.swift */; };
+		468610B71E0BD49A00575265 /* StoreAccountObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A81E0BD49A00575265 /* StoreAccountObserver.swift */; };
+		468610B81E0BD49A00575265 /* StoreBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610A91E0BD49A00575265 /* StoreBalance.swift */; };
+		468610BD1E0BD4CE00575265 /* BalanceParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610B91E0BD4CE00575265 /* BalanceParserTest.swift */; };
+		468610BE1E0BD4CE00575265 /* BalanceResponseOk.xml in Resources */ = {isa = PBXBuildFile; fileRef = 468610BA1E0BD4CE00575265 /* BalanceResponseOk.xml */; };
+		468610BF1E0BD4CE00575265 /* EntityNSCodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610BB1E0BD4CE00575265 /* EntityNSCodingTest.swift */; };
+		468610C01E0BD4CE00575265 /* LoginCheckParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468610BC1E0BD4CE00575265 /* LoginCheckParserTest.swift */; };
+		468610C11E0BD51900575265 /* GourmetModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468610791E0BD3DF00575265 /* GourmetModel.framework */; };
 		46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */; };
 		46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */; };
 		46E160851DF98D5B00E90C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160831DF98D5B00E90C4F /* Main.storyboard */; };
 		46E160871DF98D5B00E90C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E160861DF98D5B00E90C4F /* Assets.xcassets */; };
 		46E1608A1DF98D5B00E90C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E160881DF98D5B00E90C4F /* LaunchScreen.storyboard */; };
 		46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160AD1DF9A52700E90C4F /* BalanceVC.swift */; };
-		46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */; };
-		46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BA1DF9A93300E90C4F /* LoginCheck.swift */; };
-		46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BC1DF9AA1200E90C4F /* GetBalance.swift */; };
 		46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160BE1DF9AA7F00E90C4F /* BalanceVM.swift */; };
 		46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E160C01DF9AA8900E90C4F /* PurchaseVM.swift */; };
 		46E160CE1DF9B03F00E90C4F /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E160CD1DF9B03F00E90C4F /* App.strings */; };
@@ -87,18 +87,8 @@
 		46E160FF1DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */; };
 		46E161001DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */; };
 		46E161011DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */; };
-		46EFDBAC1DFD75E20058204D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBA91DFD75E20058204D /* Account.swift */; };
-		46EFDBAD1DFD75E20058204D /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAA1DFD75E20058204D /* Balance.swift */; };
-		46EFDBAE1DFD75E20058204D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAB1DFD75E20058204D /* Purchase.swift */; };
-		46EFDBB01DFD76FC0058204D /* EntityNSCodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */; };
-		46EFDBB31DFD85A00058204D /* GourmetServiceDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */; };
-		46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */; };
-		46EFDBB71DFDCD170058204D /* LoginCheckParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */; };
-		46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */; };
-		46EFDBBB1DFDF0F50058204D /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */; };
 		46EFDBBD1DFE001B0058204D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBBC1DFE001B0058204D /* LoginPresenter.swift */; };
 		46EFDBBF1DFE00B80058204D /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBBE1DFE00B80058204D /* LoginFactory.swift */; };
-		46EFDBC11DFE068C0058204D /* StoreAccountObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFDBC01DFE068C0058204D /* StoreAccountObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +98,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 460ED5321E0AAFA700C7A9BB;
 			remoteInfo = GourmetToday;
+		};
+		468610831E0BD3E000575265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46E160741DF98D5B00E90C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 468610781E0BD3DF00575265;
+			remoteInfo = GourmetModel;
+		};
+		468610851E0BD3E000575265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46E160741DF98D5B00E90C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46E1607B1DF98D5B00E90C4F;
+			remoteInfo = Gourmet;
+		};
+		4686108C1E0BD3E000575265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46E160741DF98D5B00E90C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 468610781E0BD3DF00575265;
+			remoteInfo = GourmetModel;
 		};
 		46E160911DF98D5B00E90C4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -128,6 +139,17 @@
 				460ED5401E0AAFA700C7A9BB /* GourmetToday.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468610951E0BD3E000575265 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4686108F1E0BD3E000575265 /* GourmetModel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -153,14 +175,32 @@
 		464906831DF9F32700EF209B /* MapAccountToAccountVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAccountToAccountVM.swift; sourceTree = "<group>"; };
 		465CF8191E007B5000B375DF /* BalancePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
 		465CF81B1E007B6700B375DF /* BalanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
-		465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalanceOffline.swift; sourceTree = "<group>"; };
-		465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalanceOnline.swift; sourceTree = "<group>"; };
-		465CF8211E009DF600B375DF /* StoreBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBalance.swift; sourceTree = "<group>"; };
-		465CF8231E009E0600B375DF /* BalanceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceParser.swift; sourceTree = "<group>"; };
-		465CF8251E009E1B00B375DF /* BalanceParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceParserTest.swift; sourceTree = "<group>"; };
-		465CF8271E009E3A00B375DF /* BalanceResponseOk.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BalanceResponseOk.xml; sourceTree = "<group>"; };
 		4662F83E1E01C00A0008796A /* BalanceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceFactory.swift; sourceTree = "<group>"; };
 		4662F8401E01C12C0008796A /* MapBalanceToBalanceVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBalanceToBalanceVM.swift; sourceTree = "<group>"; };
+		468610791E0BD3DF00575265 /* GourmetModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GourmetModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4686107B1E0BD3DF00575265 /* GourmetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GourmetModel.h; sourceTree = "<group>"; };
+		4686107C1E0BD3DF00575265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		468610811E0BD3DF00575265 /* GourmetModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4686108A1E0BD3E000575265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		468610991E0BD49A00575265 /* GourmetServiceDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetServiceDM.swift; sourceTree = "<group>"; };
+		4686109B1E0BD49A00575265 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		4686109C1E0BD49A00575265 /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		4686109D1E0BD49A00575265 /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		4686109E1E0BD49A00575265 /* ResponseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
+		468610A01E0BD49A00575265 /* BalanceParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceParser.swift; sourceTree = "<group>"; };
+		468610A11E0BD49A00575265 /* GetBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalance.swift; sourceTree = "<group>"; };
+		468610A21E0BD49A00575265 /* GetBalanceOffline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalanceOffline.swift; sourceTree = "<group>"; };
+		468610A31E0BD49A00575265 /* GetBalanceOnline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalanceOnline.swift; sourceTree = "<group>"; };
+		468610A41E0BD49A00575265 /* GetStoredAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStoredAccount.swift; sourceTree = "<group>"; };
+		468610A51E0BD49A00575265 /* LoginCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheck.swift; sourceTree = "<group>"; };
+		468610A61E0BD49A00575265 /* LoginCheckParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParser.swift; sourceTree = "<group>"; };
+		468610A71E0BD49A00575265 /* StoreAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreAccount.swift; sourceTree = "<group>"; };
+		468610A81E0BD49A00575265 /* StoreAccountObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreAccountObserver.swift; sourceTree = "<group>"; };
+		468610A91E0BD49A00575265 /* StoreBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreBalance.swift; sourceTree = "<group>"; };
+		468610B91E0BD4CE00575265 /* BalanceParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceParserTest.swift; sourceTree = "<group>"; };
+		468610BA1E0BD4CE00575265 /* BalanceResponseOk.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BalanceResponseOk.xml; sourceTree = "<group>"; };
+		468610BB1E0BD4CE00575265 /* EntityNSCodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNSCodingTest.swift; sourceTree = "<group>"; };
+		468610BC1E0BD4CE00575265 /* LoginCheckParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParserTest.swift; sourceTree = "<group>"; };
 		46A2FA3C1DFAF3A100FB3220 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46E1607C1DF98D5B00E90C4F /* Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gourmet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,9 +211,6 @@
 		46E160901DF98D5B00E90C4F /* GourmetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E160961DF98D5B00E90C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E160AD1DF9A52700E90C4F /* BalanceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
-		46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStoredAccount.swift; sourceTree = "<group>"; };
-		46E160BA1DF9A93300E90C4F /* LoginCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheck.swift; sourceTree = "<group>"; };
-		46E160BC1DF9AA1200E90C4F /* GetBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBalance.swift; sourceTree = "<group>"; };
 		46E160BE1DF9AA7F00E90C4F /* BalanceVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceVM.swift; sourceTree = "<group>"; };
 		46E160C01DF9AA8900E90C4F /* PurchaseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseVM.swift; sourceTree = "<group>"; };
 		46E160CD1DF9B03F00E90C4F /* App.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = App.strings; sourceTree = "<group>"; };
@@ -201,18 +238,8 @@
 		46E160E81DF9B45B00E90C4F /* SF-UI-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		46E160E91DF9B45B00E90C4F /* SF-UI-Text-Ultrathin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Ultrathin.otf"; sourceTree = "<group>"; };
 		46E160EA1DF9B45B00E90C4F /* SF-UI-Text-UltrathinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-UltrathinItalic.otf"; sourceTree = "<group>"; };
-		46EFDBA91DFD75E20058204D /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		46EFDBAA1DFD75E20058204D /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
-		46EFDBAB1DFD75E20058204D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
-		46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNSCodingTest.swift; sourceTree = "<group>"; };
-		46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetServiceDM.swift; sourceTree = "<group>"; };
-		46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParser.swift; sourceTree = "<group>"; };
-		46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckParserTest.swift; sourceTree = "<group>"; };
-		46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
-		46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreAccount.swift; sourceTree = "<group>"; };
 		46EFDBBC1DFE001B0058204D /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		46EFDBBE1DFE00B80058204D /* LoginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
-		46EFDBC01DFE068C0058204D /* StoreAccountObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreAccountObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +247,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468610C11E0BD51900575265 /* GourmetModel.framework in Frameworks */,
 				460ED5361E0AAFA700C7A9BB /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468610751E0BD3DF00575265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4686107E1E0BD3DF00575265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468610821E0BD3E000575265 /* GourmetModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4686108E1E0BD3E000575265 /* GourmetModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +348,82 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		4686107A1E0BD3DF00575265 /* GourmetModel */ = {
+			isa = PBXGroup;
+			children = (
+				468610971E0BD49A00575265 /* Data */,
+				4686109F1E0BD49A00575265 /* Interactors */,
+				4686107B1E0BD3DF00575265 /* GourmetModel.h */,
+				4686107C1E0BD3DF00575265 /* Info.plist */,
+			);
+			path = GourmetModel;
+			sourceTree = "<group>";
+		};
+		468610871E0BD3E000575265 /* GourmetModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				468610BA1E0BD4CE00575265 /* BalanceResponseOk.xml */,
+				468610B91E0BD4CE00575265 /* BalanceParserTest.swift */,
+				468610BB1E0BD4CE00575265 /* EntityNSCodingTest.swift */,
+				468610BC1E0BD4CE00575265 /* LoginCheckParserTest.swift */,
+				4686108A1E0BD3E000575265 /* Info.plist */,
+			);
+			path = GourmetModelTests;
+			sourceTree = "<group>";
+		};
+		468610971E0BD49A00575265 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				468610981E0BD49A00575265 /* DataManagers */,
+				4686109A1E0BD49A00575265 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		468610981E0BD49A00575265 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				468610991E0BD49A00575265 /* GourmetServiceDM.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		4686109A1E0BD49A00575265 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4686109B1E0BD49A00575265 /* Account.swift */,
+				4686109C1E0BD49A00575265 /* Balance.swift */,
+				4686109D1E0BD49A00575265 /* Purchase.swift */,
+				4686109E1E0BD49A00575265 /* ResponseLogin.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4686109F1E0BD49A00575265 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				468610A01E0BD49A00575265 /* BalanceParser.swift */,
+				468610A11E0BD49A00575265 /* GetBalance.swift */,
+				468610A21E0BD49A00575265 /* GetBalanceOffline.swift */,
+				468610A31E0BD49A00575265 /* GetBalanceOnline.swift */,
+				468610A41E0BD49A00575265 /* GetStoredAccount.swift */,
+				468610A51E0BD49A00575265 /* LoginCheck.swift */,
+				468610A61E0BD49A00575265 /* LoginCheckParser.swift */,
+				468610A71E0BD49A00575265 /* StoreAccount.swift */,
+				468610A81E0BD49A00575265 /* StoreAccountObserver.swift */,
+				468610A91E0BD49A00575265 /* StoreBalance.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		46E160731DF98D5B00E90C4F = {
 			isa = PBXGroup;
 			children = (
 				46E1607E1DF98D5B00E90C4F /* Gourmet */,
 				46E160931DF98D5B00E90C4F /* GourmetTests */,
 				460ED5371E0AAFA700C7A9BB /* GourmetToday */,
+				4686107A1E0BD3DF00575265 /* GourmetModel */,
+				468610871E0BD3E000575265 /* GourmetModelTests */,
 				460ED5341E0AAFA700C7A9BB /* Frameworks */,
 				46E1607D1DF98D5B00E90C4F /* Products */,
 			);
@@ -321,6 +435,8 @@
 				46E1607C1DF98D5B00E90C4F /* Gourmet.app */,
 				46E160901DF98D5B00E90C4F /* GourmetTests.xctest */,
 				460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */,
+				468610791E0BD3DF00575265 /* GourmetModel.framework */,
+				468610811E0BD3DF00575265 /* GourmetModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,7 +444,6 @@
 		46E1607E1DF98D5B00E90C4F /* Gourmet */ = {
 			isa = PBXGroup;
 			children = (
-				46E160A61DF9A44000E90C4F /* Model */,
 				46E160A51DF9A42B00E90C4F /* View */,
 				46E160A71DF9A4A000E90C4F /* Support */,
 				46E1607F1DF98D5B00E90C4F /* AppDelegate.swift */,
@@ -344,10 +459,6 @@
 			isa = PBXGroup;
 			children = (
 				46E160961DF98D5B00E90C4F /* Info.plist */,
-				46EFDBAF1DFD76FC0058204D /* EntityNSCodingTest.swift */,
-				46EFDBB61DFDCD170058204D /* LoginCheckParserTest.swift */,
-				465CF8251E009E1B00B375DF /* BalanceParserTest.swift */,
-				465CF8271E009E3A00B375DF /* BalanceResponseOk.xml */,
 			);
 			path = GourmetTests;
 			sourceTree = "<group>";
@@ -361,15 +472,6 @@
 				46E160AC1DF9A52700E90C4F /* Balance */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		46E160A61DF9A44000E90C4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				46E160C91DF9AB6600E90C4F /* Data */,
-				46E160B71DF9A8E700E90C4F /* Interactors */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		46E160A71DF9A4A000E90C4F /* Support */ = {
@@ -393,32 +495,6 @@
 				4662F83E1E01C00A0008796A /* BalanceFactory.swift */,
 			);
 			path = Balance;
-			sourceTree = "<group>";
-		};
-		46E160B71DF9A8E700E90C4F /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-				46E160B81DF9A90B00E90C4F /* GetStoredAccount.swift */,
-				46E160BA1DF9A93300E90C4F /* LoginCheck.swift */,
-				46EFDBB41DFDBE140058204D /* LoginCheckParser.swift */,
-				46EFDBBA1DFDF0F50058204D /* StoreAccount.swift */,
-				46EFDBC01DFE068C0058204D /* StoreAccountObserver.swift */,
-				46E160BC1DF9AA1200E90C4F /* GetBalance.swift */,
-				465CF81D1E009DE000B375DF /* GetBalanceOffline.swift */,
-				465CF81F1E009DEB00B375DF /* GetBalanceOnline.swift */,
-				465CF8211E009DF600B375DF /* StoreBalance.swift */,
-				465CF8231E009E0600B375DF /* BalanceParser.swift */,
-			);
-			path = Interactors;
-			sourceTree = "<group>";
-		};
-		46E160C91DF9AB6600E90C4F /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				46EFDBB11DFD85600058204D /* DataManager */,
-				46EFDBA81DFD75E20058204D /* Entities */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		46E160CC1DF9B02900E90C4F /* Strings */ = {
@@ -477,27 +553,18 @@
 			path = "SF-UI-Text";
 			sourceTree = "<group>";
 		};
-		46EFDBA81DFD75E20058204D /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				46EFDBA91DFD75E20058204D /* Account.swift */,
-				46EFDBAA1DFD75E20058204D /* Balance.swift */,
-				46EFDBAB1DFD75E20058204D /* Purchase.swift */,
-				46EFDBB81DFDCFFA0058204D /* ResponseLogin.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		46EFDBB11DFD85600058204D /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				46EFDBB21DFD85A00058204D /* GourmetServiceDM.swift */,
-			);
-			name = DataManager;
-			path = DataManagers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		468610761E0BD3DF00575265 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4686108B1E0BD3E000575265 /* GourmetModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		460ED5321E0AAFA700C7A9BB /* GourmetToday */ = {
@@ -517,6 +584,43 @@
 			productReference = 460ED5331E0AAFA700C7A9BB /* GourmetToday.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		468610781E0BD3DF00575265 /* GourmetModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468610941E0BD3E000575265 /* Build configuration list for PBXNativeTarget "GourmetModel" */;
+			buildPhases = (
+				468610741E0BD3DF00575265 /* Sources */,
+				468610751E0BD3DF00575265 /* Frameworks */,
+				468610761E0BD3DF00575265 /* Headers */,
+				468610771E0BD3DF00575265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GourmetModel;
+			productName = GourmetModel;
+			productReference = 468610791E0BD3DF00575265 /* GourmetModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		468610801E0BD3DF00575265 /* GourmetModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468610961E0BD3E000575265 /* Build configuration list for PBXNativeTarget "GourmetModelTests" */;
+			buildPhases = (
+				4686107D1E0BD3DF00575265 /* Sources */,
+				4686107E1E0BD3DF00575265 /* Frameworks */,
+				4686107F1E0BD3DF00575265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				468610841E0BD3E000575265 /* PBXTargetDependency */,
+				468610861E0BD3E000575265 /* PBXTargetDependency */,
+			);
+			name = GourmetModelTests;
+			productName = GourmetModelTests;
+			productReference = 468610811E0BD3DF00575265 /* GourmetModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		46E1607B1DF98D5B00E90C4F /* Gourmet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46E160991DF98D5B00E90C4F /* Build configuration list for PBXNativeTarget "Gourmet" */;
@@ -525,11 +629,13 @@
 				46E160791DF98D5B00E90C4F /* Frameworks */,
 				46E1607A1DF98D5B00E90C4F /* Resources */,
 				460ED5441E0AAFA700C7A9BB /* Embed App Extensions */,
+				468610951E0BD3E000575265 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				460ED53F1E0AAFA700C7A9BB /* PBXTargetDependency */,
+				4686108D1E0BD3E000575265 /* PBXTargetDependency */,
 			);
 			name = Gourmet;
 			productName = Gourmet;
@@ -560,13 +666,22 @@
 		46E160741DF98D5B00E90C4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Atenea;
 				TargetAttributes = {
 					460ED5321E0AAFA700C7A9BB = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
+					};
+					468610781E0BD3DF00575265 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					468610801E0BD3DF00575265 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 46E1607B1DF98D5B00E90C4F;
 					};
 					46E1607B1DF98D5B00E90C4F = {
 						CreatedOnToolsVersion = 8.1;
@@ -595,6 +710,8 @@
 				46E1607B1DF98D5B00E90C4F /* Gourmet */,
 				46E1608F1DF98D5B00E90C4F /* GourmetTests */,
 				460ED5321E0AAFA700C7A9BB /* GourmetToday */,
+				468610781E0BD3DF00575265 /* GourmetModel */,
+				468610801E0BD3DF00575265 /* GourmetModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -606,6 +723,21 @@
 			files = (
 				460ED5461E0AB09600C7A9BB /* App.strings in Resources */,
 				460ED53C1E0AAFA700C7A9BB /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468610771E0BD3DF00575265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4686107F1E0BD3DF00575265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468610BE1E0BD4CE00575265 /* BalanceResponseOk.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +781,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465CF8281E009E3A00B375DF /* BalanceResponseOk.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,23 +791,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				460ED5551E0AB36900C7A9BB /* GetStoredAccount.swift in Sources */,
-				460ED55E1E0AB36900C7A9BB /* BalanceParser.swift in Sources */,
-				460ED55A1E0AB36900C7A9BB /* GetBalance.swift in Sources */,
-				460ED5471E0AB33000C7A9BB /* GourmetServiceDM.swift in Sources */,
-				460ED5561E0AB36900C7A9BB /* LoginCheck.swift in Sources */,
-				460ED55B1E0AB36900C7A9BB /* GetBalanceOffline.swift in Sources */,
-				460ED55D1E0AB36900C7A9BB /* StoreBalance.swift in Sources */,
-				460ED5491E0AB33800C7A9BB /* Balance.swift in Sources */,
-				460ED55C1E0AB36900C7A9BB /* GetBalanceOnline.swift in Sources */,
-				460ED5571E0AB36900C7A9BB /* LoginCheckParser.swift in Sources */,
-				460ED5581E0AB36900C7A9BB /* StoreAccount.swift in Sources */,
-				460ED54A1E0AB33800C7A9BB /* Purchase.swift in Sources */,
-				460ED5591E0AB36900C7A9BB /* StoreAccountObserver.swift in Sources */,
-				460ED5481E0AB33800C7A9BB /* Account.swift in Sources */,
 				460ED5451E0AB09600C7A9BB /* Localizable.swift in Sources */,
-				460ED5601E0AB37000C7A9BB /* ResponseLogin.swift in Sources */,
 				460ED5391E0AAFA700C7A9BB /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468610741E0BD3DF00575265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468610B61E0BD49A00575265 /* StoreAccount.swift in Sources */,
+				468610B71E0BD49A00575265 /* StoreAccountObserver.swift in Sources */,
+				468610AD1E0BD49A00575265 /* Purchase.swift in Sources */,
+				468610B51E0BD49A00575265 /* LoginCheckParser.swift in Sources */,
+				468610AA1E0BD49A00575265 /* GourmetServiceDM.swift in Sources */,
+				468610B81E0BD49A00575265 /* StoreBalance.swift in Sources */,
+				468610AC1E0BD49A00575265 /* Balance.swift in Sources */,
+				468610B11E0BD49A00575265 /* GetBalanceOffline.swift in Sources */,
+				468610B01E0BD49A00575265 /* GetBalance.swift in Sources */,
+				468610B31E0BD49A00575265 /* GetStoredAccount.swift in Sources */,
+				468610B41E0BD49A00575265 /* LoginCheck.swift in Sources */,
+				468610AB1E0BD49A00575265 /* Account.swift in Sources */,
+				468610AE1E0BD49A00575265 /* ResponseLogin.swift in Sources */,
+				468610B21E0BD49A00575265 /* GetBalanceOnline.swift in Sources */,
+				468610AF1E0BD49A00575265 /* BalanceParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4686107D1E0BD3DF00575265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468610BF1E0BD4CE00575265 /* EntityNSCodingTest.swift in Sources */,
+				468610C01E0BD4CE00575265 /* LoginCheckParserTest.swift in Sources */,
+				468610BD1E0BD4CE00575265 /* BalanceParserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,31 +832,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E160BB1DF9A93300E90C4F /* LoginCheck.swift in Sources */,
-				46EFDBAC1DFD75E20058204D /* Account.swift in Sources */,
 				46A2FA3D1DFAF3A100FB3220 /* SignUpPresenter.swift in Sources */,
-				46E160B91DF9A90B00E90C4F /* GetStoredAccount.swift in Sources */,
 				4628430A1DFC732700F07686 /* SignUpFactory.swift in Sources */,
 				46E160801DF98D5B00E90C4F /* AppDelegate.swift in Sources */,
-				465CF8241E009E0600B375DF /* BalanceParser.swift in Sources */,
-				46EFDBB91DFDCFFA0058204D /* ResponseLogin.swift in Sources */,
-				465CF8221E009DF600B375DF /* StoreBalance.swift in Sources */,
-				46EFDBAD1DFD75E20058204D /* Balance.swift in Sources */,
-				46EFDBB31DFD85A00058204D /* GourmetServiceDM.swift in Sources */,
 				464906711DF9E14B00EF209B /* AccountVM.swift in Sources */,
-				46EFDBC11DFE068C0058204D /* StoreAccountObserver.swift in Sources */,
 				464906741DF9E14B00EF209B /* MainVC.swift in Sources */,
 				4662F8411E01C12C0008796A /* MapBalanceToBalanceVM.swift in Sources */,
-				465CF8201E009DEB00B375DF /* GetBalanceOnline.swift in Sources */,
-				465CF81E1E009DE000B375DF /* GetBalanceOffline.swift in Sources */,
 				46E160BF1DF9AA7F00E90C4F /* BalanceVM.swift in Sources */,
 				464906841DF9F32700EF209B /* MapAccountToAccountVM.swift in Sources */,
 				465CF81A1E007B5000B375DF /* BalancePresenter.swift in Sources */,
 				46EFDBBF1DFE00B80058204D /* LoginFactory.swift in Sources */,
 				4662F83F1E01C00A0008796A /* BalanceFactory.swift in Sources */,
-				46EFDBB51DFDBE140058204D /* LoginCheckParser.swift in Sources */,
-				46EFDBBB1DFDF0F50058204D /* StoreAccount.swift in Sources */,
-				46E160BD1DF9AA1200E90C4F /* GetBalance.swift in Sources */,
 				46E160AE1DF9A52700E90C4F /* BalanceVC.swift in Sources */,
 				46EFDBBD1DFE001B0058204D /* LoginPresenter.swift in Sources */,
 				46E160C11DF9AA8900E90C4F /* PurchaseVM.swift in Sources */,
@@ -718,7 +852,6 @@
 				464906731DF9E14B00EF209B /* MainPresenter.swift in Sources */,
 				464906771DF9E15F00EF209B /* LoginVC.swift in Sources */,
 				4649067B1DF9E66E00EF209B /* SignUpView.swift in Sources */,
-				46EFDBAE1DFD75E20058204D /* Purchase.swift in Sources */,
 				464906791DF9E5A900EF209B /* LoginView.swift in Sources */,
 				46E160D01DF9B05200E90C4F /* Localizable.swift in Sources */,
 				464906691DF9E10800EF209B /* SignUpVC.swift in Sources */,
@@ -729,9 +862,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465CF8261E009E1B00B375DF /* BalanceParserTest.swift in Sources */,
-				46EFDBB01DFD76FC0058204D /* EntityNSCodingTest.swift in Sources */,
-				46EFDBB71DFDCD170058204D /* LoginCheckParserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +872,21 @@
 			isa = PBXTargetDependency;
 			target = 460ED5321E0AAFA700C7A9BB /* GourmetToday */;
 			targetProxy = 460ED53E1E0AAFA700C7A9BB /* PBXContainerItemProxy */;
+		};
+		468610841E0BD3E000575265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 468610781E0BD3DF00575265 /* GourmetModel */;
+			targetProxy = 468610831E0BD3E000575265 /* PBXContainerItemProxy */;
+		};
+		468610861E0BD3E000575265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46E1607B1DF98D5B00E90C4F /* Gourmet */;
+			targetProxy = 468610851E0BD3E000575265 /* PBXContainerItemProxy */;
+		};
+		4686108D1E0BD3E000575265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 468610781E0BD3DF00575265 /* GourmetModel */;
+			targetProxy = 4686108C1E0BD3E000575265 /* PBXContainerItemProxy */;
 		};
 		46E160921DF98D5B00E90C4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -781,6 +926,7 @@
 		460ED5411E0AAFA700C7A9BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				INFOPLIST_FILE = GourmetToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet.GourmetToday;
@@ -793,12 +939,91 @@
 		460ED5421E0AAFA700C7A9BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				INFOPLIST_FILE = GourmetToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.Gourmet.GourmetToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		468610901E0BD3E000575265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GourmetModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.GourmetModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		468610911E0BD3E000575265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GourmetModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.GourmetModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		468610921E0BD3E000575265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = GourmetModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.GourmetModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gourmet.app/Gourmet";
+			};
+			name = Debug;
+		};
+		468610931E0BD3E000575265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = GourmetModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atenea.GourmetModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gourmet.app/Gourmet";
 			};
 			name = Release;
 		};
@@ -955,6 +1180,24 @@
 			buildConfigurations = (
 				460ED5411E0AAFA700C7A9BB /* Debug */,
 				460ED5421E0AAFA700C7A9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		468610941E0BD3E000575265 /* Build configuration list for PBXNativeTarget "GourmetModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468610901E0BD3E000575265 /* Debug */,
+				468610911E0BD3E000575265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		468610961E0BD3E000575265 /* Build configuration list for PBXNativeTarget "GourmetModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468610921E0BD3E000575265 /* Debug */,
+				468610931E0BD3E000575265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
