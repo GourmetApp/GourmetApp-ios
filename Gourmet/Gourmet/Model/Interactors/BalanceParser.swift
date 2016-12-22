@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol BalanceParserListener : NSObjectProtocol {
+public protocol BalanceParserListener : NSObjectProtocol {
     
     func onSuccess (parser: BalanceParser, response: Balance)
     func onError (parser: BalanceParser)
     
 }
 
-class BalanceParser: NSObject, XMLParserDelegate {
+public class BalanceParser: NSObject, XMLParserDelegate {
 
     private static let readingNone = 0
     private static let readyToReadBalance = 1
@@ -41,11 +41,11 @@ class BalanceParser: NSObject, XMLParserDelegate {
     private var dateField2 : String = ""
     
     // MARK: Services
-    func setListener (listener : BalanceParserListener?) {
+    public func setListener (listener : BalanceParserListener?) {
         self.listener = listener
     }
     
-    func execute (inputStream : InputStream) {
+    public func execute (inputStream : InputStream) {
         let parser = XMLParser(stream: inputStream)
         
         balance = Balance()
@@ -53,7 +53,7 @@ class BalanceParser: NSObject, XMLParserDelegate {
         parser.parse()
     }
     
-    func execute (contentsOfFile url : URL) {
+    public func execute (contentsOfFile url : URL) {
 //        guard let stream = InputStream(url: url) else {
 //            listener?.onError(parser: self)
 //            return
@@ -83,7 +83,7 @@ class BalanceParser: NSObject, XMLParserDelegate {
     }
     
     // MARK: XMLParser
-    func parser(_ parser: XMLParser,
+    public func parser(_ parser: XMLParser,
                 didStartElement elementName: String,
                 namespaceURI: String?,
                 qualifiedName qName: String?,
@@ -117,11 +117,11 @@ class BalanceParser: NSObject, XMLParserDelegate {
         }
     }
     
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
+    public func parser(_ parser: XMLParser, foundCharacters string: String) {
         elementValue?.append(string)
     }
     
-    func parser(_ parser: XMLParser,
+    public func parser(_ parser: XMLParser,
                 didEndElement elementName: String,
                 namespaceURI: String?,
                 qualifiedName qName: String?) {
@@ -158,11 +158,11 @@ class BalanceParser: NSObject, XMLParserDelegate {
         }
     }
     
-    func parserDidEndDocument(_ parser: XMLParser) {
+    public func parserDidEndDocument(_ parser: XMLParser) {
         listener?.onSuccess(parser: self, response: balance)
     }
     
-    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+    public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         listener?.onError(parser: self)
     }
     

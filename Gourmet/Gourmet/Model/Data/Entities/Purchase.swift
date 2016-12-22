@@ -8,24 +8,25 @@
 
 import Foundation
 
-class Purchase : NSObject, NSCoding {
+public class Purchase : NSObject, NSCoding {
     
-    enum PurchaseType : Int {
+    public enum PurchaseType : Int {
         case charge = 0
         case spend = 1
     }
     
-    var date : Date!
-    var type : PurchaseType = .spend
-    var quantity : String = "0.00"
-    var commerce : String = ""
-    var location : String = ""
+    public var date : Date!
+    public var type : PurchaseType = .spend
+    public var quantity : String = "0.00"
+    public var commerce : String = ""
+    public var location : String = ""
     
-    override init() {
+    override
+    public init() {
         
     }
     
-    func encode(with aCoder: NSCoder) {
+    public func encode(with aCoder: NSCoder) {
         aCoder.encode(date.timeIntervalSinceReferenceDate, forKey: "date")
         aCoder.encode(type.rawValue, forKey: "type")
         aCoder.encode(quantity, forKey: "quantity")
@@ -33,7 +34,8 @@ class Purchase : NSObject, NSCoding {
         aCoder.encode(location, forKey: "location")
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required
+    public init?(coder aDecoder: NSCoder) {
         date = Date(timeIntervalSinceReferenceDate: aDecoder.decodeDouble(forKey: "date"))
         type = PurchaseType(rawValue: aDecoder.decodeInteger(forKey: "type")) ?? .spend
         quantity = aDecoder.decodeObject(forKey: "quantity") as? String ?? "0.00"

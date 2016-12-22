@@ -8,19 +8,20 @@
 
 import Foundation
 
-@objc protocol GetStoredAccountListener {
+@objc
+public protocol GetStoredAccountListener {
     func onFinish (interactor : GetStoredAccount, account : Account?)
 }
 
-class GetStoredAccount : NSObject {
+public class GetStoredAccount : NSObject {
     
     private weak var listener : GetStoredAccountListener?
     
-    func setListener (listener : GetStoredAccountListener?) {
+    public func setListener (listener : GetStoredAccountListener?) {
         self.listener = listener
     }
     
-    func execute () {
+    public func execute () {
         DispatchQueue.global(qos: .background).async {
             let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
             var account : Account?

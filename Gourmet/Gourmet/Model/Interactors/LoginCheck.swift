@@ -8,16 +8,16 @@
 
 import Foundation
 
-protocol LoginCheckListener : NSObjectProtocol {
+public protocol LoginCheckListener : NSObjectProtocol {
     
     func onSuccess (caller: LoginCheck, account : Account)
     func onError (caller: LoginCheck, error : LoginCheck.ErrorType)
     
 }
 
-class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
+public class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
     
-    enum ErrorType : Error {
+    public enum ErrorType : Error {
         case cardIdNotExists
         case passwordInvalid
         case connectionProblem
@@ -32,7 +32,7 @@ class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
     private weak var listener : LoginCheckListener?
     private var account : Account?
     
-    init(dm : GourmetServiceDM,
+    public init(dm : GourmetServiceDM,
          parser : LoginCheckParser,
          storage : StoreAccount) {
         
@@ -44,15 +44,15 @@ class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
         self.storeAccount.setListener(listener: self)
     }
     
-    func setListener (listener : LoginCheckListener?) {
+    public func setListener (listener : LoginCheckListener?) {
         self.listener = listener
     }
     
-    func setAccount (account : Account) {
+    public func setAccount (account : Account) {
         self.account = account
     }
     
-    func execute () {
+    public func execute () {
         guard listener != nil else {
             print("A listener must be set to LoginCheck interactor")
             return
@@ -75,7 +75,7 @@ class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
     }
     
     // MARK: LoginCheckParserListener
-    internal func onSuccess(parser: LoginCheckParser, response: ResponseLogin) {
+    public func onSuccess(parser: LoginCheckParser, response: ResponseLogin) {
         if (response.code == ResponseLogin.VALID_ID) {
             storeAccount.setAccount(account: account!)
             storeAccount.execute()
@@ -94,14 +94,14 @@ class LoginCheck : NSObject, LoginCheckParseListener, StoreAccountListener {
         }
     }
     
-    internal func onError(parser: LoginCheckParser) {
+    public func onError(parser: LoginCheckParser) {
         DispatchQueue.main.async {
             self.listener?.onError(caller: self, error: .parseError)
         }
     }
     
     // MARK: StoreAccountListener
-    func onFinish(interactor: StoreAccount) {
+    public func onFinish(interactor: StoreAccount) {
         DispatchQueue.main.async {
             self.listener?.onSuccess(caller: self, account: self.account!)
         }

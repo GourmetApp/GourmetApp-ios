@@ -8,21 +8,21 @@
 
 import Foundation
 
-protocol StoreAccountObserverListener : NSObjectProtocol {
+public protocol StoreAccountObserverListener : NSObjectProtocol {
     
     func onChange(observer: StoreAccountObserver, account : Account?)
     
 }
 
-class StoreAccountObserver : NSObject {
+public class StoreAccountObserver : NSObject {
     
     private weak var listener : StoreAccountObserverListener?
     
-    func setListener (listener: StoreAccountObserverListener?) {
+    public func setListener (listener: StoreAccountObserverListener?) {
         self.listener = listener
     }
     
-    func execute () {
+    public func execute () {
         let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
         defaults?.addObserver(self, forKeyPath: "account", options: NSKeyValueObservingOptions.new, context: nil)
     }
@@ -32,7 +32,8 @@ class StoreAccountObserver : NSObject {
         defaults?.removeObserver(self, forKeyPath: "account")
     }
     
-    override func observeValue (
+    override
+    public func observeValue (
         forKeyPath keyPath: String?,
         of object: Any?,
         change: [NSKeyValueChangeKey : Any]?,

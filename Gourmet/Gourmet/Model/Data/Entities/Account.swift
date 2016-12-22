@@ -8,26 +8,28 @@
 
 import Foundation
 
-class Account : NSObject, NSCoding {
+public class Account : NSObject, NSCoding {
     
-    var cardId : String = ""
-    var password : String = ""
+    public var cardId : String = ""
+    public var password : String = ""
     
-    override init() {
+    override
+    public init() {
         
     }
     
-    init(cardId : String, password : String) {
+    public init(cardId : String, password : String) {
         self.cardId = cardId
         self.password = password
     }
     
-    func encode(with aCoder: NSCoder) {
+    public func encode(with aCoder: NSCoder) {
         aCoder.encode(cardId, forKey: "cardId")
         aCoder.encode(password, forKey: "password")
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required
+    public init?(coder aDecoder: NSCoder) {
         super.init()
         
         cardId = aDecoder.decodeObject(forKey: "cardId") as? String ?? ""

@@ -8,21 +8,21 @@
 
 import UIKit
 
-protocol GetBalanceOfflineListener : NSObjectProtocol {
+public protocol GetBalanceOfflineListener : NSObjectProtocol {
     
     func onFinish (getBalanceOffline: GetBalanceOffline, balance : Balance?)
     
 }
 
-class GetBalanceOffline: NSObject {
+public class GetBalanceOffline: NSObject {
 
     private weak var listener : GetBalanceOfflineListener?
     
-    func setListener (listener : GetBalanceOfflineListener?) {
+    public func setListener (listener : GetBalanceOfflineListener?) {
         self.listener = listener
     }
     
-    func execute() {
+    public func execute() {
         listener?.onFinish(getBalanceOffline: self, balance: nil)
         // TODO:
     }

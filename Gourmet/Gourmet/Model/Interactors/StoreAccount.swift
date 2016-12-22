@@ -8,24 +8,24 @@
 
 import Foundation
 
-protocol StoreAccountListener : NSObjectProtocol {
+public protocol StoreAccountListener : NSObjectProtocol {
     func onFinish(interactor: StoreAccount)
 }
 
-class StoreAccount : NSObject {
+public class StoreAccount : NSObject {
     
     private var account : Account?
     private weak var listener : StoreAccountListener?
     
-    func setAccount (account : Account?) {
+    public func setAccount (account : Account?) {
         self.account = account
     }
     
-    func setListener (listener : StoreAccountListener) {
+    public func setListener (listener : StoreAccountListener) {
         self.listener = listener
     }
     
-    func execute () {
+    public func execute () {
         DispatchQueue.global(qos: .background).async {
             let defaults = UserDefaults.init(suiteName: "group.atenea.gourmet")
             var data : Data?

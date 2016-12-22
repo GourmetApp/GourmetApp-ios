@@ -8,23 +8,25 @@
 
 import Foundation
 
-class Balance : NSObject, NSCoding {
+public class Balance : NSObject, NSCoding {
     
-    var quantity : String = "0.00"
-    var requestDate : Date!
-    var lastPurchases : [Purchase] = []
+    public var quantity : String = "0.00"
+    public var requestDate : Date!
+    public var lastPurchases : [Purchase] = []
     
-    override init() {
+    override
+    public init() {
         
     }
     
-    func encode(with aCoder: NSCoder) {
+    public func encode(with aCoder: NSCoder) {
         aCoder.encode(quantity, forKey: "quantity")
         aCoder.encode(requestDate.timeIntervalSinceReferenceDate, forKey: "requestDate")
         aCoder.encode(lastPurchases, forKey: "lastPurchases")
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required
+    public init?(coder aDecoder: NSCoder) {
         super.init()
         
         quantity = aDecoder.decodeObject(forKey: "quantity") as? String ?? "0.00"

@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol LoginCheckParseListener : NSObjectProtocol {
+public protocol LoginCheckParseListener : NSObjectProtocol {
     
     func onSuccess (parser: LoginCheckParser, response: ResponseLogin)
     func onError (parser: LoginCheckParser)
     
 }
 
-class LoginCheckParser : NSObject, XMLParserDelegate {
+public class LoginCheckParser : NSObject, XMLParserDelegate {
     
     private static let CODE_KEY = "codReq"
     private static let MESSAGE_KEY = "desReq"
@@ -26,11 +26,11 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
     private var elementValue : String?
     
     // MARK: Services
-    func setListener (listener : LoginCheckParseListener?) {
+    public func setListener (listener : LoginCheckParseListener?) {
         self.listener = listener
     }
     
-    func execute (inputStream : InputStream) {
+    public func execute (inputStream : InputStream) {
         let parser = XMLParser(stream: inputStream)
         
         reader = Reader()
@@ -38,7 +38,7 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         parser.parse()
     }
     
-    func execute (contentsOfFile url : URL) {
+    public func execute (contentsOfFile url : URL) {
         guard let stream = InputStream(url: url) else {
             listener?.onError(parser: self)
             return
@@ -48,7 +48,7 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
     }
     
     // MARK: XMLParserDelegate
-    func parser(_ parser: XMLParser,
+    public func parser(_ parser: XMLParser,
                 didStartElement elementName: String,
                 namespaceURI: String?,
                 qualifiedName qName: String?,
@@ -57,11 +57,11 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         elementValue = String()
     }
     
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
+    public func parser(_ parser: XMLParser, foundCharacters string: String) {
         elementValue?.append(string)
     }
     
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         guard elementValue != nil else { return }
         
         if (elementName == LoginCheckParser.CODE_KEY) {
@@ -73,7 +73,7 @@ class LoginCheckParser : NSObject, XMLParserDelegate {
         elementValue = nil
     }
     
-    func parserDidEndDocument(_ parser: XMLParser) {
+    public func parserDidEndDocument(_ parser: XMLParser) {
         guard reader?.codeId != nil else {
             listener?.onError(parser: self)
             return

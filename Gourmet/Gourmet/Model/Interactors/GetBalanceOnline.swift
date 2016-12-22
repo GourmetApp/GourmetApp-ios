@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol GetBalanceOnlineListener : NSObjectProtocol {
+public protocol GetBalanceOnlineListener : NSObjectProtocol {
     
     func onFinish (getBalanceOnline: GetBalanceOnline, balance : Balance?)
     
 }
 
-class GetBalanceOnline: NSObject, BalanceParserListener {
+public class GetBalanceOnline: NSObject, BalanceParserListener {
     
     private var parseBalance : BalanceParser!
     private var dm : GourmetServiceDM!
     private weak var listener : GetBalanceOnlineListener?
     
-    init(parseBalance : BalanceParser,
+    public init(parseBalance : BalanceParser,
          dm : GourmetServiceDM) {
         
         super.init()
@@ -31,11 +31,11 @@ class GetBalanceOnline: NSObject, BalanceParserListener {
         parseBalance.setListener(listener: self)
     }
     
-    func setListener (listener : GetBalanceOnlineListener?) {
+    public func setListener (listener : GetBalanceOnlineListener?) {
         self.listener = listener
     }
     
-    func execute(account : Account) {
+    public func execute(account : Account) {
         dm.getBalance(account: account) { [weak self] (url: URL?, error: Error?) in
             guard let mySelf = self else { return }
             
@@ -48,12 +48,12 @@ class GetBalanceOnline: NSObject, BalanceParserListener {
     }
     
     // MARK: BalanceParserListener
-    func onSuccess(parser: BalanceParser, response: Balance) {
+    public func onSuccess(parser: BalanceParser, response: Balance) {
         response.requestDate = Date()
         listener?.onFinish(getBalanceOnline: self, balance: response)
     }
     
-    func onError(parser: BalanceParser) {
+    public func onError(parser: BalanceParser) {
         listener?.onFinish(getBalanceOnline: self, balance: nil)
     }
 }

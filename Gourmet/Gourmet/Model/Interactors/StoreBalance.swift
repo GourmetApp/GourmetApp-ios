@@ -8,9 +8,9 @@
 
 import UIKit
 
-class StoreBalance: NSObject {
+public class StoreBalance: NSObject {
 
-    func execute(balance : Balance) {
+    public func execute(balance : Balance) {
         // TODO:
     }
     

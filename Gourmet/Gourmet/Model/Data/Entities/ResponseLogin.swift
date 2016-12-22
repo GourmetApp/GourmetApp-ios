@@ -8,13 +8,13 @@
 
 import Foundation
 
-class ResponseLogin : NSObject {
+public class ResponseLogin : NSObject {
     
-    static let INVALID_ID = -1
-    static let INVALID_PASSWORD = 2
-    static let VALID_ID = 1
+    static public let INVALID_ID = -1
+    static public let INVALID_PASSWORD = 2
+    static public let VALID_ID = 1
     
-    var code : Int = ResponseLogin.VALID_ID
-    var message : String = ""
+    public var code : Int = ResponseLogin.VALID_ID
+    public var message : String = ""
     
 }

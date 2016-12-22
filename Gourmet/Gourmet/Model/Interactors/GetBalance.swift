@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol GetBalanceListener : NSObjectProtocol {
+public protocol GetBalanceListener : NSObjectProtocol {
     
     func onSuccess (balance : Balance)
     func onError ()
     
 }
 
-class GetBalance : NSObject, GetBalanceOfflineListener, GetBalanceOnlineListener {
+public class GetBalance : NSObject, GetBalanceOfflineListener, GetBalanceOnlineListener {
     
     private var getBalanceOffline : GetBalanceOffline!
     private var getBalanceOnline : GetBalanceOnline!
@@ -24,7 +24,7 @@ class GetBalance : NSObject, GetBalanceOfflineListener, GetBalanceOnlineListener
     
     private var account : Account!
     
-    init(getBalanceOffline : GetBalanceOffline,
+    public init(getBalanceOffline : GetBalanceOffline,
          getBalanceOnline : GetBalanceOnline,
          storeBalance : StoreBalance) {
         
@@ -39,17 +39,17 @@ class GetBalance : NSObject, GetBalanceOfflineListener, GetBalanceOnlineListener
         
     }
     
-    func setListener (listener : GetBalanceListener) {
+    public func setListener (listener : GetBalanceListener) {
         self.listener = listener
     }
     
-    func execute (account : Account) {
+    public func execute (account : Account) {
         self.account = account
         getBalanceOffline.execute()
     }
     
     // MARK: GetBalanceOfflineListener
-    func onFinish(getBalanceOffline: GetBalanceOffline, balance: Balance?) {
+    public func onFinish(getBalanceOffline: GetBalanceOffline, balance: Balance?) {
         guard listener != nil else { return }
         
         if (balance != nil) {
@@ -60,7 +60,7 @@ class GetBalance : NSObject, GetBalanceOfflineListener, GetBalanceOnlineListener
     }
     
     // MARK: GetBalanceOnlineListener
-    func onFinish(getBalanceOnline: GetBalanceOnline, balance: Balance?) {
+    public func onFinish(getBalanceOnline: GetBalanceOnline, balance: Balance?) {
         guard listener != nil else { return }
         
         if (balance != nil) {

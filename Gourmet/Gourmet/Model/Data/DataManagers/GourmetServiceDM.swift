@@ -8,9 +8,9 @@
 
 import Foundation
 
-class GourmetServiceDM : NSObject {
+public class GourmetServiceDM : NSObject {
     
-    func validate(account : Account, callback : @escaping (_ url: URL?, _ error : Error?) -> Void) {
+    public func validate(account : Account, callback : @escaping (_ url: URL?, _ error : Error?) -> Void) {
         
         let headers = [
             "authorization": "Basic dmFsaWRhVXN1YXJpb1RhcmpldGE6Y2gzcXUzR291cm1ldA==",
@@ -50,7 +50,7 @@ class GourmetServiceDM : NSObject {
         downloadTask.resume()
     }
     
-    func getBalance (account : Account, callback: @escaping (_ url: URL?, _ error : Error?) -> Void) {
+    public func getBalance (account : Account, callback: @escaping (_ url: URL?, _ error : Error?) -> Void) {
         
         let token = "xAeSYsTQQTCVyPOGWLpR"
         let sUrl = "http://tarjetagourmet.chequegourmet.com/processLogin_iphoneApp.jsp?usuario=\(account.cardId)&contrasena=\(account.password)&token=\(token)"
