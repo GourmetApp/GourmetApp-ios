@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </array>
+        <array key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
@@ -19,35 +27,52 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKy-li-nh3" userLabel="View - Balance">
-                                <rect key="frame" x="16" y="0.0" width="288" height="37"/>
+                                <rect key="frame" x="16" y="0.0" width="288" height="120"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dispones de un saldo de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZY-Jh-cJo" userLabel="Label - Info">
+                                        <rect key="frame" x="8" y="18" width="272" height="17"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfN-7g-woK" userLabel="Label - Balance">
-                                        <rect key="frame" x="0.0" y="8" width="288" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="43" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="28"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEJ-4Z-XQK" userLabel="Label - date">
+                                        <rect key="frame" x="8" y="85" width="272" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="gfN-7g-woK" secondAttribute="bottom" constant="8" id="4j4-Jm-268"/>
-                                    <constraint firstItem="gfN-7g-woK" firstAttribute="top" secondItem="MKy-li-nh3" secondAttribute="top" constant="8" id="IST-aL-0UR"/>
+                                    <constraint firstItem="2ZY-Jh-cJo" firstAttribute="leading" secondItem="MKy-li-nh3" secondAttribute="leadingMargin" id="1hW-3v-ZnR"/>
+                                    <constraint firstItem="gfN-7g-woK" firstAttribute="centerY" secondItem="MKy-li-nh3" secondAttribute="centerY" id="7GZ-E9-96J"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="jEJ-4Z-XQK" secondAttribute="trailing" id="7Qb-qT-TnE"/>
+                                    <constraint firstItem="jEJ-4Z-XQK" firstAttribute="leading" secondItem="MKy-li-nh3" secondAttribute="leadingMargin" id="D6f-uL-lSX"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="2ZY-Jh-cJo" secondAttribute="trailing" id="DtV-44-EmR"/>
                                     <constraint firstAttribute="trailing" secondItem="gfN-7g-woK" secondAttribute="trailing" id="WiV-Uz-OJk"/>
+                                    <constraint firstItem="gfN-7g-woK" firstAttribute="top" secondItem="2ZY-Jh-cJo" secondAttribute="bottom" constant="8" id="wpO-pP-0f8"/>
                                     <constraint firstItem="gfN-7g-woK" firstAttribute="leading" secondItem="MKy-li-nh3" secondAttribute="leading" id="wu4-v2-ivg"/>
+                                    <constraint firstItem="jEJ-4Z-XQK" firstAttribute="top" secondItem="gfN-7g-woK" secondAttribute="bottom" constant="8" id="y10-hs-1EX"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42" userLabel="Label - error">
-                                <rect key="frame" x="20" y="8" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <rect key="frame" x="20" y="8" width="280" height="104"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="djg-K3-EeV" userLabel="Loading View">
-                                <rect key="frame" x="150" y="8" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="djg-K3-EeV" userLabel="Loading View">
+                                <rect key="frame" x="150" y="50" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <constraints>
@@ -68,8 +93,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="37"/>
+                    <size key="freeformSize" width="320" height="120"/>
                     <connections>
+                        <outlet property="balanceDateLabel" destination="jEJ-4Z-XQK" id="Bbv-Y3-PQ7"/>
                         <outlet property="balanceLabel" destination="gfN-7g-woK" id="qQG-n5-DNU"/>
                         <outlet property="balanceView" destination="MKy-li-nh3" id="Mhd-84-Kpb"/>
                         <outlet property="errorLabel" destination="GcN-lo-r42" id="cWr-ep-eBx"/>

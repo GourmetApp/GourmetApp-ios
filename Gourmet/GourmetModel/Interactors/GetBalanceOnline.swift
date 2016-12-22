@@ -40,9 +40,13 @@ public class GetBalanceOnline: NSObject, BalanceParserListener {
             guard let mySelf = self else { return }
             
             if (error != nil) {
-                mySelf.listener?.onFinish(getBalanceOnline: mySelf, balance: nil)
+                DispatchQueue.main.async {
+                    mySelf.listener?.onFinish(getBalanceOnline: mySelf, balance: nil)
+                }
             } else {
-                mySelf.parseBalance.execute(contentsOfFile: url!)
+                DispatchQueue.main.async {
+                    mySelf.parseBalance.execute(contentsOfFile: url!)
+                }
             }
         }
     }

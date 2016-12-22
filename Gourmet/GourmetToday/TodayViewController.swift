@@ -17,6 +17,7 @@ GetBalanceOnlineListener, GetStoredAccountListener {
     @IBOutlet weak var errorLabel : UILabel!
     @IBOutlet weak var balanceView : UIView!
     @IBOutlet weak var balanceLabel : UILabel!
+    @IBOutlet weak var balanceDateLabel : UILabel!
     
     private var lastBalance : Balance?
     private var getAccount : GetStoredAccount!
@@ -101,5 +102,19 @@ GetBalanceOnlineListener, GetStoredAccountListener {
         loadingView.isHidden = true
         errorLabel.isHidden = true
         balanceLabel.text = balance.quantity
+        balanceDateLabel.text = getBalanceDateHumanReadable(balance: balance)
+    }
+    
+    private func getBalanceDateHumanReadable (balance : Balance) -> String {
+        let dateMessageFormat = Localizable.getString(key: "balance_date_request_format")
+        let dateFormat = "dd/MM/yyyy"
+        let hourFormat = "HH:mm"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        let dateFormatted = dateFormatter.string(from: balance.requestDate)
+        dateFormatter.dateFormat = hourFormat
+        let hourFormatted = dateFormatter.string(from: balance.requestDate)
+        let dateString = String(format: dateMessageFormat, dateFormatted, hourFormatted)
+        return dateString
     }
 }
